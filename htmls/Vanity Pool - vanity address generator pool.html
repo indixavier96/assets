@@ -1,0 +1,1767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)https://bitcointalk.org/index.php?topic=84569.0 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<meta name="description" content="Vanity Pool - vanity address generator pool">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="keywords" content="bitcoin, forum, bitcoin forum, bitcointalk">
+	<script language="JavaScript" type="text/javascript" src="./Vanity Pool - vanity address generator pool_files/script.js.download"></script>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_theme_url = "https://bitcointalk.org/Themes/custom1";
+		var smf_images_url = "https://bitcointalk.org/Themes/custom1/images";
+		var smf_scripturl = "https://bitcointalk.org/index.php";
+		var smf_iso_case_folding = false;
+		var smf_charset = "ISO-8859-1";
+	// ]]></script>
+	<title>Vanity Pool - vanity address generator pool</title><!--b6f14290a1ac30ca2e3458194eafda3861e6f3460daf7d1fc6ab3e6230ca2e3458194eafda3861e6f3460daf454264932d37b5730ca2e3458194eafda3861e6f3460daffc5b-->
+	<link rel="stylesheet" type="text/css" href="./Vanity Pool - vanity address generator pool_files/style.css">
+	 <!--[if !IE]> -->
+	 <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 650px)" href="./Vanity Pool - vanity address generator pool_files/mobile.css">
+	 <!-- <![endif]-->
+	<link rel="stylesheet" type="text/css" href="./Vanity Pool - vanity address generator pool_files/print.css" media="print"><style type="text/css">
+.msgcl1 {padding: 1px 1px 0 1px;}
+
+</style>
+
+
+
+	<link rel="help" href="https://bitcointalk.org/index.php?action=help" target="_blank">
+	<link rel="search" href="https://bitcointalk.org/index.php?action=search">
+	<link rel="contents" href="https://bitcointalk.org/index.php">
+	<link rel="alternate" type="application/rss+xml" title="Bitcoin Forum - RSS" href="https://bitcointalk.org/index.php?type=rss;action=.xml">
+	<link rel="prev" href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=prev">
+	<link rel="next" href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=next">
+	<link rel="index" href="https://bitcointalk.org/index.php?board=6.0"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		function showhide(msgnr)
+		{
+			if (document.getElementById("message"+msgnr).style.display == "")
+			    {document.getElementById("message"+msgnr).style.display = "none";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "hidden";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "";
+			     document.getElementById("ignfooter"+msgnr).style.display = "none";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignshow.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Show";
+			     document.getElementById("ignprofile"+msgnr).style.display = "none";
+			    }
+			    else
+			    {document.getElementById("message"+msgnr).style.display = "";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "visible";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "none";
+			     document.getElementById("ignfooter"+msgnr).style.display = "";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignhide.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Hide";
+			     document.getElementById("ignprofile"+msgnr).style.display = "";
+			     }
+		}
+// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			smf_setThemeOption("collapse_header", mode ? 1 : 0, null, "30ca2e3458194eafda3861e6f3460daf");
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+			document.getElementById("upshrinkHeader2").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// ]]></script>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			var current_header_ic = false;
+
+			function shrinkHeaderIC(mode)
+			{
+				smf_setThemeOption("collapse_header_ic", mode ? 1 : 0, null, "30ca2e3458194eafda3861e6f3460daf");
+				document.getElementById("upshrink_ic").src = smf_images_url + (mode ? "/expand.gif" : "/collapse.gif");
+
+				document.getElementById("upshrinkHeaderIC").style.display = mode ? "none" : "";
+
+				current_header_ic = mode;
+			}
+		// ]]></script></head>
+<body>
+	<div class="tborder">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" id="smfheader">
+			<tbody><tr>
+				<td class="catbg" height="32">
+					<span style="font-family: Verdana, sans-serif; font-size: 140%; ">Bitcoin Forum</span>
+				</td>
+				<td align="right" class="catbg">
+					<img src="./Vanity Pool - vanity address generator pool_files/smflogo.gif" style="margin: 2px;" alt="">
+				</td>
+			</tr>
+		</tbody></table>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr>
+				<td class="titlebg2" height="32">
+					<span style="font-size: 130%;" id="hellomember"> Hello <b>IndiXavi</b></span>
+				</td>
+				<td class="titlebg2" height="32" align="right">
+					<span class="smalltext">February 20, 2026, 05:35:53 AM</span>
+					<a href="https://bitcointalk.org/index.php?topic=84569.0#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="./Vanity Pool - vanity address generator pool_files/upshrink.gif" alt="*" title="Shrink or expand the header." align="bottom" style="margin: 0 1ex;"></a>
+				</td>
+			</tr>
+			<tr id="upshrinkHeader">
+				<td valign="top" colspan="2">
+					<table width="100%" class="bordercolor" cellpadding="8" cellspacing="1" border="0" style="margin-top: 1px;">
+						<tbody><tr>
+							<td colspan="2" width="100%" valign="top" class="windowbg2" id="variousheadlinks"><span class="middletext">
+								<a href="https://bitcointalk.org/index.php?action=unread">Show unread posts since last visit.</a> <br>
+								<a href="https://bitcointalk.org/index.php?action=unreadreplies">Show new replies to your posts.</a><br><a href="https://bitcointalk.org/index.php?action=watchlist">Watchlist</a><br>
+								Total time logged in: 12 minutes.<br>				</span>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		<table id="upshrinkHeader2" width="100%" cellpadding="4" cellspacing="0" border="0">
+			<tbody><tr>
+				<td width="90%" class="titlebg2">
+					<span class="smalltext"><b>News</b>: Latest Bitcoin Core release: <a class="ul" href="https://bitcoincore.org/en/download/">30.2</a> [<a class="ul" href="https://bitcointalk.org/bitcoin-30.2.torrent">Torrent</a>]</span>
+				</td>
+				<td class="titlebg2" align="right" nowrap="nowrap" valign="top">
+					<form action="https://bitcointalk.org/index.php?action=search2" method="post" accept-charset="ISO-8859-1" style="margin: 0;">
+						<a href="https://bitcointalk.org/index.php?action=search;advanced"><img src="./Vanity Pool - vanity address generator pool_files/filter.gif" align="middle" style="margin: 0 1ex;" alt=""></a>
+						<input type="text" name="search" value="" style="width: 190px;">&nbsp;
+						<input type="submit" name="submit" value="Search" style="width: 11ex;">
+						<input type="hidden" name="advanced" value="0">
+						<input type="hidden" name="topic" value="84569">
+					</form>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+			<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 10px;">
+				<tbody><tr>
+					<td class="maintab_first">&nbsp;</td><td class="maintab_active_first">&nbsp;</td>
+				<td valign="top" class="maintab_active_back">
+					<a href="https://bitcointalk.org/index.php">Home</a>
+				</td><td class="maintab_active_last">&nbsp;</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=help">Help</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=search">Search</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=profile">Profile</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=pm">My Messages </a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=mlist">Members</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/more.php">More</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=logout;sesc=30ca2e3458194eafda3861e6f3460daf">Logout</a>
+				</td>
+				<td class="maintab_last">&nbsp;</td>
+			</tr>
+		</tbody></table>
+	<div id="bodyarea" style="padding: 1ex 0px 2ex 0px;">
+<a name="top"></a>
+<a name="msg934146"></a>
+<div><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b> (Moderators: <a href="https://bitcointalk.org/index.php?action=profile;u=11425" title="Board Moderator">gmaxwell</a>, <a href="https://bitcointalk.org/index.php?action=profile;u=290195" title="Board Moderator">achow101</a>)&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=84569.0" class="nav">Vanity Pool - vanity address generator pool</a></b></div></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Pages:  [<b>1</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.40">3</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.60">4</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.80">5</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.100">6</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.120">7</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.140">8</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.160">9</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.180">10</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.200">11</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.220">12</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.240">13</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.260">14</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.280">15</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.300">16</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.320">17</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.340">18</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.360">19</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.380">20</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.400">21</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.420">22</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.440">23</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.460">24</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.480">25</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.500">26</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.520">27</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.540">28</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.560">29</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.580">30</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.600">31</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.620">32</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.640">33</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.660">34</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.680">35</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.700">36</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.20">»</a> </span></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=next#new">next topic »</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="mirrortab_first">&nbsp;</td>
+		<td class="mirrortab_back"><a href="https://bitcointalk.org/index.php?action=post;topic=84569.0;num_replies=711">Reply</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?topic=84569.0;do=watch;sesc=30ca2e3458194eafda3861e6f3460daf" onclick="return confirm(&#39;Watch or unwatch this topic?&#39;);">Watch</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=notify;sa=on;topic=84569.0;sesc=30ca2e3458194eafda3861e6f3460daf" onclick="return confirm(&#39;Are you sure you wish to enable notification of new replies for this topic?&#39;);">Notify</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=markasread;sa=topic;t=0;topic=84569.0;sesc=30ca2e3458194eafda3861e6f3460daf">Mark unread</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=printpage;topic=84569.0" target="_blank">Print</a></td>
+		<td class="mirrortab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tbody><tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+					<img src="./Vanity Pool - vanity address generator pool_files/veryhot_post.gif" align="bottom" alt="">
+				</td>
+				<td width="13%"> Author</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Topic: Vanity Pool - vanity address generator pool &nbsp;(Read 148640 times)
+				</td>
+		</tr>
+</tbody></table>
+<form action="https://bitcointalk.org/index.php?action=quickmod2;topic=84569.0" method="post" accept-charset="ISO-8859-1" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save(&#39;30ca2e3458194eafda3861e6f3460daf&#39;) : confirm(&#39;Are you sure you want to do this?&#39;);">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor"><tbody><tr><td class="msgcl1">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=934146;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934146#msg934146"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934146"><a href="https://bitcointalk.org/index.php?topic=84569.msg934146#msg934146">Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext"><span title="Last edit: October 26, 2013, 10:42:34 PM by ThePiachu" class="edited">June 01, 2012, 02:53:57 AM</span><span class="editplain"><br>Last edit: October 26, 2013, 10:42:34 PM by ThePiachu</span></div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=140584">EFS</a> (24), <a href="https://bitcointalk.org/index.php?action=profile;u=459836">LoyceV</a> (6), <a href="https://bitcointalk.org/index.php?action=profile;u=359716">ABCbits</a> (2), <a href="https://bitcointalk.org/index.php?action=profile;u=131361">Timelord2067</a> (1), <a href="https://bitcointalk.org/index.php?action=profile;u=870608">th3nolo</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns1" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934146;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934146#msg934146">#1</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">I've implemented a sort of "mining pool" for creating vanity addresses with zero needed trust. As to how it is possible, check out these links:<br><br><a class="ul" href="https://bitcointalk.org/index.php?topic=81865.msg901491#msg901491">https://bitcointalk.org/index.php?topic=81865.msg901491#msg901491</a><br><a class="ul" href="http://bitcoin.stackexchange.com/q/3853/323">http://bitcoin.stackexchange.com/q/3853/323</a><br><br>The main pool is running at:<br><span style="font-size: 15pt !important; line-height: 1.3em;"><b><a class="ul" href="http://vanitypool.appspot.com/">http://vanitypool.appspot.com/</a></b></span><br><br>And you might also want to check out:<br><a class="ul" href="http://gobittest.appspot.com/VanityAll">http://gobittest.appspot.com/VanityAll</a><br><a class="ul" href="https://en.bitcoin.it/wiki/Bitcoin_Address_Utility">https://en.bitcoin.it/wiki/Bitcoin_Address_Utility</a><br><br>So, onwards with the explanations:<br><br>The idea is, that you can generate a vanity address without even knowing what private key it will actually belong to. One party grabs a random ECDSA keypair and saves the private key for themselves. They later can issue a request for a vanity address to be created, by supplying the public key form that keypair, their desired pattern and so forth. A person takes with looking for the vanity address is required to brute force random ECDSA private keys, get their corresponding public keys, <b>add them to the provided public key</b>, and proceed normally with SHA, RIPEMD and base58 until they receive the desired pattern. Then they give the private key they found to the first person, which adds the two private keys in order to get their vanity address. The best thing about it - the person looking for the solution won't know what the resulting private key is! <b>This means that you can outsource your vanity key generation without needing to trust any third party.</b><br><br>An example (available from gobittest website):<br>We have a private key:<br>18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725<br>which maps to public key:<br>0450863AD64A87AE8A2FE83C1AF1A8403CB53F53E486D8511DAD8A04887E5B23522CD470243453A<span style="width: 0; margin: 0 -0.6ex 0 -1px;"> </span>299FA9E77237716103ABC11A1DF38855ED6F2EE187E9C582BA6<br><br>and say we want to find a pattern "166". One of the solutions takes a form of a private key<br>B18427B169E86DE681A1A62588E1D02AE4A7E83C1B413849989A76282A7B562F<br>mapping to public key:<br>049C95E0949E397FACCECF0FE8EAD247E6FD082717E4A4A876049FB34A9ADED110DFEA2EF691CC4<span style="width: 0; margin: 0 -0.6ex 0 -1px;"> </span>A1410498F4C312F3A94318CD5B6F0E8E92051064876751C8404<br><br>If we add the two public keys (like the person looking for the solution would do), we get a public key:<br>0436970CE32E14DC06AC50217CDCF53E628B32810707080D6848D9C8D4BE9FE461E100E705CCA98<span style="width: 0; margin: 0 -0.6ex 0 -1px;"> </span>54436A1283210CCEFBB6B16CB9A86B009488922A8F302A27487<br>which is equivalent to this address:<br>166ev9JXn2rFqiPSQAwM7qJYpNL1JrNf3h<br><br>If we add the two private keys (like the person requesting the address would), we get:<br>CA65722CD418ED28EC369E36CFE3B7F3CC1CD035BFBF6469CE759FCA30AD6D54<br>which maps to the same public key as the sum of the public keys, and thus - to the same address.<br><br>Since this is a model that requires basically no trust from any party, I've decided to create this "Vanity Pool" to enable people to easily outsource their vanity address creation, as well as enable people wanting to earn some Bitcoins to use their machines for something different from traditional mining.<br><br>The main problem currently, is that there is no software to support mining for such split addresses, and combining them offline. If someone wants to commit to creating such a software, it would be great!<br><br>For the time being, the website is up for testing only on testnet. From that I can see there are still some bugs in the system, but it should work as expected.<br><br>Any comments, suggestions?<br><br>EDIT 1:<br>I've created a simple split vanity miner software in Google Go (if you're wondering why I used this weird language - I've been developing Bitcoin-related apps in it for a year for my master thesis). The source code and a Mac executable is available here:<br><a class="ul" href="https://github.com/ThePiachu/Split-Vanity-Miner-Golang">https://github.com/ThePiachu/Split-Vanity-Miner-Golang</a><br>It is quite slow, checking a couple hundred addresses on my old Macbook Pro, but it can solve some reasonably short patterns. The software is streamlined for the vanity pool, you only need to change the given testnet Bitcoin address to yours and it will do most of the work. It fetches work only during the start, so keep that in mind if you want to run it for longer.<br><br>EDIT 2:<br>Main Net version is up.<br><br>EDIT 3:<br>If you want to mine at this pool, please use oclvanityminer created by samr7 (<a class="ul" href="https://bitcointalk.org/index.php?topic=25804">https://bitcointalk.org/index.php?topic=25804</a>).<br><br><del>Also, if you are interested, there is a new bounty for split-key vanity address management software:<br><a class="ul" href="https://bitcointalk.org/index.php?topic=117050.0">https://bitcointalk.org/index.php?topic=117050.0</a></del></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934146">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934199"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=51152" title="View the profile of Tittiez">Tittiez</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=51152" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 686<br>
+								Merit: 500<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_51152.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=51152"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=51152" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=51152;topic=84569;msg=934199;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934199#msg934199"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934199"><a href="https://bitcointalk.org/index.php?topic=84569.msg934199#msg934199">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 03:28:36 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns2" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934199;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934199#msg934199">#2</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 37px;">Great Idea!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934199">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934781"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=38164" title="View the profile of Tuxavant">Tuxavant</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 784<br>
+								Merit: 1010<br><br>
+								Bitcoin Mayor of Las Vegas<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=38164"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://bitcoinsinvegas.com/" title="Bitcoins In Vegas"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=38164;topic=84569;msg=934781;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934781#msg934781"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934781"><a href="https://bitcointalk.org/index.php?topic=84569.msg934781#msg934781">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 12:38:52 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns3" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934781;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934781#msg934781">#3</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 37px;">And a new Bitcoin Business model was born. Where do I invest?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934781">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig38164"><a rel="ugc" class="ul" href="http://www.facebook.com/julian.tosh">FB</a> | <a rel="ugc" class="ul" href="http://bitcoinsinvegas.com/">Bitcoins In Vegas</a> | <a rel="ugc" class="ul" href="http://blocktrain.me/">BlockTrain.me</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934795"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=934795;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934795#msg934795"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934795"><a href="https://bitcointalk.org/index.php?topic=84569.msg934795#msg934795">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 12:45:05 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns4" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934795;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934795#msg934795">#4</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934781#msg934781">Quote from: Tuxavant on June 01, 2012, 12:38:52 PM</a></div><div class="quote">And a new Bitcoin Business model was born. Where do I invest?<br></div>Donations are always welcome;):<br><br>1B98qJ1NT6BNdnGp1fgCshAvWP8i4grdy7</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934795">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934802"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=38164" title="View the profile of Tuxavant">Tuxavant</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 784<br>
+								Merit: 1010<br><br>
+								Bitcoin Mayor of Las Vegas<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=38164"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://bitcoinsinvegas.com/" title="Bitcoins In Vegas"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=38164;topic=84569;msg=934802;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934802#msg934802"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934802"><a href="https://bitcointalk.org/index.php?topic=84569.msg934802#msg934802">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 12:51:27 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns5" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934802;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934802#msg934802">#5</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">I mean INVEST... like if you've solved this problem, someone needs to be throwing money at you to buy hardware and further develop this proprietary software for a promise in sharing future profits. Maybe I'm wrong, but I see a big demand for this kind of service as Bitcoin awareness spreads.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934802">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig38164"><a rel="ugc" class="ul" href="http://www.facebook.com/julian.tosh">FB</a> | <a rel="ugc" class="ul" href="http://bitcoinsinvegas.com/">Bitcoins In Vegas</a> | <a rel="ugc" class="ul" href="http://blocktrain.me/">BlockTrain.me</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934830"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=934830;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934830#msg934830"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934830"><a href="https://bitcointalk.org/index.php?topic=84569.msg934830#msg934830">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:04:21 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns6" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934830;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934830#msg934830">#6</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">The pool is running on Google App Engine and my Bitcoind runs on Amazon EC2, so my hardware costs are non-existant. As for software, I probably can create some basic solutions easily enough with enough time and put up some bounties for more sophisticated ones.<br><br>I'm generally not that much of a business type, so trying to handle possible investments could only hamper this little project for now. What sort of model of investing did you have in mind?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934830">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934865"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=38164" title="View the profile of Tuxavant">Tuxavant</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 784<br>
+								Merit: 1010<br><br>
+								Bitcoin Mayor of Las Vegas<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=38164"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://bitcoinsinvegas.com/" title="Bitcoins In Vegas"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=38164;topic=84569;msg=934865;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934865#msg934865"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934865"><a href="https://bitcointalk.org/index.php?topic=84569.msg934865#msg934865">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:22:05 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns7" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934865;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934865#msg934865">#7</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">I dunno, I'm not much of a business person either. But I would imagine some type of stock issuance would be a start. But that would require some kind of incorporation and like you said, probably a huge hindrance to you at this point.<br><br>For now, I'm happy to send you some Bitcoins when I have some time to try out the service.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934865">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig38164"><a rel="ugc" class="ul" href="http://www.facebook.com/julian.tosh">FB</a> | <a rel="ugc" class="ul" href="http://bitcoinsinvegas.com/">Bitcoins In Vegas</a> | <a rel="ugc" class="ul" href="http://blocktrain.me/">BlockTrain.me</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934872"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=5776" title="View the profile of Meni Rosenfeld">Meni Rosenfeld</a></b>
+							<div class="smalltext">
+								Donator<br>
+								Legendary<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/donator.gif" alt="*" border="0"><br>
+<img style="padding-top:2px" src="./Vanity Pool - vanity address generator pool_files/expert.png" title="Bitcoin expert" alt="expert" class="badgeimg"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=5776" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 2058<br>
+								Merit: 1057<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_5776.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=5776"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcoil.co.il/" title="Bitcoil"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="mailto:bitcointalk@menirosenfeld.com"><img src="./Vanity Pool - vanity address generator pool_files/email_sm.gif" alt="Email" title="Email" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=5776" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=5776;topic=84569;msg=934872;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934872#msg934872"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934872"><a href="https://bitcointalk.org/index.php?topic=84569.msg934872#msg934872">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:25:18 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns8" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934872;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934872#msg934872">#8</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934802#msg934802">Quote from: Tuxavant on June 01, 2012, 12:51:27 PM</a></div><div class="quote">I mean INVEST... like if you've solved this problem, someone needs to be throwing money at you to buy hardware and further develop this proprietary software for a promise in sharing future profits. Maybe I'm wrong, but I see a big demand for this kind of service as Bitcoin awareness spreads.<br></div>Kudos to ThePiachu but it's not like he invented anything new. The theoretical basis for outsourcing vanity address generation has existed for a while and he just started a project to get the ball rolling. One way or another this will end up as a FLOSS platform so there's not much monetization potential.<br><br>Looking forward to the advent of compatible miners.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934872">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig5776">1EofoZNBhWQ3kxfKnvWkhtMns4AivZArhr&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=121314">Who am I?</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="http://bitcoin-otc.com/viewratingdetail.php?nick=MeniRosenfeld&amp;type=RECV&amp;sign=ANY">bitcoin-otc WoT</a><br><a rel="ugc" class="ul" href="https://bitcoil.co.il/">Bitcoil</a> - Exchange bitcoins for ILS (<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=5762">thread</a>)&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="http://www.bitcoin.org.il/">Israel Bitcoin community homepage</a> (<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=76747.0">thread</a>)<br><a rel="ugc" class="ul" href="https://bitcoil.co.il/pool_analysis.pdf">Analysis of Bitcoin Pooled Mining Reward Systems</a>&nbsp;(<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=32814.0">thread</a>, <a rel="ugc" class="ul" href="https://bitcoil.co.il/pool_summary.pdf">summary</a>)&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=65569">PureMining</a> - Infinite-term, deterministic mining bond</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934878"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=38164" title="View the profile of Tuxavant">Tuxavant</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 784<br>
+								Merit: 1010<br><br>
+								Bitcoin Mayor of Las Vegas<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=38164"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://bitcoinsinvegas.com/" title="Bitcoins In Vegas"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=38164" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=38164;topic=84569;msg=934878;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934878#msg934878"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934878"><a href="https://bitcointalk.org/index.php?topic=84569.msg934878#msg934878">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:28:31 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns9" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934878;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934878#msg934878">#9</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934872#msg934872">Quote from: Meni Rosenfeld on June 01, 2012, 01:25:18 PM</a></div><div class="quote">One way or another this will end up as a FLOSS platform so there's not much monetization potential.<br></div><br>There's more to it than software. The key to success for a business venture like this will be the backend hardware that allows for mass production and fulfilment.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934878">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig38164"><a rel="ugc" class="ul" href="http://www.facebook.com/julian.tosh">FB</a> | <a rel="ugc" class="ul" href="http://bitcoinsinvegas.com/">Bitcoins In Vegas</a> | <a rel="ugc" class="ul" href="http://blocktrain.me/">BlockTrain.me</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934882"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=5776" title="View the profile of Meni Rosenfeld">Meni Rosenfeld</a></b>
+							<div class="smalltext">
+								Donator<br>
+								Legendary<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/donator.gif" alt="*" border="0"><br>
+<img style="padding-top:2px" src="./Vanity Pool - vanity address generator pool_files/expert.png" title="Bitcoin expert" alt="expert" class="badgeimg"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=5776" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 2058<br>
+								Merit: 1057<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_5776.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=5776"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcoil.co.il/" title="Bitcoil"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="mailto:bitcointalk@menirosenfeld.com"><img src="./Vanity Pool - vanity address generator pool_files/email_sm.gif" alt="Email" title="Email" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=5776" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=5776;topic=84569;msg=934882;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934882#msg934882"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934882"><a href="https://bitcointalk.org/index.php?topic=84569.msg934882#msg934882">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:31:29 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns10" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934882;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934882#msg934882">#10</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934878#msg934878">Quote from: Tuxavant on June 01, 2012, 01:28:31 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934872#msg934872">Quote from: Meni Rosenfeld on June 01, 2012, 01:25:18 PM</a></div><div class="quote">One way or another this will end up as a FLOSS platform so there's not much monetization potential.<br></div>There's more to it than software. The key to success for a business venture like this will be the backend hardware that allows for mass production and fulfilment.<br></div>ThePiachu's point is to create a pool for other miners to participate in, not (or not only) to do the mining himself. Running a mining pool is distinct from running mining hardware, which itself is distinct from developing hardware.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934882">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig5776">1EofoZNBhWQ3kxfKnvWkhtMns4AivZArhr&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=121314">Who am I?</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="http://bitcoin-otc.com/viewratingdetail.php?nick=MeniRosenfeld&amp;type=RECV&amp;sign=ANY">bitcoin-otc WoT</a><br><a rel="ugc" class="ul" href="https://bitcoil.co.il/">Bitcoil</a> - Exchange bitcoins for ILS (<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=5762">thread</a>)&nbsp;&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="http://www.bitcoin.org.il/">Israel Bitcoin community homepage</a> (<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=76747.0">thread</a>)<br><a rel="ugc" class="ul" href="https://bitcoil.co.il/pool_analysis.pdf">Analysis of Bitcoin Pooled Mining Reward Systems</a>&nbsp;(<a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=32814.0">thread</a>, <a rel="ugc" class="ul" href="https://bitcoil.co.il/pool_summary.pdf">summary</a>)&nbsp; |&nbsp;&nbsp; <a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=65569">PureMining</a> - Infinite-term, deterministic mining bond</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934892"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=43745" title="View the profile of rjk">rjk</a></b>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=43745" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 250<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_43745.png" alt="" class="avatar" border="0"></div><br>
+								1ngldh<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=43745"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=43745" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=43745;topic=84569;msg=934892;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934892#msg934892"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934892"><a href="https://bitcointalk.org/index.php?topic=84569.msg934892#msg934892">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:38:25 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns11" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934892;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934892#msg934892">#11</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 39px;">This is cool, now all we need is oclvanitygen to support this so that we can use all the video cards that will soon be obsolete now that ASICs are coming along. <img src="./Vanity Pool - vanity address generator pool_files/grin.gif" alt="Grin" border="0"> <img src="./Vanity Pool - vanity address generator pool_files/grin.gif" alt="Grin" border="0"></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934892">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig43745"><a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=64450.0">Mining Rig Extraordinaire - the Trenton BPX6806 18-slot PCIe backplane [PICS]</a> Dead project is dead, all hail the coming of the mighty ASIC!</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934909"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=934909;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934909#msg934909"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934909"><a href="https://bitcointalk.org/index.php?topic=84569.msg934909#msg934909">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 01:50:47 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns12" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934909;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934909#msg934909">#12</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934892#msg934892">Quote from: rjk on June 01, 2012, 01:38:25 PM</a></div><div class="quote">This is cool, now all we need is oclvanitygen to support this so that we can use all the video cards that will soon be obsolete now that ASICs are coming along. <img src="./Vanity Pool - vanity address generator pool_files/grin.gif" alt="Grin" border="0"> <img src="./Vanity Pool - vanity address generator pool_files/grin.gif" alt="Grin" border="0"><br></div><br>Well, this might be viable if suddenly a lot of people would want really fancy addresses and they were willing to pay up for them. It probably won't happen, but it might encourage a few people to go for a vanity address that normally wouldn't.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934909">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934945"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=24589" title="View the profile of Garr255">Garr255</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/legendary.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=24589" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 938<br>
+								Merit: 1000<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_24589.png" alt="" class="avatar" border="0"></div><br>
+								What's a GPU?<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=24589"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=24589" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=24589;topic=84569;msg=934945;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934945#msg934945"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934945"><a href="https://bitcointalk.org/index.php?topic=84569.msg934945#msg934945">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 02:15:20 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns13" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934945;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934945#msg934945">#13</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 37px;">Cool! I added a link to this in the OP of my thread.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934945">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig24589">“First they ignore you, then they laugh at you, then they fight you, then you win.”&nbsp; -- Mahatma Gandhi<br><br>Average time between signing on to bitcointalk: Two weeks. Please don't expect responses any faster than that!</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg934996"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=51152" title="View the profile of Tittiez">Tittiez</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=51152" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 686<br>
+								Merit: 500<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_51152.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=51152"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=51152" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=51152;topic=84569;msg=934996;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg934996#msg934996"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_934996"><a href="https://bitcointalk.org/index.php?topic=84569.msg934996#msg934996">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 02:53:59 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns14" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=934996;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg934996#msg934996">#14</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934146#msg934146">Quote from: ThePiachu on June 01, 2012, 02:53:57 AM</a></div><div class="quote">and say we want to find a pattern "166". One of the solutions takes a form of a private key<br>B18427B169E86DE681A1A62588E1D02AE4A7E83C1B413849989A76282A7B562F<br>mapping to public key:<br>049C95E0949E397FACCECF0FE8EAD247E6FD082717E4A4A876049FB34A9ADED110DFEA2EF691CC4<span style="width: 0; margin: 0 -0.6ex 0 -1px;"> </span>A1410498F4C312F3A94318CD5B6F0E8E92051064876751C8404<br></div><br>Sorry for my terrible math, but how is that private key a solution to the pattern "166"? That private key makes the address 12gFLYWpfnDTQ3JB5w5VDPpF5JQZnA1g1c it doesn't have 166 in it. The math doesn't lie and if you add the two private keys together you do get an address with "166" in it, but where did this one come from? How would one do this with vanitygen?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_934996">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935020"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=935020;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935020#msg935020"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935020"><a href="https://bitcointalk.org/index.php?topic=84569.msg935020#msg935020">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 03:01:36 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns15" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935020;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935020#msg935020">#15</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934996#msg934996">Quote from: Tittiez on June 01, 2012, 02:53:59 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg934146#msg934146">Quote from: ThePiachu on June 01, 2012, 02:53:57 AM</a></div><div class="quote">and say we want to find a pattern "166". One of the solutions takes a form of a private key<br>B18427B169E86DE681A1A62588E1D02AE4A7E83C1B413849989A76282A7B562F<br>mapping to public key:<br>049C95E0949E397FACCECF0FE8EAD247E6FD082717E4A4A876049FB34A9ADED110DFEA2EF691CC4<span style="width: 0; margin: 0 -0.6ex 0 -1px;"> </span>A1410498F4C312F3A94318CD5B6F0E8E92051064876751C8404<br></div><br>Sorry for my terrible math, but how is that private key a solution to the pattern "166"? That private key makes the address 12gFLYWpfnDTQ3JB5w5VDPpF5JQZnA1g1c it doesn't have 166 in it. The math doesn't lie and if you add the two private keys together you do get an address with "166" in it, but where did this one come from? How would one do this with vanitygen?<br></div><br>Check out this page:<br><a class="ul" href="http://gobittest.appspot.com/Vanity">http://gobittest.appspot.com/Vanity</a><br><br>When you add<br>18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725<br>and <br>B18427B169E86DE681A1A62588E1D02AE4A7E83C1B413849989A76282A7B562F<br>their sum becomes<br>CA65722CD418ED28EC369E36CFE3B7F3CC1CD035BFBF6469CE759FCA30AD6D54<br>which maps to 166ev9JXn2rFqiPSQAwM7qJYpNL1JrNf3h<br><br>Currently you can't do these operations with vanitygen, but I'll look into making a tool for the generation soon.<br><br>Basically, one would need to make a modified vanitygen that would add a predefined public key to a generated keypair before proceeding with calculating the Bitcoin address. It's a fairly simple modification, but I'm not fluent enough in vanitygen's source code to make it.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935020">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935103"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=14808" title="View the profile of BurtW">BurtW</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/legendary.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=14808" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 2646<br>
+								Merit: 1145<br><br>
+								All paid signature campaigns should be banned.<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=14808"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://www.burtw.com/" title="BurtW&#39;s Legal Defense Fund"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=14808" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=14808;topic=84569;msg=935103;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935103#msg935103"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935103"><a href="https://bitcointalk.org/index.php?topic=84569.msg935103#msg935103">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 03:43:37 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns16" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935103;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935103#msg935103">#16</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 37px;">Something I have thought about doing for a long time.&nbsp; Subscribe.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935103">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig14808">Our family was terrorized by Homeland Security.&nbsp; Read all about it here:&nbsp; <a rel="ugc" class="ul" href="http://www.jmwagner.com/">http://www.jmwagner.com/</a> and <a rel="ugc" class="ul" href="http://www.burtw.com/">http://www.burtw.com/</a>&nbsp; Any donations to help us recover from the $300,000 in legal fees and forced donations to the Federal Asset Forfeiture slush fund are greatly appreciated!</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935390"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=39000" title="View the profile of Red Emerald">Red Emerald</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=39000" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 742<br>
+								Merit: 500<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_39000.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=39000"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://deepred-emerald.tumblr.com/" title="My Bitcoin-related Tumblr"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=39000" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=39000;topic=84569;msg=935390;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935390#msg935390"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935390"><a href="https://bitcointalk.org/index.php?topic=84569.msg935390#msg935390">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 06:11:29 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns17" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935390;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935390#msg935390">#17</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg935103#msg935103">Quote from: BurtW on June 01, 2012, 03:43:37 PM</a></div><div class="quote">Something I have thought about doing for a long time.&nbsp; Subscribe.<br></div><img class="userimg " src="./Vanity Pool - vanity address generator pool_files/saved_resource" alt="" border="0"><br><br>I still think an address namespace in namecoin (or something similar) is a better long term solution than vanity addresses, but they are fun for now.<br><br>Is there some way to charge based on how long the key took to find?&nbsp; Like what if you set the price equal to whatever you would made mining BTC?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935390">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig39000"><a rel="ugc" class="ul" href="http://j.mp/HUyAAk">Firstbits 11235813</a> | <a rel="ugc" class="ul" href="http://j.mp/1j9xBDA">Bitcoin Homebrew Tap</a> | <a rel="ugc" class="ul" href="http://j.mp/wkdUcn">P2Pool</a> | <a rel="ugc" class="ul" href="http://j.mp/xMBGH2">OTC</a> | <a rel="ugc" class="ul" href="http://j.mp/zz94fm">Tumblr</a> | <a rel="ugc" class="ul" href="http://j.mp/OShWC">STV</a> | <a rel="ugc" class="ul" href="http://j.mp/ID3AWS">Bitcoin PR</a> | <a rel="ugc" class="ul" href="http://j.mp/TlhS1u">VanityPool</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935770"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=935770;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935770#msg935770"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935770"><a href="https://bitcointalk.org/index.php?topic=84569.msg935770#msg935770">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 10:03:08 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns18" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935770;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935770#msg935770">#18</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg935390#msg935390">Quote from: Red Emerald on June 01, 2012, 06:11:29 PM</a></div><div class="quote">Is there some way to charge based on how long the key took to find?&nbsp; Like what if you set the price equal to whatever you would made mining BTC?<br></div><br>For now the service doesn't charge based on key length. It can be implemented if there is a need for it. I'd have to benchmark some split-vanity-mining software on some various hardware first in order to determine how much should one be charging. I've done it for normal vanity mining (details will be available in my master thesis that I'll probably post on the forum eventually).<br><br>Personally, I'd have to first check whether looking for multiple keys at the same time will slow the process down considerably, or will it not be too noticeable.<br>Generally I'd like to leave a lot of freedom to the miners to discriminate themselves which tasks pay enough for them to undertake them (this is why the bounty is listed along with the task).</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935770">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935827"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=9477" title="View the profile of Raoul Duke">Raoul Duke</a></b>
+							<div class="smalltext">
+								aka psy<br>
+								Legendary<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/legendary.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=9477" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 1386<br>
+								Merit: 1002<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_9477.jpg" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=9477"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=9477" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=9477;topic=84569;msg=935827;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935827#msg935827"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935827"><a href="https://bitcointalk.org/index.php?topic=84569.msg935827#msg935827">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 10:41:24 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns19" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935827;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935827#msg935827">#19</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="codeheader">Code:</div><div class="code">Work accepted!<br><br>Your work has been prepared!<br><br>Please send a reward you want to pay for it to this address: mh4ymyUejEA7VNuA9VKEqw3wsVquoN7BPx</div><br>Is that address correct? Starting by m?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935827">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg935833"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=34743" title="View the profile of ThePiachu">ThePiachu</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><img src="./Vanity Pool - vanity address generator pool_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 444<br>
+								Merit: 313<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Vanity Pool - vanity address generator pool_files/avatar_34743.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=34743"><img src="./Vanity Pool - vanity address generator pool_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="http://tpbitcalc.appspot.com/" title="TP&#39;s Bitcoin Calculator"><img src="./Vanity Pool - vanity address generator pool_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=34743" title="Personal Message (Offline)"><img src="./Vanity Pool - vanity address generator pool_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=34743;topic=84569;msg=935833;sesc=30ca2e3458194eafda3861e6f3460daf">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=84569.msg935833#msg935833"><img src="./Vanity Pool - vanity address generator pool_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_935833"><a href="https://bitcointalk.org/index.php?topic=84569.msg935833#msg935833">Re: Vanity Pool - vanity address generator pool</a></div>
+												<div class="smalltext">June 01, 2012, 10:44:40 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns20" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=935833;topic=84569.0;num_replies=711;sesc=30ca2e3458194eafda3861e6f3460daf"><img src="./Vanity Pool - vanity address generator pool_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=84569.msg935833#msg935833">#20</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=84569.msg935827#msg935827">Quote from: psy on June 01, 2012, 10:41:24 PM</a></div><div class="quote"><div class="codeheader">Code:</div><div class="code">Work accepted!<br><br>Your work has been prepared!<br><br>Please send a reward you want to pay for it to this address: mh4ymyUejEA7VNuA9VKEqw3wsVquoN7BPx</div><br>Is that address correct? Starting by m?<br></div><br>It's a testnet address:<br><a class="ul" href="https://en.bitcoin.it/wiki/Testnet">https://en.bitcoin.it/wiki/Testnet</a><br><br>Means you can play with fake-Bitcoins, just in case something goes wrong with the system.<br><br>You can get some testnet bitcoins here:<br><a class="ul" href="http://testnet.freebitcoins.appspot.com/">http://testnet.freebitcoins.appspot.com/</a><br>They are free.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_935833">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Vanity Pool - vanity address generator pool_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig34743">1HWbVLhxj7bhewhyapMZpyhqWAeAhJd51E<br>My Bitcoin Calculator:<br><a rel="ugc" class="ul" href="http://tpbitcalc.appspot.com/">http://tpbitcalc.appspot.com/</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</tbody></table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext">Pages:  [<b>1</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.40">3</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.60">4</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.80">5</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.100">6</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.120">7</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.140">8</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.160">9</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.180">10</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.200">11</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.220">12</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.240">13</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.260">14</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.280">15</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.300">16</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.320">17</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.340">18</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.360">19</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.380">20</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.400">21</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.420">22</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.440">23</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.460">24</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.480">25</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.500">26</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.520">27</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.540">28</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.560">29</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.580">30</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.600">31</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.620">32</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.640">33</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.660">34</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.680">35</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.700">36</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=84569.20">»</a> </span></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="maintab_first">&nbsp;</td>
+		<td class="maintab_back"><a href="https://bitcointalk.org/index.php?action=post;topic=84569.0;num_replies=711">Reply</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?topic=84569.0;do=watch;sesc=30ca2e3458194eafda3861e6f3460daf" onclick="return confirm(&#39;Watch or unwatch this topic?&#39;);">Watch</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=notify;sa=on;topic=84569.0;sesc=30ca2e3458194eafda3861e6f3460daf" onclick="return confirm(&#39;Are you sure you wish to enable notification of new replies for this topic?&#39;);">Notify</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=markasread;sa=topic;t=0;topic=84569.0;sesc=30ca2e3458194eafda3861e6f3460daf">Mark unread</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=printpage;topic=84569.0" target="_blank">Print</a></td>
+		<td class="maintab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<script language="JavaScript" type="text/javascript" src="./Vanity Pool - vanity address generator pool_files/xml_topic.js.download"></script>
+<script language="JavaScript" type="text/javascript">//<!--
+	quickReplyCollapsed = true;
+
+	smf_topic = 84569;
+	smf_start = 0;
+	smf_show_modify = 0;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="30ca2e3458194eafda3861e6f3460daf" /><input type="hidden" name="topic" value="84569" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Save" onclick="return modify_save(\'30ca2e3458194eafda3861e6f3460daf\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Cancel" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="https://bitcointalk.org/index.php?topic=84569.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Topic: %subject% &nbsp;(Read 148640 times)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// --></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tbody><tr>
+				<td valign="top"><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b> (Moderators: <a href="https://bitcointalk.org/index.php?action=profile;u=11425" title="Board Moderator">gmaxwell</a>, <a href="https://bitcointalk.org/index.php?action=profile;u=290195" title="Board Moderator">achow101</a>)&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=84569.0" class="nav">Vanity Pool - vanity address generator pool</a></b></div></td> 
+				<td valign="top" align="right" class="nav"> <a href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=84569.0;prev_next=next#new">next topic »</a></td>
+		</tr>
+</tbody></table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tbody><tr>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody></table>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="https://bitcointalk.org/index.php" method="get" accept-charset="ISO-8859-1" style="padding:0; margin: 0;">
+		<span class="smalltext">Jump to:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex &gt; 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf(&#39;?&#39;) == -1 || this.options[this.selectedIndex].value.substr(0, 1) != &#39;?&#39; ? 0 : 1);">
+			<option value="">Please select a destination:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#1">Bitcoin</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=1.0"> =&gt; Bitcoin Discussion</option>
+			<option value="?board=74.0"> ===&gt; Legal</option>
+			<option value="?board=77.0"> ===&gt; Press</option>
+			<option value="?board=86.0"> ===&gt; Meetups</option>
+			<option value="?board=87.0"> ===&gt; Important Announcements</option>
+			<option value="?board=6.0" selected="selected"> =&gt; Development &amp; Technical Discussion</option>
+			<option value="?board=37.0"> ===&gt; Wallet software</option>
+			<option value="?board=98.0"> =====&gt; Electrum</option>
+			<option value="?board=100.0"> =====&gt; Bitcoin Wallet for Android</option>
+			<option value="?board=138.0"> =====&gt; BitcoinJ</option>
+			<option value="?board=97.0"> =====&gt; Armory</option>
+			<option value="?board=231.0"> =====&gt; Mycelium</option>
+			<option value="?board=261.0"> =====&gt; Hardware wallets</option>
+			<option value="?board=14.0"> =&gt; Mining</option>
+			<option value="?board=40.0"> ===&gt; Mining support</option>
+			<option value="?board=41.0"> ===&gt; Pools</option>
+			<option value="?board=42.0"> ===&gt; Mining software (miners)</option>
+			<option value="?board=76.0"> ===&gt; Hardware</option>
+			<option value="?board=137.0"> =====&gt; Group buys</option>
+			<option value="?board=81.0"> ===&gt; Mining speculation</option>
+			<option value="?board=4.0"> =&gt; Bitcoin Technical Support</option>
+			<option value="?board=12.0"> =&gt; Project Development</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#3">Economy</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=7.0"> =&gt; Economics</option>
+			<option value="?board=57.0"> ===&gt; Speculation</option>
+			<option value="?board=5.0"> =&gt; Marketplace</option>
+			<option value="?board=51.0"> ===&gt; Goods</option>
+			<option value="?board=75.0"> =====&gt; Computer hardware</option>
+			<option value="?board=93.0"> =====&gt; Digital goods</option>
+			<option value="?board=234.0"> =======&gt; Invites &amp; Accounts</option>
+			<option value="?board=217.0"> =====&gt; Collectibles</option>
+			<option value="?board=52.0"> ===&gt; Services</option>
+			<option value="?board=53.0"> ===&gt; Currency exchange</option>
+			<option value="?board=56.0"> ===&gt; Gambling</option>
+			<option value="?board=71.0"> =====&gt; Games and rounds</option>
+			<option value="?board=207.0"> =====&gt; Investor-based games</option>
+			<option value="?board=228.0"> =====&gt; Gambling discussion</option>
+			<option value="?board=65.0"> ===&gt; Lending</option>
+			<option value="?board=88.0"> =====&gt; Long-term offers</option>
+			<option value="?board=78.0"> ===&gt; Securities</option>
+			<option value="?board=73.0"> ===&gt; Auctions</option>
+			<option value="?board=84.0"> ===&gt; Service Announcements</option>
+			<option value="?board=212.0"> =====&gt; Micro Earnings</option>
+			<option value="?board=85.0"> ===&gt; Service Discussion</option>
+			<option value="?board=222.0"> =====&gt; Web Wallets</option>
+			<option value="?board=223.0"> =====&gt; Exchanges</option>
+			<option value="?board=8.0"> =&gt; Trading Discussion</option>
+			<option value="?board=83.0"> ===&gt; Scam Accusations</option>
+			<option value="?board=129.0"> ===&gt; Reputation</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Other</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> =&gt; Meta</option>
+			<option value="?board=168.0"> ===&gt; Bitcoin Wiki</option>
+			<option value="?board=34.0"> =&gt; Politics &amp; Society</option>
+			<option value="?board=39.0"> =&gt; Beginners &amp; Help</option>
+			<option value="?board=9.0"> =&gt; Off-topic</option>
+			<option value="?board=250.0"> =&gt; Serious discussion</option>
+			<option value="?board=251.0"> ===&gt; Ivory Tower</option>
+			<option value="?board=59.0"> =&gt; Archival</option>
+			<option value="?board=167.0"> ===&gt; New forum software</option>
+			<option value="?board=92.0"> ===&gt; &#1050;&#1086;&#1088;&#1079;&#1080;&#1085;&#1072;</option>
+			<option value="?board=44.0"> ===&gt; CPU/GPU Bitcoin mining hardware</option>
+			<option value="?board=17.0"> ===&gt; Chinese students</option>
+			<option value="?board=25.0"> ===&gt; Obsolete (buying)</option>
+			<option value="?board=26.0"> ===&gt; Obsolete (selling)</option>
+			<option value="?board=99.0"> ===&gt; MultiBit</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Alternate cryptocurrencies</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=67.0"> =&gt; Altcoin Discussion</option>
+			<option value="?board=159.0"> =&gt; Announcements (Altcoins)</option>
+			<option value="?board=240.0"> ===&gt; Tokens (Altcoins)</option>
+			<option value="?board=160.0"> =&gt; Mining (Altcoins)</option>
+			<option value="?board=199.0"> ===&gt; Pools (Altcoins)</option>
+			<option value="?board=161.0"> =&gt; Marketplace (Altcoins)</option>
+			<option value="?board=197.0"> ===&gt; Service Announcements (Altcoins)</option>
+			<option value="?board=198.0"> ===&gt; Service Discussion (Altcoins)</option>
+			<option value="?board=238.0"> ===&gt; Bounties (Altcoins)</option>
+			<option value="?board=224.0"> =&gt; Speculation (Altcoins)</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Local</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=241.0"> =&gt; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; (Arabic)</option>
+			<option value="?board=242.0"> ===&gt; &#1575;&#1604;&#1593;&#1605;&#1604;&#1575;&#1578; &#1575;&#1604;&#1576;&#1583;&#1610;&#1604;&#1577; (Altcoins)</option>
+			<option value="?board=265.0"> =====&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578;</option>
+			<option value="?board=253.0"> ===&gt; &#1573;&#1587;&#1578;&#1601;&#1587;&#1575;&#1585;&#1575;&#1578; &#1608; &#1571;&#1587;&#1574;&#1604;&#1577; &#1575;&#1604;&#1605;&#1576;&#1578;&#1583;&#1574;&#1610;&#1606;</option>
+			<option value="?board=266.0"> ===&gt; &#1575;&#1604;&#1578;&#1593;&#1583;&#1610;&#1606;</option>
+			<option value="?board=267.0"> ===&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578; &#1575;&#1604;&#1571;&#1582;&#1585;&#1609;</option>
+			<option value="?board=271.0"> ===&gt; &#1605;&#1606;&#1589;&#1575;&#1578; &#1575;&#1604;&#1578;&#1576;&#1575;&#1583;&#1604;</option>
+			<option value="?board=191.0"> =&gt; Bahasa Indonesia (Indonesian)</option>
+			<option value="?board=193.0"> ===&gt; Marketplace (Bahasa Indonesia)</option>
+			<option value="?board=194.0"> ===&gt; Mining (Bahasa Indonesia)</option>
+			<option value="?board=192.0"> ===&gt; Altcoins (Bahasa Indonesia)</option>
+			<option value="?board=276.0"> ===&gt; Trading dan Spekulasi</option>
+			<option value="?board=277.0"> ===&gt; Ekonomi, Politik, dan Budaya</option>
+			<option value="?board=278.0"> ===&gt; Topik Lainnya</option>
+			<option value="?board=27.0"> =&gt; Español (Spanish)</option>
+			<option value="?board=31.0"> ===&gt; Mercado y Economía</option>
+			<option value="?board=202.0"> =====&gt; Servicios</option>
+			<option value="?board=203.0"> =====&gt; Trading y especulación</option>
+			<option value="?board=32.0"> ===&gt; Hardware y Minería</option>
+			<option value="?board=33.0"> ===&gt; Esquina Libre</option>
+			<option value="?board=101.0"> ===&gt; Mercadillo</option>
+			<option value="?board=102.0"> =====&gt; Mexico</option>
+			<option value="?board=103.0"> =====&gt; Argentina</option>
+			<option value="?board=104.0"> =====&gt; España</option>
+			<option value="?board=105.0"> =====&gt; Centroamerica y Caribe</option>
+			<option value="?board=130.0"> ===&gt; Primeros pasos y ayuda</option>
+			<option value="?board=151.0"> ===&gt; Altcoins (criptomonedas alternativas)</option>
+			<option value="?board=177.0"> =====&gt; Minería de altcoins</option>
+			<option value="?board=204.0"> =====&gt; Servicios</option>
+			<option value="?board=254.0"> =====&gt; Tokens (Español)</option>
+			<option value="?board=30.0"> =&gt; &#20013;&#25991; (Chinese)</option>
+			<option value="?board=117.0"> ===&gt; &#36339;&#34468;&#24066;&#22330;</option>
+			<option value="?board=118.0"> ===&gt; &#23665;&#23528;&#24065;</option>
+			<option value="?board=119.0"> ===&gt; &#23186;&#20307;</option>
+			<option value="?board=146.0"> ===&gt; &#25366;&#30719;</option>
+			<option value="?board=196.0"> ===&gt; &#31163;&#39064;&#19975;&#37324;</option>
+			<option value="?board=201.0"> =&gt; Hrvatski (Croatian)</option>
+			<option value="?board=220.0"> ===&gt; Trgovina</option>
+			<option value="?board=221.0"> ===&gt; Altcoins (Hrvatski)</option>
+			<option value="?board=273.0"> =====&gt; Announcements (Hrvatski)</option>
+			<option value="?board=272.0"> ===&gt; Off-topic (Hrvatski)</option>
+			<option value="?board=16.0"> =&gt; Deutsch (German)</option>
+			<option value="?board=62.0"> ===&gt; Anfänger und Hilfe</option>
+			<option value="?board=60.0"> ===&gt; Mining (Deutsch)</option>
+			<option value="?board=61.0"> ===&gt; Trading und Spekulation</option>
+			<option value="?board=63.0"> ===&gt; Projektentwicklung</option>
+			<option value="?board=64.0"> ===&gt; Off-Topic (Deutsch)</option>
+			<option value="?board=139.0"> ===&gt; Treffen</option>
+			<option value="?board=140.0"> ===&gt; Presse </option>
+			<option value="?board=152.0"> ===&gt; Altcoins (Deutsch)</option>
+			<option value="?board=270.0"> =====&gt; Announcements (Deutsch)</option>
+			<option value="?board=269.0"> ===&gt; Marktplatz</option>
+			<option value="?board=141.0"> =====&gt; Auktionen</option>
+			<option value="?board=36.0"> =====&gt; Suche</option>
+			<option value="?board=35.0"> =====&gt; Biete</option>
+			<option value="?board=120.0"> =&gt; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940; (Greek)</option>
+			<option value="?board=136.0"> ===&gt; &#913;&#947;&#959;&#961;&#940;</option>
+			<option value="?board=195.0"> ===&gt; Mining Discussion (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=179.0"> ===&gt; Altcoins (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=246.0"> =====&gt; Altcoin Announcements (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=247.0"> =====&gt; Altcoin Mining (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=95.0"> =&gt; &#1506;&#1489;&#1512;&#1497;&#1514; (Hebrew)</option>
+			<option value="?board=13.0"> =&gt; Français</option>
+			<option value="?board=183.0"> ===&gt; Actualité et News</option>
+			<option value="?board=208.0"> ===&gt; Débutants</option>
+			<option value="?board=47.0"> ===&gt; Discussions générales et utilisation du Bitcoin</option>
+			<option value="?board=48.0"> ===&gt; Mining et Hardware</option>
+			<option value="?board=187.0"> ===&gt; Économie et spéculation</option>
+			<option value="?board=49.0"> ===&gt; Place de marché</option>
+			<option value="?board=209.0"> =====&gt; Échanges</option>
+			<option value="?board=210.0"> =====&gt; Produits et services</option>
+			<option value="?board=211.0"> =====&gt; Petites annonces</option>
+			<option value="?board=188.0"> ===&gt; Le Bitcoin et la loi</option>
+			<option value="?board=54.0"> ===&gt; Wiki, documentation et traduction</option>
+			<option value="?board=186.0"> ===&gt; Développement et technique</option>
+			<option value="?board=184.0"> ===&gt; Vos sites et projets</option>
+			<option value="?board=50.0"> ===&gt; Hors-sujet</option>
+			<option value="?board=149.0"> ===&gt; Altcoins (Français)</option>
+			<option value="?board=258.0"> =====&gt; Annonces</option>
+			<option value="?board=89.0"> =&gt; India</option>
+			<option value="?board=121.0"> ===&gt; Mining (India)</option>
+			<option value="?board=122.0"> ===&gt; Marketplace (India)</option>
+			<option value="?board=123.0"> ===&gt; Regional Languages (India)</option>
+			<option value="?board=124.0"> ===&gt; Press &amp; News from India</option>
+			<option value="?board=125.0"> ===&gt; Alt Coins (India)</option>
+			<option value="?board=126.0"> ===&gt; Buyer/ Seller Reputations (India)</option>
+			<option value="?board=127.0"> ===&gt; Off-Topic (India)</option>
+			<option value="?board=28.0"> =&gt; Italiano (Italian)</option>
+			<option value="?board=153.0"> ===&gt; Guide (Italiano)</option>
+			<option value="?board=169.0"> ===&gt; Progetti</option>
+			<option value="?board=205.0"> ===&gt; Discussioni avanzate e sviluppo</option>
+			<option value="?board=175.0"> ===&gt; Trading, analisi e speculazione</option>
+			<option value="?board=170.0"> ===&gt; Mercato</option>
+			<option value="?board=46.0"> =====&gt; Mercato valute</option>
+			<option value="?board=107.0"> =====&gt; Beni</option>
+			<option value="?board=171.0"> =====&gt; Servizi</option>
+			<option value="?board=172.0"> =====&gt; Esercizi commerciali</option>
+			<option value="?board=173.0"> =====&gt; Hardware/Mining (Italiano)</option>
+			<option value="?board=200.0"> =====&gt; Gambling (Italiano)</option>
+			<option value="?board=162.0"> ===&gt; Accuse scam/truffe</option>
+			<option value="?board=115.0"> ===&gt; Mining (Italiano)</option>
+			<option value="?board=132.0"> ===&gt; Alt-Currencies (Italiano)</option>
+			<option value="?board=176.0"> =====&gt; Annunci</option>
+			<option value="?board=144.0"> ===&gt; Raduni/Meeting (Italiano)</option>
+			<option value="?board=165.0"> ===&gt; Crittografia e decentralizzazione</option>
+			<option value="?board=145.0"> ===&gt; Off-Topic (Italiano)</option>
+			<option value="?board=252.0"> =&gt; &#26085;&#26412;&#35486; (Japanese)</option>
+			<option value="?board=255.0"> ===&gt; &#12450;&#12523;&#12488;&#12467;&#12452;&#12531;</option>
+			<option value="?board=79.0"> =&gt; Nederlands (Dutch)</option>
+			<option value="?board=80.0"> ===&gt; Markt</option>
+			<option value="?board=94.0"> ===&gt; Gokken/lotterijen</option>
+			<option value="?board=116.0"> ===&gt; Mining (Nederlands)</option>
+			<option value="?board=143.0"> ===&gt; Beurzen</option>
+			<option value="?board=147.0"> ===&gt; Alt Coins (Nederlands)</option>
+			<option value="?board=148.0"> ===&gt; Off-topic (Nederlands)</option>
+			<option value="?board=150.0"> ===&gt; Meetings (Nederlands)</option>
+			<option value="?board=275.0"> =&gt; Nigeria (Naija)</option>
+			<option value="?board=279.0"> ===&gt; Politics and society (Naija)</option>
+			<option value="?board=280.0"> ===&gt; Off-topic (Naija)</option>
+			<option value="?board=82.0"> =&gt; &#54620;&#44397;&#50612; (Korean)</option>
+			<option value="?board=182.0"> ===&gt; &#45824;&#52404;&#53076;&#51064; Alt Coins (&#54620;&#44397;&#50612;)</option>
+			<option value="?board=219.0"> =&gt; Pilipinas</option>
+			<option value="?board=243.0"> ===&gt; Altcoins (Pilipinas)</option>
+			<option value="?board=260.0"> =====&gt; Altcoin Announcements (Pilipinas)</option>
+			<option value="?board=268.0"> ===&gt; Pamilihan</option>
+			<option value="?board=274.0"> ===&gt; Others (Pilipinas)</option>
+			<option value="?board=142.0"> =&gt; Polski</option>
+			<option value="?board=163.0"> ===&gt; Tablica og&#322;osze&#324;</option>
+			<option value="?board=164.0"> ===&gt; Alternatywne kryptowaluty</option>
+			<option value="?board=263.0"> =====&gt; Nowe kryptowaluty i tokeny</option>
+			<option value="?board=264.0"> =====&gt; Tablica og&#322;osze&#324; (altcoiny)</option>
+			<option value="?board=29.0"> =&gt; Português (Portuguese)</option>
+			<option value="?board=131.0"> ===&gt; Primeiros Passos (Iniciantes)</option>
+			<option value="?board=69.0"> ===&gt; Economia &amp; Mercado</option>
+			<option value="?board=70.0"> ===&gt; Mineração em Geral</option>
+			<option value="?board=206.0"> ===&gt; Desenvolvimento &amp; Discussões Técnicas</option>
+			<option value="?board=181.0"> ===&gt; Criptomoedas Alternativas</option>
+			<option value="?board=134.0"> ===&gt; Brasil</option>
+			<option value="?board=135.0"> ===&gt; Portugal</option>
+			<option value="?board=10.0"> =&gt; &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russian)</option>
+			<option value="?board=22.0"> ===&gt; &#1053;&#1086;&#1074;&#1080;&#1095;&#1082;&#1080;</option>
+			<option value="?board=23.0"> ===&gt; &#1041;&#1080;&#1079;&#1085;&#1077;&#1089;</option>
+			<option value="?board=236.0"> =====&gt; &#1041;&#1072;&#1088;&#1072;&#1093;&#1086;&#1083;&#1082;&#1072;</option>
+			<option value="?board=237.0"> =====&gt; &#1054;&#1073;&#1084;&#1077;&#1085;&#1085;&#1080;&#1082;&#1080;</option>
+			<option value="?board=90.0"> ===&gt; &#1048;&#1076;&#1077;&#1080;</option>
+			<option value="?board=66.0"> ===&gt; &#1050;&#1086;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=21.0"> ===&gt; &#1052;&#1072;&#1081;&#1085;&#1077;&#1088;&#1099;</option>
+			<option value="?board=91.0"> ===&gt; &#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;</option>
+			<option value="?board=20.0"> ===&gt; &#1058;&#1088;&#1077;&#1081;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=72.0"> ===&gt; &#1040;&#1083;&#1100;&#1090;&#1077;&#1088;&#1085;&#1072;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1074;&#1072;&#1083;&#1102;&#1090;&#1099;</option>
+			<option value="?board=248.0"> =====&gt; &#1058;&#1086;&#1082;&#1077;&#1085;&#1099;</option>
+			<option value="?board=256.0"> =====&gt; &#1041;ay&#1085;&#1090;&#1080; &#1080; a&#1080;p&#1076;po&#1087;&#1099;</option>
+			<option value="?board=55.0"> ===&gt; &#1061;&#1072;&#1081;&#1087;&#1099;</option>
+			<option value="?board=185.0"> ===&gt; &#1056;&#1072;&#1073;&#1086;&#1090;&#1072;</option>
+			<option value="?board=18.0"> ===&gt; &#1056;&#1072;&#1079;&#1085;&#1086;&#1077;</option>
+			<option value="?board=262.0"> ===&gt; O&#1073;cy&#1078;&#1076;e&#1085;&#1080;e Bitcoin</option>
+			<option value="?board=128.0"> =====&gt; &#1053;&#1086;&#1074;&#1086;&#1089;&#1090;&#1080;</option>
+			<option value="?board=19.0"> =====&gt; &#1070;&#1088;&#1080;&#1089;&#1090;&#1099;</option>
+			<option value="?board=108.0"> =&gt; Român&#259; (Romanian)</option>
+			<option value="?board=109.0"> ===&gt; Anunturi importante</option>
+			<option value="?board=110.0"> ===&gt; Offtopic</option>
+			<option value="?board=111.0"> ===&gt; Market</option>
+			<option value="?board=257.0"> =====&gt; Discutii Servicii</option>
+			<option value="?board=166.0"> ===&gt; Minerit</option>
+			<option value="?board=112.0"> ===&gt; Tutoriale</option>
+			<option value="?board=113.0"> ===&gt; Bine ai venit!</option>
+			<option value="?board=114.0"> ===&gt; Presa</option>
+			<option value="?board=259.0"> ===&gt; Altcoins (Monede Alternative)</option>
+			<option value="?board=178.0"> =====&gt; Anunturi Monede Alternative</option>
+			<option value="?board=45.0"> =&gt; Skandinavisk</option>
+			<option value="?board=133.0"> =&gt; Türkçe (Turkish)</option>
+			<option value="?board=180.0"> ===&gt; Bitcoin Haberleri</option>
+			<option value="?board=155.0"> ===&gt; Pazar Alan&#305;</option>
+			<option value="?board=156.0"> ===&gt; Madencilik</option>
+			<option value="?board=189.0"> ===&gt; Ekonomi</option>
+			<option value="?board=190.0"> ===&gt; Servisler</option>
+			<option value="?board=232.0"> =====&gt; Fonlar</option>
+			<option value="?board=229.0"> ===&gt; Proje Geli&#351;tirme</option>
+			<option value="?board=157.0"> ===&gt; Alternatif Kripto-Paralar</option>
+			<option value="?board=235.0"> =====&gt; Madencilik (Alternatif Kripto-Paralar)</option>
+			<option value="?board=239.0"> =====&gt; Duyurular (Alternatif Kripto-Paralar)</option>
+			<option value="?board=158.0"> ===&gt; Konu D&#305;&#351;&#305;</option>
+			<option value="?board=174.0"> ===&gt; Yeni Ba&#351;layanlar &amp; Yard&#305;m</option>
+			<option value="?board=230.0"> ===&gt; Bulu&#351;malar</option>
+			<option value="?board=11.0"> =&gt; Other languages/locations</option>
+		</select>&nbsp;
+		<input type="button" value="go" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = &#39;https://bitcointalk.org/index.php&#39; + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;">
+	</form>
+</div></div><br>
+	</div><script type="text/javascript">
+//<!--
+Array.prototype.forEach.call(document.getElementsByClassName("userimg"), checkImg);
+//-->
+</script>
+
+	<div id="footerarea" style="text-align: center; padding-bottom: 1ex;">
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			function smfFooterHighlight(element, value)
+			{
+				element.src = smf_images_url + "/" + (value ? "h_" : "") + element.id + ".gif";
+			}
+		// ]]></script>
+		<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+			<tbody><tr>
+				<td width="28%" valign="middle" align="right">
+					<a href="http://www.mysql.com/" target="_blank"><img id="powered-mysql" src="./Vanity Pool - vanity address generator pool_files/powered-mysql.gif" alt="Powered by MySQL" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://www.php.net/" target="_blank"><img id="powered-php" src="./Vanity Pool - vanity address generator pool_files/powered-php.gif" alt="Powered by PHP" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+				<td valign="middle" align="center" style="white-space: nowrap;">
+					
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.19</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF © 2006-2009, Simple Machines</a>
+		</span>
+				</td>
+				<td width="28%" valign="middle" align="left">
+					<a href="http://validator.w3.org/check/referer" target="_blank"><img id="valid-xhtml10" src="./Vanity Pool - vanity address generator pool_files/valid-xhtml10.gif" alt="Valid XHTML 1.0!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img id="valid-css" src="./Vanity Pool - vanity address generator pool_files/valid-css.gif" alt="Valid CSS!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+			</tr>
+		</tbody></table>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			window.addEventListener("load", smf_codeFix, false);
+
+			function smf_codeFix()
+			{
+				var codeFix = document.getElementsByTagName ? document.getElementsByTagName("div") : document.all.tags("div");
+
+				for (var i = 0; i < codeFix.length; i++)
+				{
+					if ((codeFix[i].className == "code" || codeFix[i].className == "post" || codeFix[i].className == "signature") && codeFix[i].offsetHeight < 20)
+						codeFix[i].style.height = (codeFix[i].offsetHeight + 20) + "px";
+				}
+			}
+		// ]]></script>
+	</div>
+	<div id="ajax_in_progress" style="display: none;">Loading...</div>
+</body></html>

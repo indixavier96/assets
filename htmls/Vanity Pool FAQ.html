@@ -1,0 +1,159 @@
+
+<!-- saved from url=(0034)https://vanitypool.appspot.com/faq -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vanity Pool</title>
+	<link rel="StyleSheet" type="text/css" href="./Vanity Pool FAQ_files/style.css" media="all">
+	<script type="text/javascript" async="" src="./Vanity Pool FAQ_files/ga.js.download"></script><script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-33778317-1']);
+		_gaq.push(['_trackPageview']);
+	
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body>
+<div class="All">
+	<div class="Header">
+		<h1>Vanity Pool</h1>
+	</div>
+	<div class="Menu">
+		<a href="https://vanitypool.appspot.com/">Main page</a><br>
+		<a href="https://vanitypool.appspot.com/newWork">Request a vanity address</a><br>
+		<a href="https://vanitypool.appspot.com/availableWork">Check available work</a><br>
+		<a href="https://vanitypool.appspot.com/solvedWork">Solved work</a><br>
+		<a href="https://vanitypool.appspot.com/faq">FAQ</a><br>
+	</div>
+	<div class="Body">
+		<h2>FAQ</h2>
+		<p><a href="https://cex.io/r/0/ThePiachu/0/" title="CEX.io - Bitcoin Commodity Exchange" target="_blank"><img src="./Vanity Pool FAQ_files/728x90.jpg" width="728" height="90" border="0" alt="CEX.io"></a></p>
+		
+		<h4>I encountered an error and can't submit my solution. What should I do?</h4>
+		<p>If you encounter an error that prevents you from submitting your work, please contact us with the appropriate solution and your reward address. 
+		We will check what is wrong and compensate the first person to report a problem with the appropriate private key solving a given work for the reward that
+		they could not claim (provided the work was not solved prior to the message being sent). Please make sure to include the solution, otherwise we won't be able
+		to compensate you for your work. Please also check that your solution is in proper format (see below).</p>
+		
+		<h4>I tried submitting a solution but it doesn't work, what's wrong?</h4>
+		<p>Please make sure you are not trying to submit a solution in the Wallet Import Format format (like 5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ).
+		The Pool only takes solutions in a form of hexadecimal private keys (like 0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE471BE89827E19D72AA1D). If you submit
+		your solutions in WIF, you are likely to receive an error message.</p>
+		
+		<h4>What is the status of this website?</h4>
+		<p>Currently we are in a beta period - the system should work just fine, but errors can occur. Please keep this in mind. Coin loss <b>can</b> occur, but it is not likely.</p>
+
+		<h4>What is this website?</h4>
+		<p>This website is an equivalent to a mining pool for creating Bitcoin vanity addresses.
+		It allows multiple people to try creating a safe vanity addresses, so as to make the process efficient.</p>
+		
+		<h4>What are those Bitcoins you speak of?</h4>
+		<p>You ought to check out <a href="http://www.weusecoins.com/">this website.</a> This website is dealing with a bit advanced concepts, so you really should start there.</p>
+
+		<h4>What are vanity addresses?</h4>
+		<p>Vanity addresses is a Bitcoin address that has a desirable pattern - name of a company, your nickname, etc.
+		The main problem with vanity addresses, is that in order to create them, one has to brute force a lot of addresses.</p>
+
+		<h4>How does this differ from other vanity address generators?</h4>
+		<p>This website aims to generate vanity addresses without the need to trust a third party.
+		This is done by using the properties of the ECDSA algorithm. Instead of using one private key, two are used.
+		One is owned by you and never revealed to anyone, the second is the solution to your problem that can be broadcasted publicly.
+		When you add them together, you get your vanity address.
+		The trick is, one can generate this vanity address by knowing just your public key (which is safe to broadcast).
+		For more info, <a href="http://bitcoin.stackexchange.com/q/3853/323">check out the Stack Exchange.</a></p>
+
+		<h4>What is the catch?</h4>
+		<p>There is no catch. You are only required to pay a fee that will be used to reward the person that generates your vanity address.
+		We charge a percentage of that reward to keep our service running.</p>
+		
+		<h4>What are the fees and how much do you charge?</h4>
+		<p>At the moment the minimum fee is 0.01BTC, and the pool is charging 20% of the reward to keep our servers running. We are planning on lowering our cut in the future,
+		when we will build up enough popularity.</p>
+		
+		<h4>How quickly do I need to pay?</h4>
+		<p>Old unpaid address requests are removed within a week or two of them being created.</p>
+
+		<h4>How can I get started?</h4>
+		<p>If you want to buy a vanity address, <a href="https://vanitypool.appspot.com/newWork">just request it with this form.</a>
+		You will need to provide us with a public key of an ECDSA keypair you own (keep your private key safe), your desired pattern, and what network you are using.
+		You will then be prompted to pay a fee. After we process that transaction, your request will be <a href="https://vanitypool.appspot.com/availableWork">displayed for everyone to see</a>.
+		Anyone can then try generating your address, and if they succeed, they can claim your reward.
+		After that, the solved work will be moved <a href="https://vanitypool.appspot.com/solvedWork">here.</a></p>
+
+		<h4>Why do I need to log in?</h4>
+		<p>There are two reasons for that - later we want to implement email notifications of solved work (so you won't have to be checking the page manually).
+		The login page is also used to prevent bots requesting addresses. This website is for humans ;).</p>
+
+		<h4>How do I get the private key for my vanity address?</h4>
+		<p>For now, this technology is so fresh, that there are no offline solutions for this.
+		However, for testing purposes we do offer our <a href="https://gobittest.appspot.com/VanityAll">other website</a> where you can combine your private keys.
+		It does support https and we don't peek at what is inputted there, but this is your money we are talking about here, use for testing only.</p>
+		<p>Other online service providing split-key address combination is <a href="https://www.bitaddress.org/">bitaddress</a></p>
+		<p>For offline address combination, we recommend <a href="http://casascius.wordpress.com/2013/01/26/bitcoin-address-utility/">Bitcoin Address Utility by Casascius</a></p>
+		<p>If you want to implement a tool yourself, <a href="http://bitcoin.stackexchange.com/q/3853/323">check out the Stack Exchange.</a></p>
+		
+		<h4>How do I mine for vanity addresses?</h4>
+		<p>In order to mine for vanity addresses, you can check out the <a href="https://bitcointalk.org/index.php?topic=90587">related topic on BitcoinTalk</a>,
+		or just use <a href="https://bitcointalk.org/index.php?topic=25804">the oclvanityminer developed by samr7</a>.
+		When more software will become available, we will advertise them on this website.
+		For future reference - you can either check out the <a href="https://vanitypool.appspot.com/availableWork">available work area</a> and get required info manually,
+		or use <a href="https://vanitypool.appspot.com/getWork">our automated work display page</a> without any unnecessary padding (good for automatic tools).
+		The format is as follows:</p>
+		<p>Pattern:PublicKey:NetworkByte:Reward;Comment</p>
+		<p>Each entry is displayed in a new line. Currently comments are not used, but they might be in the future.
+		You can submit the solved work either on the work page, or by using HTML POST to <a href="https://vanitypool.appspot.com/solve">this page</a>
+		with parameters:</p>
+		<p>key - equal to "Pattern:PublicKey" (without quotations)<br>
+		privateKey - equal to the private key that is the solution to the problem<br>
+		bitcoinAddress - equal to the Bitcoin address you want to claim the reward with<br></p>
+		<p>If the solution is accepted, "OK!" will be returned, otherwise an error message will be displayed.
+		If you provide a proper key, but there will be some problem with the address or something else,
+		the solution will not be saved (and thus, you will have a chance to claim it properly).
+		This is done to ensure that everyone is paid for their due work.</p>
+		
+		<h4>What is the lavishness, mining ratio and all that jargon?</h4>
+		<p>Lavishness is a measurement of how profitable mining for a vanity address is. It takes into account how complex the searched pattern is,
+		as well as the size of the bounty it has.<br>
+		Mining ratio is the ratio that determines how many times vanity mining is more profitable than traditional mining.<br>
+		Having the following variables:<br><br>
+		L - lavishness<br>
+		MR - mining ratio<br>
+		b - vanity address bounty (in Bitcoins)<br>
+		c - vanity address complexity<br>
+		d - block difficulty<br>
+		r - block reward (in Bitcoins)<br>
+		k - key generation rate (in keys per second)<br>
+		m - mining speed (in hashes per second)<br>
+		We can calculate:<br><br>
+		L = 2^32 * (b/c)<br>
+		MR = L * (d/r) * (k/m) = 2^32 * (b/c) * (d/r) * (k/m)<br><br>
+		The 2^32 is so called Difficulty of 1, and is used to determine how profitable mining is. It has been assigned as a constant to
+		calculating the lavishness to balance out the really big number that usually is the complexity. Mining ratio above 1 means that
+		mining for vanity addresses is more profitable than mining for blocks (by the factor of MR), while a ratio below 1 means that
+		mining blocks is more profitable.<br>
+		For our internal calculations, the ratio k/m has been set to 0.06. You can find out your precise ratio
+		<a href="https://en.bitcoin.it/wiki/Vanity_mining_hardware_comparison">here</a>.
+		</p>
+		
+		<h4>I have a comment/I made a piece software you might be interested in</h4>
+		<p>Sweet! Contact me through the Bitcoin Forum, my username is <a href="https://bitcointalk.org/index.php?action=profile;u=34743">ThePiachu</a>.</p>
+		
+		<p>You should also <a href="https://bitcointalk.org/index.php?topic=84569">check out this page for more info.</a></p>
+
+		<a href="https://vanitypool.appspot.com/">Back to the main page</a>
+
+		<p>If you like this site, please consider sharing or sending some Bitcoins over to:</p>
+		<p><a href="bitcoin:1JSpE7i3xncuirvQvRqjRFQ8g1gUynePDB?amount=0.1&amp;label=Vanity%20Pool%20donation">1JSpE7i3xncuirvQvRqjRFQ8g1gUynePDB</a></p>
+		<div style="position: relative; top: 50px;">
+		
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="https://vanitypool.appspot.com/">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+		<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e71f9fb5d9e1831"></script></div></div></div></body></html>

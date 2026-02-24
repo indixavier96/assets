@@ -1,0 +1,40 @@
+| Address Type   | BIP    | Path              |
+| -------------- | ------ | ----------------- |
+| Legacy (P2PKH) | BIP-44 | `m/44'/0'/0'/0/0` |
+| SegWit (P2SH)  | BIP-49 | `m/49'/0'/0'/0/0` |
+| Native SegWit  | BIP-84 | `m/84'/0'/0'/0/0` |
+| Taproot        | BIP-86 | `m/86'/0'/0'/0/0` |
+
+
+------------------------------------
+🔹 Legacy (P2PKH) //Starts with: 1
+
+address = Base58Check(
+  RIPEMD160(SHA256(public_key))
+)
+
+------------------------------------
+🔹 SegWit (P2WPKH – Bech32) //Starts with: bc1q
+
+address = Bech32(
+  HASH160(public_key)
+)
+
+
+------------------------------------
+🔹 Taproot (P2TR) //Starts with: bc1p
+
+address = Bech32m(
+  x_only_public_key
+)
+
+
+=================================
+
+
+| Address Type | Hash Used for Address? | Hash Functions                 |
+| ------------ | ---------------------- | ------------------------------ |
+| P2PKH        | ✅ Yes                  | SHA256 + RIPEMD160             |
+| P2WPKH       | ✅ Yes                  | SHA256 + RIPEMD160             |
+| P2WSH        | ✅ Yes                  | SHA256                         |
+| P2TR         | ❌ No                   | SHA256 (tagged, internal only) |

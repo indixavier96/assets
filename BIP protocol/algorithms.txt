@@ -1,0 +1,133 @@
+1. Legacy Address (P2PKH – Pay to Public Key Hash)
+
+Prefix: 1...
+
+Address Generation Algorithm
+1. Generate private key k
+2. Compute public key K = k × G
+3. Compute pubKeyHash = RIPEMD160(SHA256(K))
+4. Prepend version byte (0x00 for mainnet)
+5. Compute checksum = SHA256(SHA256(version || pubKeyHash))[0:4]
+6. Encode using Base58Check
+Script (Locking Script)
+OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
+Spending Algorithm
+1. Provide signature S and public key K
+2. Verify HASH160(K) == pubKeyHash
+3. Verify ECDSA signature S against transaction hash
+Algorithms Used
+
+ECDSA (secp256k1)
+
+SHA-256
+
+RIPEMD-160
+
+Base58Check
+
+2. Script Hash Address (P2SH)
+
+Prefix: 3...
+
+Address Generation Algorithm
+1. Create redeem script R (e.g. multisig)
+2. Compute scriptHash = RIPEMD160(SHA256(R))
+3. Prepend version byte (0x05)
+4. Compute Base58Check checksum
+Script (Locking Script)
+OP_HASH160 <scriptHash> OP_EQUAL
+Spending Algorithm
+1. Provide redeem script R and input data
+2. Verify HASH160(R) == scriptHash
+3. Execute redeem script R
+Common Use
+
+Multisig (m-of-n)
+
+Wrapped SegWit
+
+3. SegWit v0 – P2WPKH (Native SegWit)
+
+Prefix: bc1q...
+
+Address Generation Algorithm
+1. Generate public key K
+2. Compute pubKeyHash = HASH160(K)
+3. Witness version = 0
+4. Witness program = pubKeyHash (20 bytes)
+5. Encode using Bech32
+ScriptPubKey
+0 <pubKeyHash>
+Spending Algorithm
+1. Signature and public key go into witness field
+2. Validate HASH160(K)
+3. Validate ECDSA signature
+Advantages
+
+No transaction malleability
+
+Lower fees
+
+Cleaner script evaluation
+
+4. SegWit v0 – P2WSH
+
+Prefix: bc1q...
+
+Address Generation Algorithm
+1. Create witness script W
+2. Compute scriptHash = SHA256(W)
+3. Witness version = 0
+4. Encode via Bech32
+ScriptPubKey
+0 <32-byte SHA256(script)>
+Spending Algorithm
+1. Provide witness script W
+2. SHA256(W) must match scriptHash
+3. Execute W
+Typical Use
+
+Native multisig
+
+Lightning Network channels
+
+5. Taproot (P2TR – SegWit v1)
+
+Prefix: bc1p...
+
+Address Generation Algorithm
+1. Generate internal public key P
+2. (Optional) Build script tree (Merkle tree)
+3. Compute tweak = SHA256(P || merkle_root)
+4. Compute output key Q = P + tweak × G
+5. Witness version = 1
+6. Encode using Bech32m
+ScriptPubKey
+1 <32-byte x-only pubkey>
+Spending Algorithms
+Key Path Spend
+1. Provide Schnorr signature σ
+2. Verify σ against output key Q
+Script Path Spend
+1. Reveal script + Merkle proof
+2. Verify Merkle root
+3. Execute script
+Algorithms Used
+
+Schnorr signatures (BIP-340)
+
+Merkle trees
+
+SHA-256
+
+Bech32m
+
+
+
+| Address Type | Signature | Hashing            | Encoding | Script Complexity |
+| ------------ | --------- | ------------------ | -------- | ----------------- |
+| P2PKH        | ECDSA     | SHA256 + RIPEMD160 | Base58   | Simple            |
+| P2SH         | ECDSA     | HASH160            | Base58   | Medium            |
+| P2WPKH       | ECDSA     | HASH160            | Bech32   | Simple            |
+| P2WSH        | ECDSA     | SHA256             | Bech32   | Complex           |
+| P2TR         | Schnorr   | SHA256             | Bech32m  | Advanced          |

@@ -1,0 +1,138 @@
+What is the Btcpuzzle.info website?
+Btcpuzzle.info website is a platform built on “Bitcoin Puzzle” and provides free services for this purpose. Btcpuzzle.info's main goal is to provide a "solo pool" service built on Bitcoin Puzzle. Although our website is a pool website, it also offers extra tools and services.
+
+What is a solo pool?
+Solo is a general term and can be explained as a type of pool where people work only individually and ultimately gain the entire reward/service for themselves. Although we work with the logic of "solo pool", we use shared workforce. Here people join forces, but only one lucky person gets the full reward.
+
+Is the pool paid?
+Most of the time, participation in the pool is free. The "community" determines whether the pool will be paid or not, and generally, when a certain percentage of the relevant puzzle is exceeded, an "entrance fee" is requested for members who join the pool later. 80% of the entrance fees are shared among the users who contribute to the pool according to the "contribution to the pool".
+
+What is the working logic of the pool?
+Btcpuzzle.info pool works with the “range” logic. Here private keys are no longer important. The pool sends a “range” to each user and asks them to scan it. It contains approximately 1.1 trillion private keys in its range. When the user completes this range, he/she sends a flag request to the pool saying "I scanned" again and the relevant range is marked as a scanned area in the pool. It can never be scanned/requested by anyone else again.
+
+Our pool works with the "proof of work" logic and asks users for proof of its work. This proof aims to find “3 extra private keys” for each existing range. Each time the user requests a range from the pool, “an additional 3 BTC wallet addresses” are transmitted. All of these addresses are within the transmitted range and the user is asked to find the private keys of these wallet addresses. The private keys found are hashed with SHA256 in a special order and transmitted to the pool server as proof of this work. If the evidence passed is correct, the scanned range is now correctly marked as “scanned”.
+
+Does the pool share the rewards found?
+This is a solo pool and rewards are not shared. Only the labor performed is shared. The person who finds the private key gets the full reward.
+
+How can I join the pool?
+To join the pool, you must first open a free account on the btcpuzzle.info website. You can then start working in the pool by downloading the open source client shared on the " Github " page. If you wish, you can easily join the pool by using GPU rental services. In this regard, “CloudSearch” offered by Btcpuzzle allows beginners to get started very easily.
+
+Follow this link for a detailed getting started guide.
+
+What is participation rate and share?
+Participation rate represents a user's percentage of total scanned ranges. It means that the user with a high PR rate has contributed more to the pool. Does PR matter even though it's not a shared pool? Yes, because once a puzzle pool reaches a certain percentage, new users are now charged an "entry fee". 80% of the total entrance fee paid by users is distributed among pool users. (When the puzzle is solved. It does not matter whether the puzzle is solved in this pool or not).
+
+The user who contributes the most gets more shares. For example, let's assume that the entry fee for any puzzle is active and a total of $125K is paid. If your PR rate is 8%, you'll get paid $8K. Payments can now be withdrawn from the user panel when the puzzle is solved. Users can receive this payment whether the puzzle is in this pool or not.
+
+How can I trust the pool?
+Our main goal is security. You can access the application that allows you to scan (bitcrackrandomiser) as 100% open source and examine it with all its codes. In addition, all additional programs (Bitcrack, VanitySearch, etc.) can be accessed as 100% open source on the Github page. With the API documentation we offer, anyone can write their own client and join the pool.
+
+In addition, Btcpuzzle is hosted on AWS servers with daily backups and works with a "proof of work" system. This prevents unauthorized and incorrect information from entering the pool system.
+
+What are pool rewards?
+In puzzle scans, the search is always made from a single address. Our main goal is to find the private key of the relevant puzzle wallet address. If there is a "pool prize" in the relevant puzzle on Btcpuzzle.info, multiple addresses can be searched instead of a single target. Pool prizes are determined by sponsors and a private key is selected in the ranges of the relevant puzzle. Users also search for these addresses apart from the main target of the puzzle. If a pool prize is found, they can view the prize content using the private key on the btcpuzzle.info website.
+
+In order to receive the pool reward, the user must have scanned the range where the pool reward's private key is located and must have scanned a minimum of 100 ranges in total. To scan pool rewards, the "scan_reward" setting must be set to "true" in the application's settings file.
+
+Does the pool know the private key found?
+Our BTC puzzle pool does not have information about the key found. If any user finds the private key through the pool, only he/she knows it. No notification is sent to the pool. You can see more information by reviewing the open source codes of the application.
+
+Is pool data publicly available?
+Pool data is not publicly available.
+
+What is a puzzle?
+Although we often say "puzzle", when we get into the situation, we see that the task is more than a puzzle, but rather a search for a specific area. If we need to define it briefly; “Bitcoin Puzzle” is the process of trying to find the private key hidden in a certain area by using computer power.
+
+Bitcoin private keys are private keys that allow us to have authority over wallet addresses. Knowing the private key of any wallet allows others to have full authority over that wallet.
+
+Bitcoin Puzzle; It starts with puzzle #1 and currently extends to puzzle #160. This incident came to light through a transaction made by someone or others in 2015. The relevant person or persons sent payments to certain addresses according to a certain rule. The first payment sent was sent to the first wallet address where Bitcoin's first private key (i.e. "1") was used. Transfer transactions were carried out according to a certain rule, with the relevant amounts increasing in each subsequent transfer transaction. This is the main adventure and definition of Bitcoin Puzzle. You can also see this Bitcoin transfer transaction via Blockchain . You can also go to the relevant page to see the entire Bitcoin puzzle list .
+
+How were puzzle names determined?
+Puzzle naming (1 and 160) is actually based on certain mathematics. You can easily understand the logic by going to the relevant page . The first Bitcoin transfer (0.001 BTC/first transfer) was made to the wallet address “1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH”. The private key of this wallet address is “ 0000000000000000000000000000000000000000000000000000000000000000001 ”. So this address is the first private key that can be created in Bitcoin. A specific rule was created by increasing the payment amounts by “0.001 BTC/first transfer” with each subsequent transfer.
+
+Puzzle names are determined according to a certain order, with the continuation of the first private key being 2 to the 1st power (2^1). In this case, the next puzzle must be (2^2) and the starting point must start from where the previous puzzle ended. You can understand this more easily from the table below.
+
+...1	Puzzle #1 private key	(2^1)-1 = 1
+...3	Puzzle #2 private key	(2^2)-1 = 3
+...7	Puzzle #3 private key	(2^3)-1 = 7
+...1d3	Puzzle #9 private key	(2^9)-1 = 513
+...?	Puzzle #160 private key	(2^160)-1 = ….
+When you look at the examples above, we can see that the private key of the wallet address for each transfer transaction is created in twice as much space as the previous one. This means, for example, the ranges we need to search for Puzzle 23 should be (2^22)...(2^23)-1 and the private key of Puzzle 23 should be found there. You can understand it more easily in the table below.
+
+Puzzle	Total Number of Keys/Start
+Puzzle 1	(2^0) = 0/1
+Puzzle 2	(2^1) = 2
+Puzzle 3	(2^2) = 4
+Puzzle 4	(2^3) = 8
+Puzzle 5	(2^4) = 16
+Puzzle 6	(2^5) = 32
+Puzzle 66	(2^65) = 36.893.488.147.419.103.232
+When the number of each puzzle is increased by +1, it has twice as many possible private keys as the previous puzzle, meaning that each subsequent puzzle is twice as difficult as the previous one. The puzzle name is probably determined by the last interval of scanning the puzzle. In this case, although the name of Puzzle 66 should have been "65", it was named "Puzzle 66" by including the range where the last key was located.
+
+Who created the puzzle? What is its purpose?
+It is not clear who or by whom this puzzle was created, but there are many "Satoshi Nakamato" rumors around. That's why we need to know what its real purpose is, not who created it.
+
+The main purpose of the puzzle is to prove the cryptographic and technological power of Bitcoin. Because in fact, each puzzle only allows us to search in certain small areas. As of today (April 23, 2024), Puzzle 66 has not been found yet. With today's technology, we cannot find a specific key in a small area with a certain area. This proves to us how impossible it is to decipher an ordinary Bitcoin private key.
+
+Any ordinary Bitcoin private key is just a 256 Bit number. So the total number of keys is actually 2^256 (2 to the 256th power). The hardest puzzle is only 2^160. The easiest puzzle currently waiting to be solved is 2^66 and has not been found yet as of April 21, 2024. This is living proof of how reliable Bitcoin is today and probably for centuries to come.
+
+How difficult is the puzzle?
+Pretty hard. With current technology we can easily find older and easier puzzles. However, since each puzzle is twice as difficult as the previous one, it becomes more difficult day by day (as the puzzle is solved). As of now (April 21, 2024), the easiest puzzle to solve is puzzle number 66. If we consider that there are approximately 36 quintillion private keys here and add that we only scan 4-5 billion private keys per second, you can imagine how difficult it is.
+
+Although it is theoretically possible to find the private key of a puzzle individually or individually, this is extremely impossible.
+
+What does it mean that one in every 5 puzzles has been found?
+When you examine the list, you will see that a reward is transferred each 5 puzzles. The main reason for this is that the "public key" of the relevant wallet address appears after every fifth address that spends. It makes getting the relevant prize easy, especially in puzzles with low numbers.
+
+For now, revealing the public key of any puzzle smaller than 80 will make it easier to solve that puzzle.
+
+How much are the prize amounts?
+The total reward is approximately 990 BTC, of which only 32 BTC was found. (April 21, 2024). So this means that there is a reward of approximately 956 BTC waiting for us. These awards are awards determined after April 2023. For example, while the rewards before this date were “0.66 BTC” for Puzzle 66, after this date they were increased 10 times and became “6.6 BTC”. It is not clear whether the prize increase was made by the puzzle owner.
+
+The easiest puzzle waiting to be solved right now is puzzle number 66. The reward for this is 6.6 BTC.
+
+How to win/find the reward?
+Currently the only way to win the reward is to scan. This requires computer/graphics card power. The Bitcoin wallet addresses of each puzzle and the ranges of these addresses are clear. Here, the private key of the wallet address must be present in order to receive the reward. Once you find the private key, you can now send the balance from the relevant wallet address to any other address you wish.
+
+For example, Puzzle 66's wallet address is “ 13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so ”. This address is known to be in the HEX range “20000000000000000” and “3ffffffffffffffff”. In simpler words, it is any number between the number “36893488147419103232” and the number “73786976294838206463”. Here, there are approximately "36893488147419103232" (Approximately 36 quintillion) private keys and only one of them is the key to the puzzle.
+
+Computing power is used to find the correct number/hex private key and each scanned private key is converted into a Bitcoin wallet address and checked to see if it is the correct key. When the correct key is found, the reward is won.
+
+Can the prize be found outside the pool?
+Certainly. Apart from this pool, there are also many people and pools scanning puzzles. The advantage of pools is that many people share the workforce, making the scanning process faster.
+
+How can I transfer the reward to another BTC address?
+If you found the private key of any puzzle, you are entitled to receive the reward. What is explained here is for general information purposes and it is the user's own responsibility to transfer the reward to another address.
+
+The easiest way to transfer the reward to another address is to scan the relevant private key using a mobile wallet. Most wallets do not support importing HEX-based private keys. Therefore, first of all, you need to convert the HEX private key you have obtained into the “WIF” format, which is an importable format, and scan the obtained private key with any wallet (Exodus, etc.) and transfer the entire balance to your wallet. You can make conversions using our HEX to WIF tool offline.
+
+What should I pay attention to when transferring the reward?
+There is a topic that is the subject of much debate in low numbered puzzles. Puzzles with low numbers (approximately 80 and below) with known Public Keys can be easily found using methods such as "kangaroo/bsgs". This brought to the fore the issue of caution when transferring the rewards of low-numbered puzzles to another BTC wallet address. It is frequently heard that bots have been created specifically for this issue and that they are waiting for the relevant puzzles (most often 66, 67 and others) to make a transfer.
+
+Once Puzzle 66 is found and the prize is transferred to another address, the bots come into play and capture the relevant transfer transaction. Since the "public key" of the relevant puzzle will be revealed in this transfer process, can one quickly find the private key of the relevant puzzle with the previously mentioned methods (probably less than 1 minute) and manipulate the transaction? Of course, there are risks, but it is up to you to minimize them.
+
+Suppose you find a reward and you are going to transfer it to your own Bitcoin wallet address. There are some important criteria you need to pay attention to.
+
+1 - Make sure RBF is turned off in the wallet you use. RBF (Replace by Fee) is a nice feature that allows us to change the “fee” value of the relevant transfer transaction later and start a new transaction. However, this may pose a risk in puzzles with low numbers. Assuming RBF is turned on when you transfer a puzzle prize to another address, someone who knows the private key can manipulate the transaction for a higher fee. Therefore, it is recommended that you initiate a transfer transaction in a wallet where RBF is turned off. (Exodus supports private key import with RBF disabled by default, as of April 21, 2024.)
+
+2 - Avoid network congestion. Initiating a transfer during a period when the Bitcoin network is slower than normal may increase risks. Therefore, it would be better to perform the transfer when the network is operating normally. This means that the transfer transaction can easily be included in a block and can protect you from any risks.
+
+3 - Wait for a moment when transfer fees are low. A similar risk reduction method as the previous item. Once Bitcoin transfer fees are standard, you can reduce the risks when the transfer process is initiated.
+
+4 - Trust your feelings. Start the transfer process when you feel the next block being mined. This means that the transaction will be included in the next block immediately and you can minimize risks as much as possible.
+
+Of course, there are some risks, but the probability of this possibility coming true is higher if you do not take the above into consideration.
+
+You can also use Mara Pool's "Slipstream" service. In short, this service prevents the transfer from appearing in the "mempool". For example; Import the private key of the puzzle to the Electrum wallet. Then start a new sending transaction, but only sign it and do not send the payment. Paste the "TX Hex" value created as a result of the signing into the Mara pool and complete the transaction with the "activate" option. With this transaction, your transfer transaction will be included in the next block.
+
+What is the “challenge” feature on the site?
+We do our best to make the pool more fun. When Challenge is activated from the user panel, it works as follows; The pool determines a random starting point every 6 hours, and each user who participates in the challenge scans only the ranges starting with this starting point for 6 hours.
+
+Joining/leaving the challenge is real-time and this setting can be changed from the user panel. For example, let's say you participate in the challenge and the pool creates a starting point starting with "3A". All your workers actively working in the pool will only request and scan ranges starting with “3A”.
+
+What is the “kingdom” feature on the site?
+To get away from boring and add some fun, Btcpuzzle.info has the king of every puzzle. The king is the user who has scanned the most ranges in the last 24 hours and is automatically determined by the pool. A user who is a king can post a message on the page of the relevant puzzle and choose a fun GIF if he wishes. The kingdom is updated every 5 minutes.
+
+What does 'defeated ranges' mean on the site?
+Some puzzles may have ranges that are manually marked as "scanned", and these ranges are generally determined to be the areas where the private key is least likely to be found. For example, currently only the first 0.98% and last 0.98% areas in Puzzle 66 are designated as "defeated". Users can scan these areas using the “includeDefeatedRanges” token if they wish. The percentage of “Defeated ranges” is usually indicated in blue.

@@ -1,0 +1,1647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0071)https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<meta name="description" content="VanitySearch (Yet another address prefix finder)">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="keywords" content="bitcoin, forum, bitcoin forum, bitcointalk">
+	<script language="JavaScript" type="text/javascript" src="./VanitySearch (Yet another address prefix finder)_files/script.js.download"></script>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_theme_url = "https://bitcointalk.org/Themes/custom1";
+		var smf_images_url = "https://bitcointalk.org/Themes/custom1/images";
+		var smf_scripturl = "https://bitcointalk.org/index.php";
+		var smf_iso_case_folding = false;
+		var smf_charset = "ISO-8859-1";
+	// ]]></script>
+	<title>VanitySearch (Yet another address prefix finder)</title><!--35be7e896d1c6e6eb1e124e500cd5769ee730cf4dab15aabc41c6e6eb1e124e500cd5769ee730cf4dabefa08671658dc6e6eb1e124e500cd5769ee730cf4dabb6c28e8c6e6eb1e124e500cd5769ee730cf4dab2936--><link rel="canonical" href="https://bitcointalk.org/index.php?topic=5112311.280">
+	<link rel="stylesheet" type="text/css" href="./VanitySearch (Yet another address prefix finder)_files/style.css">
+	 <!--[if !IE]> -->
+	 <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 650px)" href="./VanitySearch (Yet another address prefix finder)_files/mobile.css">
+	 <!-- <![endif]-->
+	<link rel="stylesheet" type="text/css" href="./VanitySearch (Yet another address prefix finder)_files/print.css" media="print"><style type="text/css">
+.msgcl1 {padding: 1px 1px 0 1px;}
+
+</style>
+
+
+
+	<link rel="help" href="https://bitcointalk.org/index.php?action=help" target="_blank">
+	<link rel="search" href="https://bitcointalk.org/index.php?action=search">
+	<link rel="contents" href="https://bitcointalk.org/index.php">
+	<link rel="alternate" type="application/rss+xml" title="Bitcoin Forum - RSS" href="https://bitcointalk.org/index.php?type=rss;action=.xml">
+	<link rel="prev" href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=prev">
+	<link rel="next" href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=next">
+	<link rel="index" href="https://bitcointalk.org/index.php?board=6.0"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		function showhide(msgnr)
+		{
+			if (document.getElementById("message"+msgnr).style.display == "")
+			    {document.getElementById("message"+msgnr).style.display = "none";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "hidden";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "";
+			     document.getElementById("ignfooter"+msgnr).style.display = "none";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignshow.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Show";
+			     document.getElementById("ignprofile"+msgnr).style.display = "none";
+			    }
+			    else
+			    {document.getElementById("message"+msgnr).style.display = "";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "visible";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "none";
+			     document.getElementById("ignfooter"+msgnr).style.display = "";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignhide.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Hide";
+			     document.getElementById("ignprofile"+msgnr).style.display = "";
+			     }
+		}
+// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+			document.getElementById("upshrinkHeader2").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// ]]></script>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			var current_header_ic = false;
+
+			function shrinkHeaderIC(mode)
+			{
+				document.cookie = "upshrinkIC=" + (mode ? 1 : 0);
+				document.getElementById("upshrink_ic").src = smf_images_url + (mode ? "/expand.gif" : "/collapse.gif");
+
+				document.getElementById("upshrinkHeaderIC").style.display = mode ? "none" : "";
+
+				current_header_ic = mode;
+			}
+		// ]]></script></head>
+<body>
+	<div class="tborder">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" id="smfheader">
+			<tbody><tr>
+				<td class="catbg" height="32">
+					<span style="font-family: Verdana, sans-serif; font-size: 140%; ">Bitcoin Forum</span>
+				</td>
+				<td align="right" class="catbg">
+					<img src="./VanitySearch (Yet another address prefix finder)_files/smflogo.gif" style="margin: 2px;" alt="">
+				</td>
+			</tr>
+		</tbody></table>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr>
+				<td class="titlebg2" height="32" align="right">
+					<span class="smalltext">February 17, 2026, 06:50:49 AM</span>
+					<a href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="./VanitySearch (Yet another address prefix finder)_files/upshrink.gif" alt="*" title="Shrink or expand the header." align="bottom" style="margin: 0 1ex;"></a>
+				</td>
+			</tr>
+			<tr id="upshrinkHeader">
+				<td valign="top" colspan="2">
+					<table width="100%" class="bordercolor" cellpadding="8" cellspacing="1" border="0" style="margin-top: 1px;">
+						<tbody><tr>
+							<td colspan="2" width="100%" valign="top" class="windowbg2" id="variousheadlinks"><span class="middletext">Welcome, <b>Guest</b>. Please <a href="https://bitcointalk.org/index.php?action=login">login</a> or <a href="https://bitcointalk.org/index.php?action=register">register</a>.				</span>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		<table id="upshrinkHeader2" width="100%" cellpadding="4" cellspacing="0" border="0">
+			<tbody><tr>
+				<td width="90%" class="titlebg2">
+					<span class="smalltext"><b>News</b>: <a class="ul" href="https://bitcointalk.org/index.php?topic=5569520.0">Community awards 2025</a></span>
+				</td>
+				<td class="titlebg2" align="right" nowrap="nowrap" valign="top">
+					<form action="https://bitcointalk.org/index.php?action=search2" method="post" accept-charset="ISO-8859-1" style="margin: 0;">
+						<a href="https://bitcointalk.org/index.php?action=search;advanced"><img src="./VanitySearch (Yet another address prefix finder)_files/filter.gif" align="middle" style="margin: 0 1ex;" alt=""></a>
+						<input type="text" name="search" value="" style="width: 190px;">&nbsp;
+						<input type="submit" name="submit" value="Search" style="width: 11ex;">
+						<input type="hidden" name="advanced" value="0">
+						<input type="hidden" name="topic" value="5112311">
+					</form>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+			<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 10px;">
+				<tbody><tr>
+					<td class="maintab_first">&nbsp;</td><td class="maintab_active_first">&nbsp;</td>
+				<td valign="top" class="maintab_active_back">
+					<a href="https://bitcointalk.org/index.php">Home</a>
+				</td><td class="maintab_active_last">&nbsp;</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=help">Help</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=search">Search</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=login">Login</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=register">Register</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/more.php">More</a>
+				</td>
+				<td class="maintab_last">&nbsp;</td>
+			</tr>
+		</tbody></table>
+	<div id="bodyarea" style="padding: 1ex 0px 2ex 0px;">
+<a name="top"></a>
+<a name="msg50755232"></a>
+<div><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=5112311.0" class="nav">VanitySearch (Yet another address prefix finder)</a></b></div></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Pages: <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.260">«</a> </span><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.0">1</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.40">3</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.60">4</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.80">5</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.100">6</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.120">7</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.140">8</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.160">9</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.180">10</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.200">11</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.220">12</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.240">13</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.260">14</a> [<b>15</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.300">16</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.320">17</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.340">18</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.360">19</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.380">20</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.400">21</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.420">22</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.440">23</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.460">24</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.480">25</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.500">26</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.520">27</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.540">28</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.560">29</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.580">30</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.600">31</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.620">32</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.640">33</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.660">34</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.680">35</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.700">36</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.720">37</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.740">38</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.760">39</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.780">40</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.800">41</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.820">42</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.840">43</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.860">44</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.880">45</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.900">46</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.920">47</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.940">48</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.960">49</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.980">50</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1000">51</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1020">52</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1040">53</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1060">54</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1080">55</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1100">56</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1120">57</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1140">58</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1160">59</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1180">60</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1200">61</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1220">62</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1240">63</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1260">64</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.300">»</a> </span></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=next#new">next topic »</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="mirrortab_first">&nbsp;</td>
+		<td class="mirrortab_back"><a href="https://bitcointalk.org/index.php?action=printpage;topic=5112311.0" target="_blank">Print</a></td>
+		<td class="mirrortab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tbody><tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+					<img src="./VanitySearch (Yet another address prefix finder)_files/veryhot_post.gif" align="bottom" alt="">
+				</td>
+				<td width="13%"> Author</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Topic: VanitySearch (Yet another address prefix finder) &nbsp;(Read 34976 times)
+				</td>
+		</tr>
+</tbody></table>
+<form action="https://bitcointalk.org/index.php?action=quickmod2;topic=5112311.280" method="post" accept-charset="ISO-8859-1" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save(&#39;c6e6eb1e124e500cd5769ee730cf4dab&#39;) : confirm(&#39;Are you sure you want to do this?&#39;);">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor"><tbody><tr><td class="msgcl1">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=1169179" title="View the profile of Rath_">Rath_</a></b>
+							<div class="smalltext">
+								aka BitCryptex<br>
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/legendary.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 1876<br>
+								Merit: 3147<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_1169179.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=1169179"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50755232#msg50755232"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50755232"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50755232#msg50755232">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 24, 2019, 04:12:34 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns281" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50755232#msg50755232">#281</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 37px;">@Jean_Luc, what about case sensitive addresses? Is there any ETA on this feature? How difficult is it to implement such feature? </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50755232">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50756058"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2550169" title="View the profile of Jean_Luc">Jean_Luc</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 737<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2550169"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50756058#msg50756058"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50756058"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50756058#msg50756058">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 24, 2019, 05:02:02 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns282" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50756058#msg50756058">#282</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">No, this is not difficult to implement.<br>I'll add this feature in the new release.<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50756058">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50759916"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=352117" title="View the profile of escope">escope</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 13<br>
+								Merit: 24<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=352117"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50759916#msg50759916"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50759916"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50759916#msg50759916">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 24, 2019, 09:43:01 PM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=507936">DarkStar_</a> (4), <a href="https://bitcointalk.org/index.php?action=profile;u=18321">OgNasty</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns283" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50759916#msg50759916">#283</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hello, @Jean_Luc!<br><br>First of all I want to say a big thank you for the amazing project you are developing. Just a huge pleasure to use it.<br>Had you been thinking about expanding pattern abilities? Search for a word at the end of an address or inside an address? What do you think about the implementation of regular expressions?<br>I know regex in vanitygen working with CPU only. I don't know if this is possible but I think it would be just awesome to see something like a hybrid algo for finding regex patterns faster.<br>Thank you!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50759916">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50760665"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=329895" title="View the profile of feryjhie">feryjhie</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 882<br>
+								Merit: 595<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=329895"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50760665#msg50760665"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50760665"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50760665#msg50760665">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 24, 2019, 11:00:14 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns284" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50760665#msg50760665">#284</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50756058#msg50756058">Quote from: Jean_Luc on April 24, 2019, 05:02:02 PM</a></div><div class="quote">No, this is not difficult to implement.<br>I'll add this feature in the new release.<br><br></div><br>can you add an option to search all address in lowercase or upper case?<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50760665">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50763406"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2550169" title="View the profile of Jean_Luc">Jean_Luc</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 737<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2550169"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50763406"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 25, 2019, 06:07:27 AM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=300014">DaveF</a> (2), <a href="https://bitcointalk.org/index.php?action=profile;u=18321">OgNasty</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns285" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406">#285</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50760665#msg50760665">Quote from: feryjhie on April 24, 2019, 11:00:14 PM</a></div><div class="quote">can you add an option to search all address in lowercase or upper case?<br></div><br>I'm not sure to fully understand your request ? Could you be more precise ?<br><br><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50759916#msg50759916">Quote from: escope on April 24, 2019, 09:43:01 PM</a></div><div class="quote">Hello, @Jean_Luc!<br><br>First of all I want to say a big thank you for the amazing project you are developing. Just a huge pleasure to use it.<br>Had you been thinking about expanding pattern abilities? Search for a word at the end of an address or inside an address? What do you think about the implementation of regular expressions?<br>I know regex in vanitygen working with CPU only. I don't know if this is possible but I think it would be just awesome to see something like a hybrid algo for finding regex patterns faster.<br>Thank you!<br></div><br>What do you think about using wildcard and using pattern like 1*Bit*Coin* ?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50763406">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50763964"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=329895" title="View the profile of feryjhie">feryjhie</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 882<br>
+								Merit: 595<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=329895"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763964#msg50763964"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50763964"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763964#msg50763964">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 25, 2019, 07:12:06 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns286" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50763964#msg50763964">#286</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406">Quote from: Jean_Luc on April 25, 2019, 06:07:27 AM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50760665#msg50760665">Quote from: feryjhie on April 24, 2019, 11:00:14 PM</a></div><div class="quote">can you add an option to search all address in lowercase or upper case?<br></div><br>I'm not sure to fully understand your request? Could you be more precise?<br><br></div><br>the one i ask about is like this <br>in this thread&nbsp; <a class="ul" href="https://bitcointalk.org/index.php?topic=1761143.0">no upper/no lower address giveaway</a> he can generate an address like this no upper case letters(e.g. <tt>184wwh1dtg8xv858d1n1ktj2cpvvbjugft</tt>) or no lower case letters (e.g. <tt>1GNGTB96XPDHQ47Y6SNP8KN3YNPLFUP6B8</tt>)<br><br>now he doesn't do that anymore and he doesn't share the application he uses to generate the address</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50763964">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50774496"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=18321" title="View the profile of OgNasty">OgNasty</a></b>
+							<div class="smalltext">
+								Donator<br>
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/donator.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 5376<br>
+								Merit: 6047<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_18321.png" alt="" class="avatar" border="0"></div><br>
+								Leading Crypto Sports Betting &amp; Casino Platform<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=18321"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://twitter.com/nastymining" title="@NastyMining"><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50774496#msg50774496"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50774496"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50774496#msg50774496">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 25, 2019, 09:41:47 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns287" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50774496#msg50774496">#287</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406">Quote from: Jean_Luc on April 25, 2019, 06:07:27 AM</a></div><div class="quote">What do you think about using wildcard and using pattern like 1*Bit*Coin* ?<br></div><br>I think that's a great idea.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50774496">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig18321"><div align="center"><table style="font: inherit; color: inherit;"><tbody><tr><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #0f212e;"><span style="color: transparent;"><span style="font-size: 8pt !important; line-height: 1.3em;">.</span>.<span style="font-size: 9pt !important; line-height: 1.3em;"><sup><span style="font-size: 16pt !important; line-height: 1.3em;"><span style="color: #fff;">Stake.com</span></span></sup></span>.<span style="font-size: 8pt !important; line-height: 1.3em;">.</span></span></span></span></span></a></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 2pt !important; line-height: 1.3em;"><tt>&nbsp;&nbsp; <span style="color: #2d4454;">&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;<br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span> &#9608;&#9608;</span>&nbsp; <span style="color: #ed5564;">&#9604;&#9608;&#9608;&#9608;&#9608;&#9604;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span> <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span> &#9608;&#9608;</span>&nbsp; <span style="color: #ed5564;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608;</span>&nbsp;&nbsp; <span style="color: #ed5564;">&#9600;&#9608;&#9608;&#9600;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608; &#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608;</span> &#9608;&#9608;</span>&nbsp; &nbsp; <span style="color: #ccc;">&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9604; &#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9600;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span> <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608; </span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9608;</span>&nbsp; <br>&nbsp;&nbsp; &#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604; &#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&nbsp; &#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&nbsp; &#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;<br>&nbsp;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></tt></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial Black;"><span style="font-size: 12pt !important; line-height: 1.3em;"><span style="color: #0f212e;">Play<br>Smarter</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><tt><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="background-color: #fff;">&#9604;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9604;<br>&#9608;&nbsp; &#9604;&#9600;&#9604;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9600;&#9600;&#9608;&#9600;&#9604;&#9604;<br>&#9608;&nbsp; &#9608;&#9600;&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9616;&nbsp; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9612;&nbsp; &#9608;<br>&#9608;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9612; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &#9608; &#9616;&nbsp; &#9608;<br>&#9608;&nbsp;&nbsp; &#9616;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9612;&nbsp;&nbsp; &#9608; &#9616; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &#9600;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&nbsp; &nbsp; &#9608; &#9612; &#9608;<br>&#9608;&nbsp; &nbsp;&nbsp; &#9604;&#9604;&#9604;&#9608;&#9608;&#9604;&#9604;&#9604;&nbsp; &nbsp;&nbsp; &#9608; &#9612;&#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616; &#9608;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616;&#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616;&#9608;<br>&#9600;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9600;&#9608;</span></span></tt></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="color: #0f212e;"><span style="font-family: Arial Black;"><span style="font-size: 12pt !important; line-height: 1.3em;">Leading Crypto Sports Betting<br><span style="color: #f1f2f4;">&amp;</span><span style="color: #b8d4f2;">&amp;</span><span style="color: #7fb6f1;">&amp;</span><span style="color: #4597ef;">&amp;</span><span style="color: #0c79ed;">&amp;</span> Casino Platform</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><span style="font-size: 2pt !important; line-height: 1.3em;"><tt><span style="background-color: #fff;"><span style="color: #0c79ed;">&#9604;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9604;<br>&#9604;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9604;<br>&#9604;&#9608;&#9600;&nbsp; &nbsp; &nbsp;&nbsp; &#9616;&#9608;&#9612;&nbsp; &nbsp; &nbsp;&nbsp; &#9600;&#9608;&#9604;<br>&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9616;&#9608;&#9612;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9600;&nbsp; &nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &#9600;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;<br>&#9600;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9600;<br>&#9600;&#9608;&#9604;&nbsp; &nbsp; &#9604;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9604;&nbsp; &#9604;&#9604;&#9604;&#9608;&#9600;<br>&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&#9600;&#9600;&#9600;&#9608;&#9608;&#9608;&#9604;&#9604;&#9604;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;</span></span></tt></span></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #0f212e;"><span style="color: transparent;"><span style="font-size: 8pt !important; line-height: 1.3em;">.</span>.<span style="font-size: 9pt !important; line-height: 1.3em;"><sup><span style="font-size: 16pt !important; line-height: 1.3em;"><span style="color: #fff;">PLAY NOW</span></span></sup></span>.<span style="font-size: 8pt !important; line-height: 1.3em;">.</span></span></span></span></span></a></td></tr></tbody></table></div></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50786783"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=300014" title="View the profile of DaveF">DaveF</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/legendary.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 4116<br>
+								Merit: 7109<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_300014.png" alt="" class="avatar" border="0"></div><br>
+								&#9989; NO KYC<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=300014"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?topic=5331692" title="I DO NOT TRADE on Telegram or Skype or Discord."><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50786783#msg50786783"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50786783"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50786783#msg50786783">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 26, 2019, 06:52:42 PM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=18321">OgNasty</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns288" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50786783#msg50786783">#288</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50763406#msg50763406">Quote from: Jean_Luc on April 25, 2019, 06:07:27 AM</a></div><div class="quote">What do you think about using wildcard and using pattern like 1*Bit*Coin* ?<br></div><br>Would like that very much!<br><br>Also, is it possible to encrypt the -o text file that you save the keys to?<br>I am running this on a offline PC that in theory nobody has access to. But, since it's alone churning for days on end other people in the office can walk up to it.<br><br>It would be another switch that encrypts the file, and clears the screen so nobody can see the command you ran.<br><br>Paranoid, I know.<br><br>-Dave</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50786783">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig300014"><div align="center"><table style="font: inherit; color: inherit;"><tbody><tr><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 1px !important; line-height: 1.3em;">&nbsp;</span><br><span style="font-family: arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;">&nbsp;<a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat,arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;"><span style="color: #fff;"><b>b1exch</b><span style="color: #FF3729;"><b>.</b><span style="color: #FFF;"><b>io</b></span></span></span></span></span></span>&nbsp;</a></span></span></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat black,arial black;"><span style="font-size: 17pt !important; line-height: 1.3em;"><span style="color: #f32;">Instant&nbsp;<span style="color: #262626;">Automated&nbsp;<span style="color: #f32;">Exchange<br><span style="font-family: montserrat,arial black;"><span style="font-size: 8pt !important; line-height: 1.3em;"><span style="color: transparent;"><span style="background-color: #7D7D7D;">.<span style="background-color: #606060;">.<span style="background-color: #515151;">.<span style="background-color: #434343;">.<span style="background-color: #343434;">.<span style="background-color: #262626;">................<span style="color: #fff;">No Logs&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No registration&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No JavaScript&nbsp;&nbsp;&nbsp;</span>................</span>.</span>.</span>.</span>.</span>.</span></span></span></span></span></span></span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 9pt !important; line-height: 1.3em;"><b><a rel="ugc" class="ul" href="https://b1exch.io/Liquidity"><tt><span style="color: #fff;"><span style="background-color: #09e;">&nbsp;&nbsp;ETH&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">DAI&nbsp;&nbsp;&nbsp;</span></span><br><span style="background-color: #f7931a;">&nbsp;&nbsp;BTC&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #09e;">&nbsp;&nbsp;LTC&nbsp;&nbsp;&nbsp;</span><br><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">USDT&nbsp;&nbsp;</span></span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #f7931a;">&nbsp;&nbsp;XMR&nbsp;&nbsp;&nbsp;<span style="font-size: 1pt !important; line-height: 1.3em;">&nbsp;</span></span></span></tt></a></b></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-family: Arial black;"><span style="font-size: 6pt !important; line-height: 1.3em;"><span style="color: #333;">ACCESS VIA</span></span><br><span style="color: #FF3729;"><span style="font-size: 22pt !important; line-height: 1.3em;">Tor</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"><span style="color: transparent;"><span style="font-size: 1pt !important; line-height: 1.3em;">.</span></span></td><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #ac0;"><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9600;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9608;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9608;&#9608;&#9608;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<span style="color: #777;">&#9608;&#9604;<span style="color: #ac0;">&#9608;&#9600;</span><br></span></span></span></span></a><div align="center"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #777;">&#9608;&#9600;&#9608;<br>&#9604;&#9604;&#9600;&#9617;&#9617;&#9608;&#9608;&#9604;&#9604;<br>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;</span>&#9608;&#9604;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;&#9617;&#9604;<span style="color: #eef;">&#9608;&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9600;&#9600;&#9600;&#9604;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;<br></span></span></div></td></tr></tbody></table></div></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50792449"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2550169" title="View the profile of Jean_Luc">Jean_Luc</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 737<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2550169"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50792449#msg50792449"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50792449"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50792449#msg50792449">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 07:49:39 AM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=300014">DaveF</a> (2), <a href="https://bitcointalk.org/index.php?action=profile;u=1169179">Rath_</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns289" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50792449#msg50792449">#289</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hi there <img src="./VanitySearch (Yet another address prefix finder)_files/wink.gif" alt="Wink" border="0"><br><br>Some news:<br>- The case insensitive search is ready and working well at almost nominal speed.<br>- For the search with wildcard, the speed is still very low, in that case I have to calculate the full base58 address for each generated point and the base58 is very slow, so I'm trying to implement this at the GPU level.<br>- I will also add an encryption mechanism for the output file and think to a manner to have a safe command line.<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50792449">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50794446"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=352117" title="View the profile of escope">escope</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 13<br>
+								Merit: 24<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=352117"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50794446#msg50794446"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50794446"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50794446#msg50794446">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 11:10:05 AM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=507936">DarkStar_</a> (4)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns290" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50794446#msg50794446">#290</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50792449#msg50792449">Quote from: Jean_Luc on April 27, 2019, 07:49:39 AM</a></div><div class="quote">Hi there <img src="./VanitySearch (Yet another address prefix finder)_files/wink.gif" alt="Wink" border="0"><br><br>Some news:<br>- The case insensitive search is ready and working well at almost nominal speed.<br>- For the search with wildcard, the speed is still very low, in that case I have to calculate the full base58 address for each generated point and the base58 is very slow, so I'm trying to implement this at the GPU level.<br>- I will also add an encryption mechanism for the output file and think to a manner to have a safe command line.<br><br></div><br>Awesome!<br>Hope to see all upper-case or all lower-case search. Also hope to see regexp search for finding whatever want.<br><br>I am not an expert but I guess there are some algos for base64 encoding/decoding on GPU:<br><a rel="ugc" class="ul" href="https://www.codeproject.com/Articles/276993/Base64-Encoding-on-a-GPU">https://www.codeproject.com/Articles/276993/Base64-Encoding-on-a-GPU</a><br><a rel="ugc" class="ul" href="https://lemire.me/blog/2018/01/17/ridiculously-fast-base64-encoding-and-decoding/">https://lemire.me/blog/2018/01/17/ridiculously-fast-base64-encoding-and-decoding/</a><br><br>Also there are several fast GPU regexp:<br><a rel="ugc" class="ul" href="https://madhumithasridhara.github.io/QuickMatch/">https://madhumithasridhara.github.io/QuickMatch/</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50794446">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50796066"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=18321" title="View the profile of OgNasty">OgNasty</a></b>
+							<div class="smalltext">
+								Donator<br>
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/donator.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 5376<br>
+								Merit: 6047<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_18321.png" alt="" class="avatar" border="0"></div><br>
+								Leading Crypto Sports Betting &amp; Casino Platform<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=18321"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://twitter.com/nastymining" title="@NastyMining"><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50796066#msg50796066"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50796066"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50796066#msg50796066">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 01:46:54 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns291" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50796066#msg50796066">#291</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50794446#msg50794446">Quote from: escope on April 27, 2019, 11:10:05 AM</a></div><div class="quote">Hope to see all upper-case or all lower-case search.<br></div><br>I don’t believe anything is stopping you from doing this now. </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50796066">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig18321"><div align="center"><table style="font: inherit; color: inherit;"><tbody><tr><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #0f212e;"><span style="color: transparent;"><span style="font-size: 8pt !important; line-height: 1.3em;">.</span>.<span style="font-size: 9pt !important; line-height: 1.3em;"><sup><span style="font-size: 16pt !important; line-height: 1.3em;"><span style="color: #fff;">Stake.com</span></span></sup></span>.<span style="font-size: 8pt !important; line-height: 1.3em;">.</span></span></span></span></span></a></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 2pt !important; line-height: 1.3em;"><tt>&nbsp;&nbsp; <span style="color: #2d4454;">&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;<br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span> &#9608;&#9608;</span>&nbsp; <span style="color: #ed5564;">&#9604;&#9608;&#9608;&#9608;&#9608;&#9604;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span> <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span> &#9608;&#9608;</span>&nbsp; <span style="color: #ed5564;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608;</span>&nbsp;&nbsp; <span style="color: #ed5564;">&#9600;&#9608;&#9608;&#9600;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608; &#9608;&#9608;&nbsp; &nbsp; &nbsp; &#9608;&#9608;</span> &#9608;&#9608;</span>&nbsp; &nbsp; <span style="color: #ccc;">&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9604; &#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608;</span><span style="color: #ccc;">&#9608;&#9608;&#9600;</span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608; <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span style="color: #ccc;">&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;</span> <span style="color: #0c79ed;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> &#9608;&#9608; </span><br>&nbsp;&nbsp; <span style="background-color: #fff;">&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ccc;">&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9608;</span>&nbsp; <br>&nbsp;&nbsp; &#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604; &#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&nbsp; &#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9608;&#9608;&#9608;&nbsp; &#9608;&#9608;&nbsp; &#9608;&#9608;&nbsp; &#9608;&#9608;&#9608;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;<br>&nbsp;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></tt></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial Black;"><span style="font-size: 12pt !important; line-height: 1.3em;"><span style="color: #0f212e;">Play<br>Smarter</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><tt><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="background-color: #fff;">&#9604;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9604;<br>&#9608;&nbsp; &#9604;&#9600;&#9604;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9600;&#9600;&#9608;&#9600;&#9604;&#9604;<br>&#9608;&nbsp; &#9608;&#9600;&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9616;&nbsp; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9612;&nbsp; &#9608;<br>&#9608;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9608;&nbsp; &#9612; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &#9608; &#9616;&nbsp; &#9608;<br>&#9608;&nbsp;&nbsp; &#9616;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9612;&nbsp;&nbsp; &#9608; &#9616; &#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &#9600;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&nbsp; &nbsp; &#9608; &#9612; &#9608;<br>&#9608;&nbsp; &nbsp;&nbsp; &#9604;&#9604;&#9604;&#9608;&#9608;&#9604;&#9604;&#9604;&nbsp; &nbsp;&nbsp; &#9608; &#9612;&#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616; &#9608;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616;&#9616;&#9612;<br>&#9608;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#9608;&#9616;&#9608;<br>&#9600;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9604;&#9600;&#9608;</span></span></tt></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="color: #0f212e;"><span style="font-family: Arial Black;"><span style="font-size: 12pt !important; line-height: 1.3em;">Leading Crypto Sports Betting<br><span style="color: #f1f2f4;">&amp;</span><span style="color: #b8d4f2;">&amp;</span><span style="color: #7fb6f1;">&amp;</span><span style="color: #4597ef;">&amp;</span><span style="color: #0c79ed;">&amp;</span> Casino Platform</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><span style="font-size: 2pt !important; line-height: 1.3em;"><tt><span style="background-color: #fff;"><span style="color: #0c79ed;">&#9604;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9604;<br>&#9604;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9604;<br>&#9604;&#9608;&#9600;&nbsp; &nbsp; &nbsp;&nbsp; &#9616;&#9608;&#9612;&nbsp; &nbsp; &nbsp;&nbsp; &#9600;&#9608;&#9604;<br>&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9616;&#9608;&#9612;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9600;&nbsp; &nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &#9600;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;<br>&#9600;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9600;<br>&#9600;&#9608;&#9604;&nbsp; &nbsp; &#9604;&#9608;&#9608;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9600;&#9608;&#9608;&#9604;&nbsp; &#9604;&#9604;&#9604;&#9608;&#9600;<br>&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&nbsp; &nbsp; &nbsp;&nbsp; &#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;<br>&#9600;&#9600;&#9600;&#9608;&#9608;&#9608;&#9604;&#9604;&#9604;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;</span></span></tt></span></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="https://stake.com/?c=3963183bcb"><span style="font-family: Arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #0f212e;"><span style="color: transparent;"><span style="font-size: 8pt !important; line-height: 1.3em;">.</span>.<span style="font-size: 9pt !important; line-height: 1.3em;"><sup><span style="font-size: 16pt !important; line-height: 1.3em;"><span style="color: #fff;">PLAY NOW</span></span></sup></span>.<span style="font-size: 8pt !important; line-height: 1.3em;">.</span></span></span></span></span></a></td></tr></tbody></table></div></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50799226"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=1231774" title="View the profile of RobertPaulig">RobertPaulig</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 7<br>
+								Merit: 1<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=1231774"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799226#msg50799226"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50799226"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799226#msg50799226">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 06:04:00 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns292" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50799226#msg50799226">#292</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Jean_Luc<br>Here's your piece of code for generating pseudorandom numbers.<br><span style="color: green;">/* Knuth's PRNG as used in the Mersenne Twister reference implementation */</span><br><div class="codeheader">Code:</div><div class="code"> &nbsp;for (pos=0; pos&lt;RK_STATE_LEN; pos++)<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp; &nbsp;state-&gt;key[pos] = seed;<br>&nbsp;&nbsp; &nbsp;seed = (1812433253UL * (seed ^ (seed &gt;&gt; 30)) + pos + 1) &amp; 0xffffffffUL;<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;state-&gt;pos = RK_STATE_LEN;<br>}</div>This is a quote from the Wiki<br><div class="quoteheader">Quote</div><div class="quote">Is not cryptographically secure, unless the CryptMT variant (discussed below) is used. The reason is that observing a sufficient number of iterations (624 in the case of MT19937, since this is the size of the state vector from which future iterations are produced) allows one to predict all future iterations.</div><a rel="ugc" class="ul" href="https://en.wikipedia.org/wiki/Mersenne_Twister">https://en.wikipedia.org/wiki/Mersenne_Twister</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50799226">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50799535"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=352117" title="View the profile of escope">escope</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 13<br>
+								Merit: 24<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=352117"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799535#msg50799535"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50799535"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799535#msg50799535">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 06:27:34 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns293" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50799535#msg50799535">#293</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50796066#msg50796066">Quote from: OgNasty on April 27, 2019, 01:46:54 PM</a></div><div class="quote">I don’t believe anything is stopping you from doing this now. <br></div>I can. But I guess it is possible by slow CPU regexp in slow Vanitygen only.<br>Please if you know something lmk about that</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50799535">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50800059"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2550169" title="View the profile of Jean_Luc">Jean_Luc</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 737<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2550169"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50800059#msg50800059"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50800059"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50800059#msg50800059">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 27, 2019, 07:14:19 PM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=352117">escope</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns294" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50800059#msg50800059">#294</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799226#msg50799226">Quote from: RobertPaulig on April 27, 2019, 06:04:00 PM</a></div><div class="quote">Hope to see all upper-case or all lower-case search. Also hope to see regexp search for finding whatever want.<br><br>I am not an expert but I guess there are some algos for base64 encoding/decoding on GPU:<br><a class="ul" href="https://www.codeproject.com/Articles/276993/Base64-Encoding-on-a-GPU">https://www.codeproject.com/Articles/276993/Base64-Encoding-on-a-GPU</a><br><a class="ul" href="https://lemire.me/blog/2018/01/17/ridiculously-fast-base64-encoding-and-decoding/">https://lemire.me/blog/2018/01/17/ridiculously-fast-base64-encoding-and-decoding/</a><br><br>Also there are several fast GPU regexp:<br><a class="ul" href="https://madhumithasridhara.github.io/QuickMatch/">https://madhumithasridhara.github.io/QuickMatch/</a><br></div><br>Thanks for the link, I will have a look at this.<br>Adding a way to generate only upper or lower case is easy except for the difficulty calculation.<br><br><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50799226#msg50799226">Quote from: RobertPaulig on April 27, 2019, 06:04:00 PM</a></div><div class="quote">Jean_Luc<br>Here's your piece of code for generating pseudorandom numbers.<br>...<br></div><br>Thanks for the info but as written in the readme it is better to use a seed for generating a safe base key and obviously to run it on a machine where you are alone. The PNRG is not used at all by default, it is enabled only if you want to use the -r option which I do not recommend (I will add a UNSAFE message in the command line usage infos for the - r option).<br><br><br><br><br><br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50800059">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50823897"></a><a name="new"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=300014" title="View the profile of DaveF">DaveF</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/legendary.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 4116<br>
+								Merit: 7109<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_300014.png" alt="" class="avatar" border="0"></div><br>
+								&#9989; NO KYC<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=300014"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?topic=5331692" title="I DO NOT TRADE on Telegram or Skype or Discord."><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50823897"><span style="opacity: 30%;">&#8702;&nbsp;</span><a style="color: black" href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext"><span title="Last edit: November 25, 2019, 10:57:42 PM by DaveF" class="edited">April 29, 2019, 02:27:50 PM</span><span class="editplain"><br>Last edit: November 25, 2019, 10:57:42 PM by DaveF</span></div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=459836">LoyceV</a> (22), <a href="https://bitcointalk.org/index.php?action=profile;u=33156">vapourminer</a> (20), <a href="https://bitcointalk.org/index.php?action=profile;u=84521">Welsh</a> (15), <a href="https://bitcointalk.org/index.php?action=profile;u=359716">ABCbits</a> (10), <a href="https://bitcointalk.org/index.php?action=profile;u=1059082">hugeblack</a> (10), <a href="https://bitcointalk.org/index.php?action=profile;u=23092">malevolent</a> (4), <a href="https://bitcointalk.org/index.php?action=profile;u=507936">DarkStar_</a> (4), <a href="https://bitcointalk.org/index.php?action=profile;u=2550169">Jean_Luc</a> (4), <a href="https://bitcointalk.org/index.php?action=profile;u=1188543">o_e_l_e_o</a> (2), <a href="https://bitcointalk.org/index.php?action=profile;u=18321">OgNasty</a> (1), <a href="https://bitcointalk.org/index.php?action=profile;u=525056">BitMaxz</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns295" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897">#295</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Has anyone put together (or started to put together) a list of CPUs / Video Cards &amp; the speed you can get out of them.<br>I know it's a newer project and Jean_Luc is working VERY VERY hard on it so getting accurate numbers is going to be a moving target. But for now all we can do is look through the thread and see who is running what to get a general idea.<br>So far I have pulled from this thread:<br><br>GPU: GPU #0 GeForce GTX 1080 Ti (28x128 cores) Grid(224x128)<br>914.418 MK/s (GPU 896.216 MK/s) <br><br>GPU: GPU #0 GeForce GTX 1050 Ti (6x128 cores) Grid(48x128)<br>220.180 MK/s (GPU 220.180 MK/s) <br><br>GPU: GPU #0 GeForce GT 520M (1x48 cores) Grid(8x128)<br>10.233 MK/s (GPU 7.026 MK/s) <br><br>GPU: GPU #0 GeForce RTX 2070 (36x64 cores) Grid(288x128)<br>1535.880 MK/s (GPU 1470.257 MK/s) <br><br>Added 30-April-2019<br><br>GPU: GPU #0 GeForce GTX 1060 3GB (9x128 cores) Grid(72x128)<br>321.929 MK/s (GPU 321.929 MK/s)<br><br>GPU: GPU #0 GeForce GTX 1080 (20x128 cores) Grid(160x128)<br>672.062 MK/s (GPU 672.062 MK/s)<br><br>Added 1-May-2019<br><br>GPU: GPU #0 Tesla V100-SXM2-16GB (80x64 cores) Grid(640x128)<br>GPU: GPU #3 Tesla V100-SXM2-16GB (80x64 cores) Grid(640x128)<br>GPU: GPU #2 Tesla V100-SXM2-16GB (80x64 cores) Grid(640x128)<br>GPU: GPU #1 Tesla V100-SXM2-16GB (80x64 cores) Grid(640x128)<br>7260.449 MK/s (GPU 7212.931 MK/s) <br>So 7260 / 4 = 1815 MK/s <br><br>GPU: GPU #0 GeForce GTX 750 (4x128 cores) Grid(32x128)<br>104.960 MK/s (GPU 94.405 MK/s) (2^32.12)<br><br>Added 3-May-2019<br>i7-7700K CPU Number of CPU thread: 8<br>22.092 MK/s (GPU 0.000 MK/s)<br><br>With -t 7<br>Number of CPU thread: 7<br>21.609 MK/s <br><br>Added 8-May-2019<br><br>EVGA RTX 2080 XC ULTRA<br>1427.967 MK/s (GPU 1424.946 MK/s)<br><br>Added 23-May-2019<br><br>GPU: GPU #0 GeForce GTX 1660 Ti <br>961.319 MK/s (GPU 961.319 MK/s) <br><br>GPU: GPU #0 GeForce RTX 2080 Ti (68x64 cores) Grid(544x128)<br>GPU: GPU #1 GeForce RTX 2080 Ti (68x64 cores) Grid(544x128)<br>5128.213 MK/s (GPU 5128.213 MK/s)<br>So 5128 / 2 &nbsp;= 2564 MK/s<br><br><br>Added 8-June-2019<br><br>GPU: GPU #0 GeForce GTX 960M (5x128 cores) Grid(40x128)<br>117.802 MK/s (GPU 117.802 MK/s)<br><br>Added 23-July-2019<br><br>GPU: GPU #0 GeForce GTX 1660 (22x64 cores) Grid(176x128)<br>839.061 MK/s (GPU 839.061 MK/s) <br><br>Added 25-July-2019<br><br>GPU: GPU #0 GeForce GTX 1650 (14x64 cores) Grid(112x128)<br>511.906 MK/s (GPU 511.906 MK/s) (2^36.97)<br><br><br>Added 21-Nov-2019<br><br>GPU: GPU #0 GeForce GTX 970 (13x128 cores) Grid(104x128)<br>360.322 MK/s (GPU 331.442 MK/s) (2^32.77) <br><br>Added 25-Nov-2019<br><br>GPU: GPU #0 GeForce GTX 980 (16x128 cores) Grid(128x128)<br>375.384 MK/s (GPU 375.384 MK/s)<br><br>GPU: GPU #0 GeForce RTX 2060 SUPER (34x64 cores) Grid(272x256)<br>[1361.71 Mkey/s][GPU 1361.71 Mkey/s]<br><br>GPU: GPU #0 GeForce RTX 2080 SUPER (48x64 cores) Grid(384x256)<br>[2001.52 Mkey/s][GPU 2001.52 Mkey/s]<br><br>Anything else?<br><br>-Dave<br><br>Last updated 25-Nov-2019.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50823897">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig300014"><div align="center"><table style="font: inherit; color: inherit;"><tbody><tr><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 1px !important; line-height: 1.3em;">&nbsp;</span><br><span style="font-family: arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;">&nbsp;<a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat,arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;"><span style="color: #fff;"><b>b1exch</b><span style="color: #FF3729;"><b>.</b><span style="color: #FFF;"><b>io</b></span></span></span></span></span></span>&nbsp;</a></span></span></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat black,arial black;"><span style="font-size: 17pt !important; line-height: 1.3em;"><span style="color: #f32;">Instant&nbsp;<span style="color: #262626;">Automated&nbsp;<span style="color: #f32;">Exchange<br><span style="font-family: montserrat,arial black;"><span style="font-size: 8pt !important; line-height: 1.3em;"><span style="color: transparent;"><span style="background-color: #7D7D7D;">.<span style="background-color: #606060;">.<span style="background-color: #515151;">.<span style="background-color: #434343;">.<span style="background-color: #343434;">.<span style="background-color: #262626;">................<span style="color: #fff;">No Logs&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No registration&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No JavaScript&nbsp;&nbsp;&nbsp;</span>................</span>.</span>.</span>.</span>.</span>.</span></span></span></span></span></span></span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 9pt !important; line-height: 1.3em;"><b><a rel="ugc" class="ul" href="https://b1exch.io/Liquidity"><tt><span style="color: #fff;"><span style="background-color: #09e;">&nbsp;&nbsp;ETH&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">DAI&nbsp;&nbsp;&nbsp;</span></span><br><span style="background-color: #f7931a;">&nbsp;&nbsp;BTC&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #09e;">&nbsp;&nbsp;LTC&nbsp;&nbsp;&nbsp;</span><br><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">USDT&nbsp;&nbsp;</span></span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #f7931a;">&nbsp;&nbsp;XMR&nbsp;&nbsp;&nbsp;<span style="font-size: 1pt !important; line-height: 1.3em;">&nbsp;</span></span></span></tt></a></b></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-family: Arial black;"><span style="font-size: 6pt !important; line-height: 1.3em;"><span style="color: #333;">ACCESS VIA</span></span><br><span style="color: #FF3729;"><span style="font-size: 22pt !important; line-height: 1.3em;">Tor</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"><span style="color: transparent;"><span style="font-size: 1pt !important; line-height: 1.3em;">.</span></span></td><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #ac0;"><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9600;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9608;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9608;&#9608;&#9608;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<span style="color: #777;">&#9608;&#9604;<span style="color: #ac0;">&#9608;&#9600;</span><br></span></span></span></span></a><div align="center"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #777;">&#9608;&#9600;&#9608;<br>&#9604;&#9604;&#9600;&#9617;&#9617;&#9608;&#9608;&#9604;&#9604;<br>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;</span>&#9608;&#9604;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;&#9617;&#9604;<span style="color: #eef;">&#9608;&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9600;&#9600;&#9600;&#9604;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;<br></span></span></div></td></tr></tbody></table></div></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50830128"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2070248" title="View the profile of Coinettin">Coinettin</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 2<br>
+								Merit: 0<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2070248"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50830128#msg50830128"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50830128"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50830128#msg50830128">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 30, 2019, 12:25:12 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns296" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50830128#msg50830128">#296</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hi Jean_Luc,<br><br>Thank you for your work. It's a huge step for generating vanity addresses. I appreciate it.<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50830128">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50843591"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=507936" title="View the profile of DarkStar_">DarkStar_</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/legendary.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 2772<br>
+								Merit: 3288<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=507936"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://keybase.io/darkness" title="My Public PGP Key"><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50843591#msg50843591"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50843591"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50843591#msg50843591">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">April 30, 2019, 10:06:29 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns297" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50843591#msg50843591">#297</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897">Quote from: DaveF on April 29, 2019, 02:27:50 PM</a></div><div class="quote">GPU: GPU #0 GeForce RTX 2070 (36x64 cores) Grid(288x128)<br>1535.880 MK/s (GPU 1470.257 MK/s) <br><br>Anything else?<br></div><br>GPU: GPU #0 GeForce GTX 1060 3GB (9x128 cores) Grid(72x128)<br>321.929 MK/s (GPU 321.929 MK/s)</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50843591">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig507936">taking a break - expect delayed responses</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50845102"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=300014" title="View the profile of DaveF">DaveF</a></b>
+							<div class="smalltext">
+								Legendary<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/legendary.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 4116<br>
+								Merit: 7109<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./VanitySearch (Yet another address prefix finder)_files/avatar_300014.png" alt="" class="avatar" border="0"></div><br>
+								&#9989; NO KYC<br>
+								<br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=300014"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?topic=5331692" title="I DO NOT TRADE on Telegram or Skype or Discord."><img src="./VanitySearch (Yet another address prefix finder)_files/www_sm.gif" alt="WWW" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50845102#msg50845102"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50845102"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50845102#msg50845102">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">May 01, 2019, 02:00:47 AM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=2550169">Jean_Luc</a> (2)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns298" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50845102#msg50845102">#298</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50843591#msg50843591">Quote from: DarkStar_ on April 30, 2019, 10:06:29 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897">Quote from: DaveF on April 29, 2019, 02:27:50 PM</a></div><div class="quote">GPU: GPU #0 GeForce RTX 2070 (36x64 cores) Grid(288x128)<br>1535.880 MK/s (GPU 1470.257 MK/s) <br><br>Anything else?<br></div><br>GPU: GPU #0 GeForce GTX 1060 3GB (9x128 cores) Grid(72x128)<br>321.929 MK/s (GPU 321.929 MK/s)<br></div><br>I updated my original post. <br><a class="ul" href="https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897">https://bitcointalk.org/index.php?topic=5112311.msg50823897#msg50823897</a><br><br>I am going to do my best to keep it updated as more info comes in.<br>As I add cards I will post the date added so there will be some form of tracking.<br><br>-Dave</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50845102">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig300014"><div align="center"><table style="font: inherit; color: inherit;"><tbody><tr><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 1px !important; line-height: 1.3em;">&nbsp;</span><br><span style="font-family: arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;">&nbsp;<a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat,arial black;"><span style="font-size: 24pt !important; line-height: 1.3em;"><span style="background-color: #262626;"><span style="color: #fff;"><b>b1exch</b><span style="color: #FF3729;"><b>.</b><span style="color: #FFF;"><b>io</b></span></span></span></span></span></span>&nbsp;</a></span></span></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="https://b1exch.io/"><span style="font-family: montserrat black,arial black;"><span style="font-size: 17pt !important; line-height: 1.3em;"><span style="color: #f32;">Instant&nbsp;<span style="color: #262626;">Automated&nbsp;<span style="color: #f32;">Exchange<br><span style="font-family: montserrat,arial black;"><span style="font-size: 8pt !important; line-height: 1.3em;"><span style="color: transparent;"><span style="background-color: #7D7D7D;">.<span style="background-color: #606060;">.<span style="background-color: #515151;">.<span style="background-color: #434343;">.<span style="background-color: #343434;">.<span style="background-color: #262626;">................<span style="color: #fff;">No Logs&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No registration&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;No JavaScript&nbsp;&nbsp;&nbsp;</span>................</span>.</span>.</span>.</span>.</span>.</span></span></span></span></span></span></span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><span style="font-size: 9pt !important; line-height: 1.3em;"><b><a rel="ugc" class="ul" href="https://b1exch.io/Liquidity"><tt><span style="color: #fff;"><span style="background-color: #09e;">&nbsp;&nbsp;ETH&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">DAI&nbsp;&nbsp;&nbsp;</span></span><br><span style="background-color: #f7931a;">&nbsp;&nbsp;BTC&nbsp;&nbsp;&nbsp;</span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #09e;">&nbsp;&nbsp;LTC&nbsp;&nbsp;&nbsp;</span><br><span style="background-color: #262626;">&nbsp;&nbsp;<span style="color: #fff;">USDT&nbsp;&nbsp;</span></span><span style="font-size: 3pt !important; line-height: 1.3em;">&nbsp;</span><span style="background-color: #f7931a;">&nbsp;&nbsp;XMR&nbsp;&nbsp;&nbsp;<span style="font-size: 1pt !important; line-height: 1.3em;">&nbsp;</span></span></span></tt></a></b></span></td><td valign="top" style="font: inherit; color: inherit;"></td><td valign="top" style="font: inherit; color: inherit;"><div align="center"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-family: Arial black;"><span style="font-size: 6pt !important; line-height: 1.3em;"><span style="color: #333;">ACCESS VIA</span></span><br><span style="color: #FF3729;"><span style="font-size: 22pt !important; line-height: 1.3em;">Tor</span></span></span></a></div></td><td valign="top" style="font: inherit; color: inherit;"><span style="color: transparent;"><span style="font-size: 1pt !important; line-height: 1.3em;">.</span></span></td><td valign="top" style="font: inherit; color: inherit;"><a rel="ugc" class="ul" href="http://blckexcrpdmau6y7teqxmf6yiyg7xn7qlphjeaxgyimxokz623w4tmqd.onion/"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #ac0;"><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9600;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9604;&#9608;&#9604;&#9600;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>&#9608;&#9608;&#9608;<br><span style="color: transparent;">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<span style="color: #777;">&#9608;&#9604;<span style="color: #ac0;">&#9608;&#9600;</span><br></span></span></span></span></a><div align="center"><span style="font-size: 2pt !important; line-height: 1.3em;"><span style="color: #777;">&#9608;&#9600;&#9608;<br>&#9604;&#9604;&#9600;&#9617;&#9617;&#9608;&#9608;&#9604;&#9604;<br>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;</span>&#9608;&#9604;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9604;&#9600;&#9617;&#9604;<span style="color: #eef;">&#9608;&#9608;&#9608;</span>&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;<span style="color: #eef;">&#9608;&#9608;</span>&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9608;&#9617;&#9608;&#9617;&#9608;&#9617;&#9608;&#9608;&#9617;&#9608;<span style="color: #595959;">&#9608;&#9608;&#9608;&#9608;</span>&#9608;<br>&#9600;&#9600;&#9600;&#9604;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9600;&#9600;&#9600;<br></span></span></div></td></tr></tbody></table></div></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50846862"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2550169" title="View the profile of Jean_Luc">Jean_Luc</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Sr. Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 462<br>
+								Merit: 737<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2550169"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50846862#msg50846862"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50846862"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50846862#msg50846862">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">May 01, 2019, 06:10:18 AM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=352117">escope</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns299" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50846862#msg50846862">#299</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Many thanks for your report Dave <img src="./VanitySearch (Yet another address prefix finder)_files/wink.gif" alt="Wink" border="0"><br><br>Some news:<br>Wildcard search is between 4 and 5 times slower than classic search for known prefixes. I reach ~40MK/s with my 1050 Ti and ~4MK/s with my i7-4770.<br>It is due to the fact that I have to compute full address each time and it requires 2 SHA for the checksum and a base58 encoding. For the CPU release, I implemented SSE checksum and I will try to implement SSE Base58 encoding using Barret's reduction (for computing div and mod 58).<br><br><br><br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50846862">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg50848349"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=1035401" title="View the profile of Lolo54">Lolo54</a></b>
+							<div class="smalltext">
+								Member<br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><img src="./VanitySearch (Yet another address prefix finder)_files/star.gif" alt="*" border="0"><br>
+								<img src="./VanitySearch (Yet another address prefix finder)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"><span class="smalltext"> Offline</span><br><br>
+								Activity: 133<br>
+								Merit: 32<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=1035401"><img src="./VanitySearch (Yet another address prefix finder)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a><br>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50848349#msg50848349"><img src="./VanitySearch (Yet another address prefix finder)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_50848349"><a href="https://bitcointalk.org/index.php?topic=5112311.msg50848349#msg50848349">Re: VanitySearch (Yet another address prefix finder)</a></div>
+												<div class="smalltext">May 01, 2019, 08:34:43 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns300" style="visibility: visible;"> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5112311.msg50848349#msg50848349">#300</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Bonjour<br>You can add it <a class="ul" href="https://bitcointalk.org/index.php?topic=5112311.msg50108268#msg50108268">https://bitcointalk.org/index.php?topic=5112311.msg50108268#msg50108268</a><br><div class="codeheader">Code:</div><div class="code">C: \ VanitySearch&gt; VanitySearch.exe -stop -gpu -gpuId 0,1,2,3 1SLarkBoyKEK <br>Début Dim 10 mars 2019 22:26:19 <br>Difficulté: 583137945833742401536Search: 1SLarkBoyKEK <br>base clé: 7098934A348028B578A730116289AC3A6BB56AFF8664117F5CE69920A360A4E9 <br>Nombre de thread CPU: 31 <br>GPU: GPU # 0 Tesla V100-SXM2-16GB (80x64 noyaux) Grille (640x128) <br>GPU: GPU n ° 3 Tesla V100-SXM2-16GB (80x64 noyaux) Grille (640x128) <br>GPU: GPU n ° 2 Tesla V100-SXM2-16GB (80x64 cœurs) Grille (640x128) <br>GPU: GPU n ° 1 Tesla V100-SXM2-16GB (80x64 cœurs) Grille (640x128) <br>7260.449 MK / s (GPU 7212.931 MK / s) (2 ^ 36.56) [P 0.00%] [50.00% en 1765.33y ] [0]<br></div></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_50848349">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./VanitySearch (Yet another address prefix finder)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</tbody></table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext">Pages: <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.260">«</a> </span><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.0">1</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.40">3</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.60">4</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.80">5</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.100">6</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.120">7</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.140">8</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.160">9</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.180">10</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.200">11</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.220">12</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.240">13</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.260">14</a> [<b>15</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.300">16</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.320">17</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.340">18</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.360">19</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.380">20</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.400">21</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.420">22</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.440">23</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.460">24</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.480">25</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.500">26</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.520">27</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.540">28</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.560">29</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.580">30</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.600">31</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.620">32</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.640">33</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.660">34</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.680">35</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.700">36</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.720">37</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.740">38</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.760">39</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.780">40</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.800">41</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.820">42</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.840">43</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.860">44</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.880">45</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.900">46</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.920">47</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.940">48</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.960">49</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.980">50</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1000">51</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1020">52</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1040">53</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1060">54</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1080">55</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1100">56</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1120">57</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1140">58</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1160">59</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1180">60</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1200">61</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1220">62</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1240">63</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.1260">64</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5112311.300">»</a> </span></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="maintab_first">&nbsp;</td>
+		<td class="maintab_back"><a href="https://bitcointalk.org/index.php?action=printpage;topic=5112311.0" target="_blank">Print</a></td>
+		<td class="maintab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<script language="JavaScript" type="text/javascript" src="./VanitySearch (Yet another address prefix finder)_files/xml_topic.js.download"></script>
+<script language="JavaScript" type="text/javascript">//<!--
+	quickReplyCollapsed = true;
+
+	smf_topic = 5112311;
+	smf_start = 280;
+	smf_show_modify = 0;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="c6e6eb1e124e500cd5769ee730cf4dab" /><input type="hidden" name="topic" value="5112311" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Save" onclick="return modify_save(\'c6e6eb1e124e500cd5769ee730cf4dab\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Cancel" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="https://bitcointalk.org/index.php?topic=5112311.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Topic: %subject% &nbsp;(Read 34976 times)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// --></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tbody><tr>
+				<td valign="top"><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=5112311.0" class="nav">VanitySearch (Yet another address prefix finder)</a></b></div></td> 
+				<td valign="top" align="right" class="nav"> <a href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=5112311.0;prev_next=next#new">next topic »</a></td>
+		</tr>
+</tbody></table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tbody><tr>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody></table>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="https://bitcointalk.org/index.php" method="get" accept-charset="ISO-8859-1" style="padding:0; margin: 0;">
+		<span class="smalltext">Jump to:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex &gt; 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf(&#39;?&#39;) == -1 || this.options[this.selectedIndex].value.substr(0, 1) != &#39;?&#39; ? 0 : 1);">
+			<option value="">Please select a destination:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#1">Bitcoin</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=1.0"> =&gt; Bitcoin Discussion</option>
+			<option value="?board=74.0"> ===&gt; Legal</option>
+			<option value="?board=77.0"> ===&gt; Press</option>
+			<option value="?board=86.0"> ===&gt; Meetups</option>
+			<option value="?board=87.0"> ===&gt; Important Announcements</option>
+			<option value="?board=6.0" selected="selected"> =&gt; Development &amp; Technical Discussion</option>
+			<option value="?board=37.0"> ===&gt; Wallet software</option>
+			<option value="?board=98.0"> =====&gt; Electrum</option>
+			<option value="?board=100.0"> =====&gt; Bitcoin Wallet for Android</option>
+			<option value="?board=138.0"> =====&gt; BitcoinJ</option>
+			<option value="?board=97.0"> =====&gt; Armory</option>
+			<option value="?board=231.0"> =====&gt; Mycelium</option>
+			<option value="?board=261.0"> =====&gt; Hardware wallets</option>
+			<option value="?board=14.0"> =&gt; Mining</option>
+			<option value="?board=40.0"> ===&gt; Mining support</option>
+			<option value="?board=41.0"> ===&gt; Pools</option>
+			<option value="?board=42.0"> ===&gt; Mining software (miners)</option>
+			<option value="?board=76.0"> ===&gt; Hardware</option>
+			<option value="?board=137.0"> =====&gt; Group buys</option>
+			<option value="?board=81.0"> ===&gt; Mining speculation</option>
+			<option value="?board=4.0"> =&gt; Bitcoin Technical Support</option>
+			<option value="?board=12.0"> =&gt; Project Development</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#3">Economy</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=7.0"> =&gt; Economics</option>
+			<option value="?board=57.0"> ===&gt; Speculation</option>
+			<option value="?board=5.0"> =&gt; Marketplace</option>
+			<option value="?board=51.0"> ===&gt; Goods</option>
+			<option value="?board=75.0"> =====&gt; Computer hardware</option>
+			<option value="?board=93.0"> =====&gt; Digital goods</option>
+			<option value="?board=234.0"> =======&gt; Invites &amp; Accounts</option>
+			<option value="?board=217.0"> =====&gt; Collectibles</option>
+			<option value="?board=52.0"> ===&gt; Services</option>
+			<option value="?board=53.0"> ===&gt; Currency exchange</option>
+			<option value="?board=56.0"> ===&gt; Gambling</option>
+			<option value="?board=71.0"> =====&gt; Games and rounds</option>
+			<option value="?board=207.0"> =====&gt; Investor-based games</option>
+			<option value="?board=228.0"> =====&gt; Gambling discussion</option>
+			<option value="?board=65.0"> ===&gt; Lending</option>
+			<option value="?board=88.0"> =====&gt; Long-term offers</option>
+			<option value="?board=78.0"> ===&gt; Securities</option>
+			<option value="?board=73.0"> ===&gt; Auctions</option>
+			<option value="?board=84.0"> ===&gt; Service Announcements</option>
+			<option value="?board=212.0"> =====&gt; Micro Earnings</option>
+			<option value="?board=85.0"> ===&gt; Service Discussion</option>
+			<option value="?board=222.0"> =====&gt; Web Wallets</option>
+			<option value="?board=223.0"> =====&gt; Exchanges</option>
+			<option value="?board=8.0"> =&gt; Trading Discussion</option>
+			<option value="?board=83.0"> ===&gt; Scam Accusations</option>
+			<option value="?board=129.0"> ===&gt; Reputation</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Other</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> =&gt; Meta</option>
+			<option value="?board=168.0"> ===&gt; Bitcoin Wiki</option>
+			<option value="?board=34.0"> =&gt; Politics &amp; Society</option>
+			<option value="?board=39.0"> =&gt; Beginners &amp; Help</option>
+			<option value="?board=9.0"> =&gt; Off-topic</option>
+			<option value="?board=250.0"> =&gt; Serious discussion</option>
+			<option value="?board=251.0"> ===&gt; Ivory Tower</option>
+			<option value="?board=59.0"> =&gt; Archival</option>
+			<option value="?board=167.0"> ===&gt; New forum software</option>
+			<option value="?board=92.0"> ===&gt; &#1050;&#1086;&#1088;&#1079;&#1080;&#1085;&#1072;</option>
+			<option value="?board=44.0"> ===&gt; CPU/GPU Bitcoin mining hardware</option>
+			<option value="?board=17.0"> ===&gt; Chinese students</option>
+			<option value="?board=25.0"> ===&gt; Obsolete (buying)</option>
+			<option value="?board=26.0"> ===&gt; Obsolete (selling)</option>
+			<option value="?board=99.0"> ===&gt; MultiBit</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Alternate cryptocurrencies</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=67.0"> =&gt; Altcoin Discussion</option>
+			<option value="?board=159.0"> =&gt; Announcements (Altcoins)</option>
+			<option value="?board=240.0"> ===&gt; Tokens (Altcoins)</option>
+			<option value="?board=160.0"> =&gt; Mining (Altcoins)</option>
+			<option value="?board=199.0"> ===&gt; Pools (Altcoins)</option>
+			<option value="?board=161.0"> =&gt; Marketplace (Altcoins)</option>
+			<option value="?board=197.0"> ===&gt; Service Announcements (Altcoins)</option>
+			<option value="?board=198.0"> ===&gt; Service Discussion (Altcoins)</option>
+			<option value="?board=238.0"> ===&gt; Bounties (Altcoins)</option>
+			<option value="?board=224.0"> =&gt; Speculation (Altcoins)</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Local</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=241.0"> =&gt; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; (Arabic)</option>
+			<option value="?board=242.0"> ===&gt; &#1575;&#1604;&#1593;&#1605;&#1604;&#1575;&#1578; &#1575;&#1604;&#1576;&#1583;&#1610;&#1604;&#1577; (Altcoins)</option>
+			<option value="?board=265.0"> =====&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578;</option>
+			<option value="?board=253.0"> ===&gt; &#1573;&#1587;&#1578;&#1601;&#1587;&#1575;&#1585;&#1575;&#1578; &#1608; &#1571;&#1587;&#1574;&#1604;&#1577; &#1575;&#1604;&#1605;&#1576;&#1578;&#1583;&#1574;&#1610;&#1606;</option>
+			<option value="?board=266.0"> ===&gt; &#1575;&#1604;&#1578;&#1593;&#1583;&#1610;&#1606;</option>
+			<option value="?board=267.0"> ===&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578; &#1575;&#1604;&#1571;&#1582;&#1585;&#1609;</option>
+			<option value="?board=271.0"> ===&gt; &#1605;&#1606;&#1589;&#1575;&#1578; &#1575;&#1604;&#1578;&#1576;&#1575;&#1583;&#1604;</option>
+			<option value="?board=191.0"> =&gt; Bahasa Indonesia (Indonesian)</option>
+			<option value="?board=193.0"> ===&gt; Marketplace (Bahasa Indonesia)</option>
+			<option value="?board=194.0"> ===&gt; Mining (Bahasa Indonesia)</option>
+			<option value="?board=192.0"> ===&gt; Altcoins (Bahasa Indonesia)</option>
+			<option value="?board=276.0"> ===&gt; Trading dan Spekulasi</option>
+			<option value="?board=277.0"> ===&gt; Ekonomi, Politik, dan Budaya</option>
+			<option value="?board=278.0"> ===&gt; Topik Lainnya</option>
+			<option value="?board=27.0"> =&gt; Español (Spanish)</option>
+			<option value="?board=31.0"> ===&gt; Mercado y Economía</option>
+			<option value="?board=202.0"> =====&gt; Servicios</option>
+			<option value="?board=203.0"> =====&gt; Trading y especulación</option>
+			<option value="?board=32.0"> ===&gt; Hardware y Minería</option>
+			<option value="?board=33.0"> ===&gt; Esquina Libre</option>
+			<option value="?board=101.0"> ===&gt; Mercadillo</option>
+			<option value="?board=102.0"> =====&gt; Mexico</option>
+			<option value="?board=103.0"> =====&gt; Argentina</option>
+			<option value="?board=104.0"> =====&gt; España</option>
+			<option value="?board=105.0"> =====&gt; Centroamerica y Caribe</option>
+			<option value="?board=130.0"> ===&gt; Primeros pasos y ayuda</option>
+			<option value="?board=151.0"> ===&gt; Altcoins (criptomonedas alternativas)</option>
+			<option value="?board=177.0"> =====&gt; Minería de altcoins</option>
+			<option value="?board=204.0"> =====&gt; Servicios</option>
+			<option value="?board=254.0"> =====&gt; Tokens (Español)</option>
+			<option value="?board=30.0"> =&gt; &#20013;&#25991; (Chinese)</option>
+			<option value="?board=117.0"> ===&gt; &#36339;&#34468;&#24066;&#22330;</option>
+			<option value="?board=118.0"> ===&gt; &#23665;&#23528;&#24065;</option>
+			<option value="?board=119.0"> ===&gt; &#23186;&#20307;</option>
+			<option value="?board=146.0"> ===&gt; &#25366;&#30719;</option>
+			<option value="?board=196.0"> ===&gt; &#31163;&#39064;&#19975;&#37324;</option>
+			<option value="?board=201.0"> =&gt; Hrvatski (Croatian)</option>
+			<option value="?board=220.0"> ===&gt; Trgovina</option>
+			<option value="?board=221.0"> ===&gt; Altcoins (Hrvatski)</option>
+			<option value="?board=273.0"> =====&gt; Announcements (Hrvatski)</option>
+			<option value="?board=272.0"> ===&gt; Off-topic (Hrvatski)</option>
+			<option value="?board=16.0"> =&gt; Deutsch (German)</option>
+			<option value="?board=62.0"> ===&gt; Anfänger und Hilfe</option>
+			<option value="?board=60.0"> ===&gt; Mining (Deutsch)</option>
+			<option value="?board=61.0"> ===&gt; Trading und Spekulation</option>
+			<option value="?board=63.0"> ===&gt; Projektentwicklung</option>
+			<option value="?board=64.0"> ===&gt; Off-Topic (Deutsch)</option>
+			<option value="?board=139.0"> ===&gt; Treffen</option>
+			<option value="?board=140.0"> ===&gt; Presse </option>
+			<option value="?board=152.0"> ===&gt; Altcoins (Deutsch)</option>
+			<option value="?board=270.0"> =====&gt; Announcements (Deutsch)</option>
+			<option value="?board=269.0"> ===&gt; Marktplatz</option>
+			<option value="?board=141.0"> =====&gt; Auktionen</option>
+			<option value="?board=36.0"> =====&gt; Suche</option>
+			<option value="?board=35.0"> =====&gt; Biete</option>
+			<option value="?board=120.0"> =&gt; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940; (Greek)</option>
+			<option value="?board=136.0"> ===&gt; &#913;&#947;&#959;&#961;&#940;</option>
+			<option value="?board=195.0"> ===&gt; Mining Discussion (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=179.0"> ===&gt; Altcoins (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=246.0"> =====&gt; Altcoin Announcements (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=247.0"> =====&gt; Altcoin Mining (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=95.0"> =&gt; &#1506;&#1489;&#1512;&#1497;&#1514; (Hebrew)</option>
+			<option value="?board=13.0"> =&gt; Français</option>
+			<option value="?board=183.0"> ===&gt; Actualité et News</option>
+			<option value="?board=208.0"> ===&gt; Débutants</option>
+			<option value="?board=47.0"> ===&gt; Discussions générales et utilisation du Bitcoin</option>
+			<option value="?board=48.0"> ===&gt; Mining et Hardware</option>
+			<option value="?board=187.0"> ===&gt; Économie et spéculation</option>
+			<option value="?board=49.0"> ===&gt; Place de marché</option>
+			<option value="?board=209.0"> =====&gt; Échanges</option>
+			<option value="?board=210.0"> =====&gt; Produits et services</option>
+			<option value="?board=211.0"> =====&gt; Petites annonces</option>
+			<option value="?board=188.0"> ===&gt; Le Bitcoin et la loi</option>
+			<option value="?board=54.0"> ===&gt; Wiki, documentation et traduction</option>
+			<option value="?board=186.0"> ===&gt; Développement et technique</option>
+			<option value="?board=184.0"> ===&gt; Vos sites et projets</option>
+			<option value="?board=50.0"> ===&gt; Hors-sujet</option>
+			<option value="?board=149.0"> ===&gt; Altcoins (Français)</option>
+			<option value="?board=258.0"> =====&gt; Annonces</option>
+			<option value="?board=89.0"> =&gt; India</option>
+			<option value="?board=121.0"> ===&gt; Mining (India)</option>
+			<option value="?board=122.0"> ===&gt; Marketplace (India)</option>
+			<option value="?board=123.0"> ===&gt; Regional Languages (India)</option>
+			<option value="?board=124.0"> ===&gt; Press &amp; News from India</option>
+			<option value="?board=125.0"> ===&gt; Alt Coins (India)</option>
+			<option value="?board=126.0"> ===&gt; Buyer/ Seller Reputations (India)</option>
+			<option value="?board=127.0"> ===&gt; Off-Topic (India)</option>
+			<option value="?board=28.0"> =&gt; Italiano (Italian)</option>
+			<option value="?board=153.0"> ===&gt; Guide (Italiano)</option>
+			<option value="?board=169.0"> ===&gt; Progetti</option>
+			<option value="?board=205.0"> ===&gt; Discussioni avanzate e sviluppo</option>
+			<option value="?board=175.0"> ===&gt; Trading, analisi e speculazione</option>
+			<option value="?board=170.0"> ===&gt; Mercato</option>
+			<option value="?board=46.0"> =====&gt; Mercato valute</option>
+			<option value="?board=107.0"> =====&gt; Beni</option>
+			<option value="?board=171.0"> =====&gt; Servizi</option>
+			<option value="?board=172.0"> =====&gt; Esercizi commerciali</option>
+			<option value="?board=173.0"> =====&gt; Hardware/Mining (Italiano)</option>
+			<option value="?board=200.0"> =====&gt; Gambling (Italiano)</option>
+			<option value="?board=162.0"> ===&gt; Accuse scam/truffe</option>
+			<option value="?board=115.0"> ===&gt; Mining (Italiano)</option>
+			<option value="?board=132.0"> ===&gt; Alt-Currencies (Italiano)</option>
+			<option value="?board=176.0"> =====&gt; Annunci</option>
+			<option value="?board=144.0"> ===&gt; Raduni/Meeting (Italiano)</option>
+			<option value="?board=165.0"> ===&gt; Crittografia e decentralizzazione</option>
+			<option value="?board=145.0"> ===&gt; Off-Topic (Italiano)</option>
+			<option value="?board=252.0"> =&gt; &#26085;&#26412;&#35486; (Japanese)</option>
+			<option value="?board=255.0"> ===&gt; &#12450;&#12523;&#12488;&#12467;&#12452;&#12531;</option>
+			<option value="?board=79.0"> =&gt; Nederlands (Dutch)</option>
+			<option value="?board=80.0"> ===&gt; Markt</option>
+			<option value="?board=94.0"> ===&gt; Gokken/lotterijen</option>
+			<option value="?board=116.0"> ===&gt; Mining (Nederlands)</option>
+			<option value="?board=143.0"> ===&gt; Beurzen</option>
+			<option value="?board=147.0"> ===&gt; Alt Coins (Nederlands)</option>
+			<option value="?board=148.0"> ===&gt; Off-topic (Nederlands)</option>
+			<option value="?board=150.0"> ===&gt; Meetings (Nederlands)</option>
+			<option value="?board=275.0"> =&gt; Nigeria (Naija)</option>
+			<option value="?board=279.0"> ===&gt; Politics and society (Naija)</option>
+			<option value="?board=280.0"> ===&gt; Off-topic (Naija)</option>
+			<option value="?board=82.0"> =&gt; &#54620;&#44397;&#50612; (Korean)</option>
+			<option value="?board=182.0"> ===&gt; &#45824;&#52404;&#53076;&#51064; Alt Coins (&#54620;&#44397;&#50612;)</option>
+			<option value="?board=219.0"> =&gt; Pilipinas</option>
+			<option value="?board=243.0"> ===&gt; Altcoins (Pilipinas)</option>
+			<option value="?board=260.0"> =====&gt; Altcoin Announcements (Pilipinas)</option>
+			<option value="?board=268.0"> ===&gt; Pamilihan</option>
+			<option value="?board=274.0"> ===&gt; Others (Pilipinas)</option>
+			<option value="?board=142.0"> =&gt; Polski</option>
+			<option value="?board=163.0"> ===&gt; Tablica og&#322;osze&#324;</option>
+			<option value="?board=164.0"> ===&gt; Alternatywne kryptowaluty</option>
+			<option value="?board=263.0"> =====&gt; Nowe kryptowaluty i tokeny</option>
+			<option value="?board=264.0"> =====&gt; Tablica og&#322;osze&#324; (altcoiny)</option>
+			<option value="?board=29.0"> =&gt; Português (Portuguese)</option>
+			<option value="?board=131.0"> ===&gt; Primeiros Passos (Iniciantes)</option>
+			<option value="?board=69.0"> ===&gt; Economia &amp; Mercado</option>
+			<option value="?board=70.0"> ===&gt; Mineração em Geral</option>
+			<option value="?board=206.0"> ===&gt; Desenvolvimento &amp; Discussões Técnicas</option>
+			<option value="?board=181.0"> ===&gt; Criptomoedas Alternativas</option>
+			<option value="?board=134.0"> ===&gt; Brasil</option>
+			<option value="?board=135.0"> ===&gt; Portugal</option>
+			<option value="?board=10.0"> =&gt; &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russian)</option>
+			<option value="?board=22.0"> ===&gt; &#1053;&#1086;&#1074;&#1080;&#1095;&#1082;&#1080;</option>
+			<option value="?board=23.0"> ===&gt; &#1041;&#1080;&#1079;&#1085;&#1077;&#1089;</option>
+			<option value="?board=236.0"> =====&gt; &#1041;&#1072;&#1088;&#1072;&#1093;&#1086;&#1083;&#1082;&#1072;</option>
+			<option value="?board=237.0"> =====&gt; &#1054;&#1073;&#1084;&#1077;&#1085;&#1085;&#1080;&#1082;&#1080;</option>
+			<option value="?board=90.0"> ===&gt; &#1048;&#1076;&#1077;&#1080;</option>
+			<option value="?board=66.0"> ===&gt; &#1050;&#1086;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=21.0"> ===&gt; &#1052;&#1072;&#1081;&#1085;&#1077;&#1088;&#1099;</option>
+			<option value="?board=91.0"> ===&gt; &#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;</option>
+			<option value="?board=20.0"> ===&gt; &#1058;&#1088;&#1077;&#1081;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=72.0"> ===&gt; &#1040;&#1083;&#1100;&#1090;&#1077;&#1088;&#1085;&#1072;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1074;&#1072;&#1083;&#1102;&#1090;&#1099;</option>
+			<option value="?board=248.0"> =====&gt; &#1058;&#1086;&#1082;&#1077;&#1085;&#1099;</option>
+			<option value="?board=256.0"> =====&gt; &#1041;ay&#1085;&#1090;&#1080; &#1080; a&#1080;p&#1076;po&#1087;&#1099;</option>
+			<option value="?board=55.0"> ===&gt; &#1061;&#1072;&#1081;&#1087;&#1099;</option>
+			<option value="?board=185.0"> ===&gt; &#1056;&#1072;&#1073;&#1086;&#1090;&#1072;</option>
+			<option value="?board=18.0"> ===&gt; &#1056;&#1072;&#1079;&#1085;&#1086;&#1077;</option>
+			<option value="?board=262.0"> ===&gt; O&#1073;cy&#1078;&#1076;e&#1085;&#1080;e Bitcoin</option>
+			<option value="?board=128.0"> =====&gt; &#1053;&#1086;&#1074;&#1086;&#1089;&#1090;&#1080;</option>
+			<option value="?board=19.0"> =====&gt; &#1070;&#1088;&#1080;&#1089;&#1090;&#1099;</option>
+			<option value="?board=108.0"> =&gt; Român&#259; (Romanian)</option>
+			<option value="?board=109.0"> ===&gt; Anunturi importante</option>
+			<option value="?board=110.0"> ===&gt; Offtopic</option>
+			<option value="?board=111.0"> ===&gt; Market</option>
+			<option value="?board=257.0"> =====&gt; Discutii Servicii</option>
+			<option value="?board=166.0"> ===&gt; Minerit</option>
+			<option value="?board=112.0"> ===&gt; Tutoriale</option>
+			<option value="?board=113.0"> ===&gt; Bine ai venit!</option>
+			<option value="?board=114.0"> ===&gt; Presa</option>
+			<option value="?board=259.0"> ===&gt; Altcoins (Monede Alternative)</option>
+			<option value="?board=178.0"> =====&gt; Anunturi Monede Alternative</option>
+			<option value="?board=45.0"> =&gt; Skandinavisk</option>
+			<option value="?board=133.0"> =&gt; Türkçe (Turkish)</option>
+			<option value="?board=180.0"> ===&gt; Bitcoin Haberleri</option>
+			<option value="?board=155.0"> ===&gt; Pazar Alan&#305;</option>
+			<option value="?board=156.0"> ===&gt; Madencilik</option>
+			<option value="?board=189.0"> ===&gt; Ekonomi</option>
+			<option value="?board=190.0"> ===&gt; Servisler</option>
+			<option value="?board=232.0"> =====&gt; Fonlar</option>
+			<option value="?board=229.0"> ===&gt; Proje Geli&#351;tirme</option>
+			<option value="?board=157.0"> ===&gt; Alternatif Kripto-Paralar</option>
+			<option value="?board=235.0"> =====&gt; Madencilik (Alternatif Kripto-Paralar)</option>
+			<option value="?board=239.0"> =====&gt; Duyurular (Alternatif Kripto-Paralar)</option>
+			<option value="?board=158.0"> ===&gt; Konu D&#305;&#351;&#305;</option>
+			<option value="?board=174.0"> ===&gt; Yeni Ba&#351;layanlar &amp; Yard&#305;m</option>
+			<option value="?board=230.0"> ===&gt; Bulu&#351;malar</option>
+			<option value="?board=11.0"> =&gt; Other languages/locations</option>
+		</select>&nbsp;
+		<input type="button" value="go" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = &#39;https://bitcointalk.org/index.php&#39; + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;">
+	</form>
+</div></div><br>
+	</div><script type="text/javascript">
+//<!--
+Array.prototype.forEach.call(document.getElementsByClassName("userimg"), checkImg);
+//-->
+</script>
+
+	<div id="footerarea" style="text-align: center; padding-bottom: 1ex;">
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			function smfFooterHighlight(element, value)
+			{
+				element.src = smf_images_url + "/" + (value ? "h_" : "") + element.id + ".gif";
+			}
+		// ]]></script>
+		<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+			<tbody><tr>
+				<td width="28%" valign="middle" align="right">
+					<a href="http://www.mysql.com/" target="_blank"><img id="powered-mysql" src="./VanitySearch (Yet another address prefix finder)_files/powered-mysql.gif" alt="Powered by MySQL" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://www.php.net/" target="_blank"><img id="powered-php" src="./VanitySearch (Yet another address prefix finder)_files/powered-php.gif" alt="Powered by PHP" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+				<td valign="middle" align="center" style="white-space: nowrap;">
+					
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.19</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF © 2006-2009, Simple Machines</a>
+		</span>
+				</td>
+				<td width="28%" valign="middle" align="left">
+					<a href="http://validator.w3.org/check/referer" target="_blank"><img id="valid-xhtml10" src="./VanitySearch (Yet another address prefix finder)_files/valid-xhtml10.gif" alt="Valid XHTML 1.0!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img id="valid-css" src="./VanitySearch (Yet another address prefix finder)_files/valid-css.gif" alt="Valid CSS!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+			</tr>
+		</tbody></table>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			window.addEventListener("load", smf_codeFix, false);
+
+			function smf_codeFix()
+			{
+				var codeFix = document.getElementsByTagName ? document.getElementsByTagName("div") : document.all.tags("div");
+
+				for (var i = 0; i < codeFix.length; i++)
+				{
+					if ((codeFix[i].className == "code" || codeFix[i].className == "post" || codeFix[i].className == "signature") && codeFix[i].offsetHeight < 20)
+						codeFix[i].style.height = (codeFix[i].offsetHeight + 20) + "px";
+				}
+			}
+		// ]]></script>
+	</div>
+	<div id="ajax_in_progress" style="display: none;">Loading...</div>
+</body></html>

@@ -1,0 +1,1732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)https://bitcointalk.org/index.php?topic=5532654.0 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<meta name="description" content="Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="keywords" content="bitcoin, forum, bitcoin forum, bitcointalk">
+	<script language="JavaScript" type="text/javascript" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/script.js.download"></script>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_theme_url = "https://bitcointalk.org/Themes/custom1";
+		var smf_images_url = "https://bitcointalk.org/Themes/custom1/images";
+		var smf_scripturl = "https://bitcointalk.org/index.php";
+		var smf_iso_case_folding = false;
+		var smf_charset = "ISO-8859-1";
+	// ]]></script>
+	<title>Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</title><!--1a308645cac0e59f8fcb6881e57bc215e875debdf61c6318c1a8732412afb2b0e59f8fcb6881e57bc215e875debdf61c6ec4850675e120e778d3e59f8fcb6881e57bc215e875debdf61c467f4dfae59f8fcb6881e57bc215e875debdf61c810a-->
+	<link rel="stylesheet" type="text/css" href="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/style.css">
+	 <!--[if !IE]> -->
+	 <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 650px)" href="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/mobile.css">
+	 <!-- <![endif]-->
+	<link rel="stylesheet" type="text/css" href="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/print.css" media="print"><style type="text/css">
+.msgcl1 {padding: 1px 1px 0 1px;}
+
+</style>
+
+
+
+	<link rel="help" href="https://bitcointalk.org/index.php?action=help" target="_blank">
+	<link rel="search" href="https://bitcointalk.org/index.php?action=search">
+	<link rel="contents" href="https://bitcointalk.org/index.php">
+	<link rel="alternate" type="application/rss+xml" title="Bitcoin Forum - RSS" href="https://bitcointalk.org/index.php?type=rss;action=.xml">
+	<link rel="prev" href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=prev">
+	<link rel="next" href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=next">
+	<link rel="index" href="https://bitcointalk.org/index.php?board=6.0"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		function showhide(msgnr)
+		{
+			if (document.getElementById("message"+msgnr).style.display == "")
+			    {document.getElementById("message"+msgnr).style.display = "none";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "hidden";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "";
+			     document.getElementById("ignfooter"+msgnr).style.display = "none";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignshow.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Show";
+			     document.getElementById("ignprofile"+msgnr).style.display = "none";
+			    }
+			    else
+			    {document.getElementById("message"+msgnr).style.display = "";
+			     document.getElementById("ignmsgbttns"+msgnr).style.visibility = "visible";
+			     document.getElementById("ignoremessage"+msgnr).style.display = "none";
+			     document.getElementById("ignfooter"+msgnr).style.display = "";
+			     document.getElementById("showhide"+msgnr).src = "https://bitcointalk.org/Themes/custom1/images/english/ignhide.gif";
+			     document.getElementById("showhide"+msgnr).alt = "Hide";
+			     document.getElementById("ignprofile"+msgnr).style.display = "";
+			     }
+		}
+// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			smf_setThemeOption("collapse_header", mode ? 1 : 0, null, "e59f8fcb6881e57bc215e875debdf61c");
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+			document.getElementById("upshrinkHeader2").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// ]]></script>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			var current_header_ic = false;
+
+			function shrinkHeaderIC(mode)
+			{
+				smf_setThemeOption("collapse_header_ic", mode ? 1 : 0, null, "e59f8fcb6881e57bc215e875debdf61c");
+				document.getElementById("upshrink_ic").src = smf_images_url + (mode ? "/expand.gif" : "/collapse.gif");
+
+				document.getElementById("upshrinkHeaderIC").style.display = mode ? "none" : "";
+
+				current_header_ic = mode;
+			}
+		// ]]></script></head>
+<body>
+	<div class="tborder">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" id="smfheader">
+			<tbody><tr>
+				<td class="catbg" height="32">
+					<span style="font-family: Verdana, sans-serif; font-size: 140%; ">Bitcoin Forum</span>
+				</td>
+				<td align="right" class="catbg">
+					<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/smflogo.gif" style="margin: 2px;" alt="">
+				</td>
+			</tr>
+		</tbody></table>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr>
+				<td class="titlebg2" height="32">
+					<span style="font-size: 130%;" id="hellomember"> Hello <b>IndiXavi</b></span>
+				</td>
+				<td class="titlebg2" height="32" align="right">
+					<span class="smalltext">February 22, 2026, 06:58:59 PM</span>
+					<a href="https://bitcointalk.org/index.php?topic=5532654.0#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/upshrink.gif" alt="*" title="Shrink or expand the header." align="bottom" style="margin: 0 1ex;"></a>
+				</td>
+			</tr>
+			<tr id="upshrinkHeader">
+				<td valign="top" colspan="2">
+					<table width="100%" class="bordercolor" cellpadding="8" cellspacing="1" border="0" style="margin-top: 1px;">
+						<tbody><tr>
+							<td colspan="2" width="100%" valign="top" class="windowbg2" id="variousheadlinks"><span class="middletext">
+								<a href="https://bitcointalk.org/index.php?action=unread">Show unread posts since last visit.</a> <br>
+								<a href="https://bitcointalk.org/index.php?action=unreadreplies">Show new replies to your posts.</a><br><a href="https://bitcointalk.org/index.php?action=watchlist">Watchlist</a><br>
+								Total time logged in: 1 hours and 21 minutes.<br>				</span>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		<table id="upshrinkHeader2" width="100%" cellpadding="4" cellspacing="0" border="0">
+			<tbody><tr>
+				<td width="90%" class="titlebg2">
+					<span class="smalltext"><b>News</b>: Latest Bitcoin Core release: <a class="ul" href="https://bitcoincore.org/en/download/">30.2</a> [<a class="ul" href="https://bitcointalk.org/bitcoin-30.2.torrent">Torrent</a>]</span>
+				</td>
+				<td class="titlebg2" align="right" nowrap="nowrap" valign="top">
+					<form action="https://bitcointalk.org/index.php?action=search2" method="post" accept-charset="ISO-8859-1" style="margin: 0;">
+						<a href="https://bitcointalk.org/index.php?action=search;advanced"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/filter.gif" align="middle" style="margin: 0 1ex;" alt=""></a>
+						<input type="text" name="search" value="" style="width: 190px;">&nbsp;
+						<input type="submit" name="submit" value="Search" style="width: 11ex;">
+						<input type="hidden" name="advanced" value="0">
+						<input type="hidden" name="topic" value="5532654">
+					</form>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+			<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 10px;">
+				<tbody><tr>
+					<td class="maintab_first">&nbsp;</td><td class="maintab_active_first">&nbsp;</td>
+				<td valign="top" class="maintab_active_back">
+					<a href="https://bitcointalk.org/index.php">Home</a>
+				</td><td class="maintab_active_last">&nbsp;</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=help">Help</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=search">Search</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=profile">Profile</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=pm">My Messages </a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=mlist">Members</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/more.php">More</a>
+				</td>
+				<td valign="top" class="maintab_back">
+					<a href="https://bitcointalk.org/index.php?action=logout;sesc=e59f8fcb6881e57bc215e875debdf61c">Logout</a>
+				</td>
+				<td class="maintab_last">&nbsp;</td>
+			</tr>
+		</tbody></table>
+	<div id="bodyarea" style="padding: 1ex 0px 2ex 0px;">
+<a name="top"></a>
+<a name="msg65082646"></a>
+<div><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b> (Moderators: <a href="https://bitcointalk.org/index.php?action=profile;u=11425" title="Board Moderator">gmaxwell</a>, <a href="https://bitcointalk.org/index.php?action=profile;u=290195" title="Board Moderator">achow101</a>)&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=5532654.0" class="nav">Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></b></div></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Pages:  [<b>1</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.40">3</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.20">»</a> </span>&nbsp;<a href="https://bitcointalk.org/index.php?topic=5532654.0;all">All</a> </td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=next#new">next topic »</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="mirrortab_first">&nbsp;</td>
+		<td class="mirrortab_back"><a href="https://bitcointalk.org/index.php?action=post;topic=5532654.0;num_replies=45">Reply</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?topic=5532654.0;do=watch;sesc=e59f8fcb6881e57bc215e875debdf61c" onclick="return confirm(&#39;Watch or unwatch this topic?&#39;);">Watch</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=notify;sa=on;topic=5532654.0;sesc=e59f8fcb6881e57bc215e875debdf61c" onclick="return confirm(&#39;Are you sure you wish to enable notification of new replies for this topic?&#39;);">Notify</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=markasread;sa=topic;t=0;topic=5532654.0;sesc=e59f8fcb6881e57bc215e875debdf61c">Mark unread</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=printpage;topic=5532654.0" target="_blank">Print</a></td>
+		<td class="mirrortab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tbody><tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+					<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/hot_post.gif" align="bottom" alt="">
+				</td>
+				<td width="13%"> Author</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Topic: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU) &nbsp;(Read 1757 times)
+				</td>
+		</tr>
+</tbody></table>
+<form action="https://bitcointalk.org/index.php?action=quickmod2;topic=5532654.0" method="post" accept-charset="ISO-8859-1" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save(&#39;e59f8fcb6881e57bc215e875debdf61c&#39;) : confirm(&#39;Are you sure you want to do this?&#39;);">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor"><tbody><tr><td class="msgcl1">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3669997" title="View the profile of FrozenThroneGuy">FrozenThroneGuy</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 72<br>
+								Merit: 43<br>
+								Posts: 72<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3669997"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3669997;topic=5532654;msg=65082646;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65082646"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646">Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 19, 2025, 04:51:28 PM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=2739424">NotATether</a> (20)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns1" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65082646;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646">#1</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hello everyone!<br>I’m super excited to share something I’ve been working on for a while now—Cyclone, the fastest CPU puzzle bruteforcer! <br>It’s designed to crack Satoshi puzzles on CPU (why not? Any chances to take a prize).<br>Here’s a quick breakdown of how Cyclone stacks up against other tools:<br><br>Vanity Search: 35.91 (No option to select a range of private keys for search and it using endomorphizm which is not relevant to range search)<br>Keyhunt: 43 (Incorrectly computes half of hashes and addresses by omitting Y coordinates for compress mode)<br>Cyclone AVX2: 51.21 (Full and correct computation of compressed public keys, computing 8 hash160 per batch)<br>Cyclone AVX512: ~64 (estimated, ~25% faster than AVX2, computing 16 hash160 per batch)<br><br>Also I tested AVX2 version on Ryzen 9 7945HX, speed is 145 Mkey/s. <br><br>On a single thread of an Intel Xeon Gold processor 3 Gen, the AVX512 version is approximately 22% faster than the AVX2 version:<br>AVX2: ~2.5 Mkey/s<br>AVX512: ~3.2 Mkey/s<br><br>If you’re curious to try it out or dive into the code, check out the GitHub repository here: <a class="ul" href="https://github.com/Dookoo2/Cyclone/tree/main">https://github.com/Dookoo2/Cyclone/tree/main</a><br>I’d love to hear your thoughts, feedback, or any suggestions for improvement. Let me know if you run into any issues or have questions.<br><br>Sorry for English, I'm not a native speaker:)</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65082646">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65082679"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3610370" title="View the profile of kTimesG">kTimesG</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3610370" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 756<br>
+								Merit: 232<br>
+								Posts: 1154<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3610370"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3610370" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3610370;topic=5532654;msg=65082679;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082679#msg65082679"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65082679"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082679#msg65082679">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 19, 2025, 05:00:40 PM</div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=3371484">Synchronice</a> (1)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns2" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65082679;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65082679#msg65082679">#2</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Nice work.<br><br>But your software is slow because it uses, as you mention, JLP-based secp256k1 math.<br><br>There are a number of users here already who outperformed your speeds already. I also believe the&nbsp; private clients of some pools are also much faster than your software.<br><br>So be careful with these performance claims (e.g. "world's fastest" - it's definitely not)..</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65082679">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3610370">Off the grid, training pigeons to broadcast signed messages.</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65101894"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3669997" title="View the profile of FrozenThroneGuy">FrozenThroneGuy</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 72<br>
+								Merit: 43<br>
+								Posts: 72<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3669997"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3669997;topic=5532654;msg=65101894;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65101894#msg65101894"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65101894"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65101894#msg65101894">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 24, 2025, 05:38:33 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns3" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65101894;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65101894#msg65101894">#3</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">kTimesG, thanks for your answer.<br>I'm glad to present my update of Cyclone. AVX512 version is ready. It is ~15-%-17% faster than AVX2 version on Ryzen 9 CPU.<br>The next step is adapting to CUDA , because I have a few ideas about speeding up computing hash160 compared to keyhunt cuda version.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65101894">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65102134"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=1024616" title="View the profile of 7xminer">7xminer</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=1024616" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 38<br>
+								Merit: 0<br>
+								Posts: 38<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=1024616"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=1024616" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=1024616;topic=5532654;msg=65102134;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65102134#msg65102134"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65102134"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65102134#msg65102134">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 24, 2025, 07:00:11 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns4" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65102134;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65102134#msg65102134">#4</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 39px;">Nice to see CPU improvement!&nbsp; <img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/cheesy.gif" alt="Cheesy" border="0"></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65102134">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65108683"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65108683;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65108683#msg65108683"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65108683"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65108683#msg65108683">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 26, 2025, 03:07:19 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns5" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65108683;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65108683#msg65108683">#5</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hi. Nothing better (faster) is available than:<br><br><a class="ul" href="https://github.com/JayDDee/cpuminer-opt/tree/master/algo/ripemd">https://github.com/JayDDee/cpuminer-opt/tree/master/algo/ripemd</a> (ripemd)<br><a class="ul" href="https://github.com/JayDDee/cpuminer-opt/tree/master/algo/sha">https://github.com/JayDDee/cpuminer-opt/tree/master/algo/sha</a> (sha)<br><br>4-way, 8-way, avx2/avx512vl . . .<br><br>&nbsp;I've been using CPU miner components in Vanity Search for a year now. Don't even try to make the AI do this task for you; you'll overload their server.&nbsp; <img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65108683">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65109075"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=1264516" title="View the profile of Geshma">Geshma</a></b>
+							<div class="smalltext">
+								Newbie<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=1264516" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 19<br>
+								Merit: 0<br>
+								Posts: 19<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=1264516"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=1264516" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=1264516;topic=5532654;msg=65109075;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65109075#msg65109075"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65109075"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65109075#msg65109075">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 26, 2025, 04:49:19 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns6" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65109075;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65109075#msg65109075">#6</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">puzzle: 67 730fc235 Possibilities : 13<br><br>Seed : 2113081982 KHex : 730fc235<br>Seed : 2179848786 KHex : 730fc235<br>Seed : 2620256395 KHex : 730fc235<br>Seed : 3559516538 KHex : 730fc235<br>Seed : 5559894373 KHex : 730fc235<br>Seed : 5960477113 KHex : 730fc235<br>Seed : 6204436682 KHex : 730fc235<br>Seed : 7016671995 KHex : 730fc235<br>Seed : 8305603871 KHex : 730fc235<br>Seed : 8560029709 KHex : 730fc235<br>Seed : 8633074902 KHex : 730fc235<br>Seed : 9737552820 KHex : 730fc235<br>Seed : 9997208084 KHex : 730fc235<br><br><br>seed integer (or "exit" to quit): 8560029709<br><br>Seed : 8560029709 KHex : 730fc235<br><br>Searching range: 730fc235000000000:730fc235fffffffff (2^36 keys)<br><br>================= WORK IN PROGRESS =================<br>Target Address: 1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9<br>CPU Threads&nbsp; &nbsp;: 2<br>Mkeys/s&nbsp; &nbsp; &nbsp; &nbsp;: 5.50<br>Total Checked : 35287381504<br>Elapsed Time&nbsp; : 01:46:50<br>Range&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 730fc235000000000:730fc235fffffffff<br>Progress&nbsp; &nbsp; &nbsp; : 51.3499 %<br>Progress Save : 21<br>================== FOUND MATCH! ==================<br>Private Key&nbsp; &nbsp;: 00000000000000000000000000000000000000000000000730FC235C1942C1AE<br>Public Key&nbsp; &nbsp; : 0212209F5EC514A1580A2937BD833979D933199FC230E204C6CDC58872B7D46F75<br>WIF&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qbP2K5cm35XKMND1X1KW<br>P2PKH Address : 1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9<br>Total Checked : 35315148800<br>Elapsed Time&nbsp; : 01:46:54<br>Speed&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 5.5030 Mkeys/s<br><br>Success! Private key found with seed 8560029709.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65109075">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65109319"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2795868" title="View the profile of COBRAS">COBRAS</a></b>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=2795868" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 1136<br>
+								Merit: 25<br>
+								Posts: 1136<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2795868"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=2795868" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=2795868;topic=5532654;msg=65109319;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65109319#msg65109319"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65109319"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65109319#msg65109319">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">February 26, 2025, 05:50:59 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns7" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65109319;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65109319#msg65109319">#7</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post" style="height: 39px;">67 finded&nbsp; <img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"> so fast, not so long kike 66 previous</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65109319">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig2795868">[</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65111108"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65111108;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65111108#msg65111108"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65111108"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65111108#msg65111108">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext"><span title="Last edit: February 27, 2025, 07:22:48 AM by nomachine" class="edited">February 27, 2025, 06:59:26 AM</span><span class="editplain"><br>Last edit: February 27, 2025, 07:22:48 AM by nomachine</span></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns8" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65111108;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65111108#msg65111108">#8</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65101894#msg65101894">Quote from: FrozenThroneGuy on February 24, 2025, 05:38:33 PM</a></div><div class="quote">It is ~15-%-17% faster than AVX2 version on Ryzen 9 CPU.<br></div><br>It is necessary to implement the entire SECP256K1 curve method (from scratch) using AVX2 to achieve significant performance improvements—potentially 2x to 5x faster. Additionally, using assembly can provide further speedups. Optimizing only the hashing process is insufficient for meaningful overall gains.<br><br>I spent hundreds of hours of development, debugging, and testing. Half a year of testing. And in the end it really sucks. The one with 1200 GPUs won the battle.&nbsp; <img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65111108">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65124268"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65124268;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65124268#msg65124268"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65124268"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65124268#msg65124268">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext"><span title="Last edit: March 27, 2025, 01:55:51 AM by nomachine" class="edited">March 02, 2025, 07:47:35 PM</span><span class="editplain"><br>Last edit: March 27, 2025, 01:55:51 AM by nomachine</span></div><div class="smalltext"><i><span style="color:green">Merited</span> by <a href="https://bitcointalk.org/index.php?action=profile;u=3253914">Cricktor</a> (2)</i></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns9" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65124268;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65124268#msg65124268">#9</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">I have ~190 Mkey/s with this searching directly Hash160 targets in pure random mode.<br><br><a class="ul" href="https://github.com/NoMachine1/Cyclone">https://github.com/NoMachine1/Cyclone</a><br><br><br><div class="codeheader">Code:</div><div class="code">./Cyclone -h bfebb73562d4541b32a02ba664d140b5a574792f -p 26</div></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65124268">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65125420"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3669997" title="View the profile of FrozenThroneGuy">FrozenThroneGuy</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 72<br>
+								Merit: 43<br>
+								Posts: 72<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3669997"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3669997;topic=5532654;msg=65125420;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125420#msg65125420"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65125420"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125420#msg65125420">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 03, 2025, 05:26:29 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns10" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65125420;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65125420#msg65125420">#10</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">Hello guys!<br>Hello nomachine!^)<br>Great work! <br>On what CPU you got this speed?<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65125420">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65125458"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65125458;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125458#msg65125458"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65125458"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125458#msg65125458">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext"><span title="Last edit: March 03, 2025, 07:02:32 AM by nomachine" class="edited">March 03, 2025, 05:56:52 AM</span><span class="editplain"><br>Last edit: March 03, 2025, 07:02:32 AM by nomachine</span></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns11" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65125458;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65125458#msg65125458">#11</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">AMD Ryzen Threadripper PRO 7985WX (but I don't just do puzzles on it. I do more stuff.) &nbsp;<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"><br><br>Makefile<br><div class="codeheader">Code:</div><div class="code"># Compiler<br>CXX = g++<br><br># Compiler flags<br>CXXFLAGS = -std=c++17 \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-write-strings -Wno-unused-variable -Wno-deprecated-copy \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-parameter -Wno-sign-compare -Wno-strict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-but-set-variable \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -march=native -mtune=native -mssse3 -Wall -Wextra \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Ofast -funroll-loops -ftree-vectorize -fstrict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-semantic-interposition -fvect-cost-model=unlimited \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-trapping-math -fipa-ra -flto -fassociative-math -fopenmp \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -lpthread -mavx2 -mbmi2 -madx<br><br># Source files<br>SRCS = Cyclone.cpp SECP256K1.cpp Int.cpp Timer.cpp IntGroup.cpp IntMod.cpp \<br>&nbsp;&nbsp; &nbsp; &nbsp; Point.cpp ripemd160_avx2.cpp sha256_avx2.cpp<br><br># Object files<br>OBJS = $(SRCS:.cpp=.o)<br><br># Target executable<br>TARGET = Cyclone<br><br># Default target<br>all: fix_rdtsc $(TARGET)<br><br># Target to replace __rdtsc with my_rdtsc<br>fix_rdtsc:<br><span style="white-space: pre;">	</span>find . -type f -name '*.cpp' -exec sed -i 's/__rdtsc/my_rdtsc/g' {} +<br><br># Link the object files to create the executable and then delete .o files<br>$(TARGET): $(OBJS)<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)<br><span style="white-space: pre;">	</span>rm -f $(OBJS) &amp;&amp; chmod +x $(TARGET)<br><br># Compile each source file into an object file<br>%.o: %.cpp<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -c $&lt; -o $@<br><br># Clean up build files<br>clean:<br><span style="white-space: pre;">	</span>echo "Cleaning..."<br><span style="white-space: pre;">	</span>rm -f $(OBJS) $(TARGET)<br><br># Phony targets<br>.PHONY: all clean fix_rdtsc</div><br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65125458">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65125531"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=2297617" title="View the profile of brainless">brainless</a></b>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=2297617" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 469<br>
+								Merit: 35<br>
+								Posts: 469<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=2297617"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=2297617" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=2297617;topic=5532654;msg=65125531;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125531#msg65125531"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65125531"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125531#msg65125531">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 03, 2025, 06:42:54 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns12" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65125531;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65125531#msg65125531">#12</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125458#msg65125458">Quote from: nomachine on March 03, 2025, 05:56:52 AM</a></div><div class="quote">AMD Ryzen Threadripper PRO 7985WX (but I don't just do puzzles on it. I do more stuff.) &nbsp;<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"><br><br>Makefile<br><div class="codeheader">Code:</div><div class="code"># Compiler<br>CXX = g++<br><br># Compiler flags<br>CXXFLAGS = -std=c++17 \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-write-strings -Wno-unused-variable -Wno-deprecated-copy \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-parameter -Wno-sign-compare -Wno-strict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-but-set-variable \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -march=native -mtune=native -mssse3 -Wall -Wextra \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Ofast -funroll-loops -ftree-vectorize -fstrict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-semantic-interposition -fvect-cost-model=unlimited \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-trapping-math -fipa-ra -flto -fassociative-math -fopenmp \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -lpthread -mavx2 -mbmi2 -madx<br><br># Source files<br>SRCS = Cyclone.cpp SECP256K1.cpp Int.cpp Timer.cpp IntGroup.cpp IntMod.cpp \<br>&nbsp;&nbsp; &nbsp; &nbsp; Point.cpp ripemd160_avx2.cpp sha256_avx2.cpp<br><br># Object files<br>OBJS = $(SRCS:.cpp=.o)<br><br># Target executable<br>TARGET = Cyclone<br><br># Default target<br>all: fix_rdtsc $(TARGET)<br><br># Target to replace __rdtsc with my_rdtsc<br>fix_rdtsc:<br><span style="white-space: pre;">	</span>find . -type f -name '*.cpp' -exec sed -i 's/__rdtsc/my_rdtsc/g' {} +<br><br># Link the object files to create the executable and then delete .o files<br>$(TARGET): $(OBJS)<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)<br><span style="white-space: pre;">	</span>rm -f $(OBJS) &amp;&amp; chmod +x $(TARGET)<br><br># Compile each source file into an object file<br>%.o: %.cpp<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -c $&lt; -o $@<br><br># Clean up build files<br>clean:<br><span style="white-space: pre;">	</span>echo "Cleaning..."<br><span style="white-space: pre;">	</span>rm -f $(OBJS) $(TARGET)<br><br># Phony targets<br>.PHONY: all clean fix_rdtsc</div></div>All files *.cpp *.h etc<br>Pls upload all files to GitHub and post link<br>For testing ...<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65125531">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig2297617">13sXkWqtivcMtNGQpskD78iqsgVy9hcHLF</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65125550"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3669997" title="View the profile of FrozenThroneGuy">FrozenThroneGuy</a></b> <span title="This member is the topic-starter" style="cursor: help;">(OP)</span>
+							<div class="smalltext">
+								Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 72<br>
+								Merit: 43<br>
+								Posts: 72<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3669997"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3669997" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3669997;topic=5532654;msg=65125550;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125550#msg65125550"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65125550"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125550#msg65125550">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 03, 2025, 06:54:28 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns13" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65125550;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65125550#msg65125550">#13</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125458#msg65125458">Quote from: nomachine on March 03, 2025, 05:56:52 AM</a></div><div class="quote">AMD Ryzen Threadripper PRO 7985WX (but I don't just do puzzles on it. I do more stuff.) &nbsp;<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/grin.gif" alt="Grin" border="0"><br><br>Makefile<br><div class="codeheader">Code:</div><div class="code"># Compiler<br>CXX = g++<br><br># Compiler flags<br>CXXFLAGS = -std=c++17 \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-write-strings -Wno-unused-variable -Wno-deprecated-copy \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-parameter -Wno-sign-compare -Wno-strict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Wno-unused-but-set-variable \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -march=native -mtune=native -mssse3 -Wall -Wextra \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Ofast -funroll-loops -ftree-vectorize -fstrict-aliasing \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-semantic-interposition -fvect-cost-model=unlimited \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -fno-trapping-math -fipa-ra -flto -fassociative-math -fopenmp \<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -lpthread -mavx2 -mbmi2 -madx<br><br># Source files<br>SRCS = Cyclone.cpp SECP256K1.cpp Int.cpp Timer.cpp IntGroup.cpp IntMod.cpp \<br>&nbsp;&nbsp; &nbsp; &nbsp; Point.cpp ripemd160_avx2.cpp sha256_avx2.cpp<br><br># Object files<br>OBJS = $(SRCS:.cpp=.o)<br><br># Target executable<br>TARGET = Cyclone<br><br># Default target<br>all: fix_rdtsc $(TARGET)<br><br># Target to replace __rdtsc with my_rdtsc<br>fix_rdtsc:<br><span style="white-space: pre;">	</span>find . -type f -name '*.cpp' -exec sed -i 's/__rdtsc/my_rdtsc/g' {} +<br><br># Link the object files to create the executable and then delete .o files<br>$(TARGET): $(OBJS)<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)<br><span style="white-space: pre;">	</span>rm -f $(OBJS) &amp;&amp; chmod +x $(TARGET)<br><br># Compile each source file into an object file<br>%.o: %.cpp<br><span style="white-space: pre;">	</span>$(CXX) $(CXXFLAGS) -c $&lt; -o $@<br><br># Clean up build files<br>clean:<br><span style="white-space: pre;">	</span>echo "Cleaning..."<br><span style="white-space: pre;">	</span>rm -f $(OBJS) $(TARGET)<br><br># Phony targets<br>.PHONY: all clean fix_rdtsc</div></div><br>7985WX a little bit faster than 7945HX (145% faster:)) <br>I'm almost done distributed Cyclone version with "client to server" topology. It could be useful if you have more than one PC/SRV for computing. Each client gets a part of whole range for computing and communicate with server for sending results. <br>Hope it will help for somebody. Release will be 4-5 march. <br>And also I will start develop a GPU version of my software with both types (standalone, distributed). <br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65125550">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65125574"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65125574;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125574#msg65125574"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65125574"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125574#msg65125574">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext"><span title="Last edit: March 03, 2025, 02:30:48 PM by nomachine" class="edited">March 03, 2025, 07:03:06 AM</span><span class="editplain"><br>Last edit: March 03, 2025, 02:30:48 PM by nomachine</span></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns14" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65125574;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65125574#msg65125574">#14</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65125531#msg65125531">Quote from: brainless on March 03, 2025, 06:42:54 AM</a></div><div class="quote">All files *.cpp *.h etc<br>Pls upload all files to GitHub and post link<br>For testing ...<br></div><br>You can use existing files from Cyclone github - the script will work.<br><br>This is still in the testing phase....</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65125574">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65154295"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=164362" title="View the profile of GoldTiger69">GoldTiger69</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=164362" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 595<br>
+								Merit: 502<br>
+								Posts: 595<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=164362"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?topic=1234619.0" title="Wallet Restoration/Password Recovery Services."><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=164362" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=164362;topic=5532654;msg=65154295;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65154295#msg65154295"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65154295"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65154295#msg65154295">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 10, 2025, 10:11:34 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns15" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65154295;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65154295#msg65154295">#15</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65124268#msg65124268">Quote from: nomachine on March 02, 2025, 07:47:35 PM</a></div><div class="quote">I have ~190 Mkey/s with this searching directly Hash160 targets in pure random mode.<br><br><div class="codeheader">Code:</div><div class="code">#include &lt;iostream&gt;<br>#include &lt;iomanip&gt;<br>#include &lt;vector&gt;<br>#include &lt;string&gt;<br>#include &lt;sstream&gt;<br>#include &lt;fstream&gt;<br>#include &lt;cmath&gt;<br>#include &lt;chrono&gt;<br>#include &lt;cstring&gt;<br>#include &lt;algorithm&gt;<br>#include &lt;omp.h&gt;<br>#include &lt;random&gt;<br>#include &lt;immintrin.h&gt; <br>// Adding program modules<br>#include "sha256_avx2.h"<br>#include "ripemd160_avx2.h"<br>#include "SECP256K1.h"<br>#include "Point.h"<br>#include "Int.h"<br>#include "IntGroup.h"<br><br>#define BISIZE 256<br>#if BISIZE == 256<br>#define NB64BLOCK 5<br>#define NB32BLOCK 10<br>#else<br>#error Unsupported size<br>#endif<br><br>//------------------------------------------------------------------------------<br>// Constants<br>static constexpr int POINTS_BATCH_SIZE = 256;<br>static constexpr int HASH_BATCH_SIZE&nbsp; &nbsp;= 8;<br><br>// Status output and progress saving frequency<br>static constexpr double statusIntervalSec = 5.0;<br>static constexpr double saveProgressIntervalSec = 300.0;<br><br>static int g_progressSaveCount = 0;<br>static std::vector&lt;std::string&gt; g_threadPrivateKeys;<br><br>//------------------------------------------------------------------------------<br>void saveProgressToFile(const std::string &amp;progressStr)<br>{<br>&nbsp; &nbsp; std::ofstream ofs("progress.txt", std::ios::app);<br>&nbsp; &nbsp; if (ofs) {<br>&nbsp; &nbsp; &nbsp; &nbsp; ofs &lt;&lt; progressStr &lt;&lt; "\n";<br>&nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cerr &lt;&lt; "Cannot open progress.txt for writing\n";<br>&nbsp; &nbsp; }<br>}<br><br>//------------------------------------------------------------------------------<br>//Converts a HEX string into a large number (a vector of 64-bit words, little-endian).<br><br>std::vector&lt;uint64_t&gt; hexToBigNum(const std::string&amp; hex) {<br>&nbsp; &nbsp; std::vector&lt;uint64_t&gt; bigNum;<br>&nbsp; &nbsp; const size_t len = hex.size();<br>&nbsp; &nbsp; bigNum.reserve((len + 15) / 16);<br>&nbsp; &nbsp; for (size_t i = 0; i &lt; len; i += 16) {<br>&nbsp; &nbsp; &nbsp; &nbsp; size_t start = (len &gt;= 16 + i) ? len - 16 - i : 0;<br>&nbsp; &nbsp; &nbsp; &nbsp; size_t partLen = (len &gt;= 16 + i) ? 16 : (len - i);<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t value = std::stoull(hex.substr(start, partLen), nullptr, 16);<br>&nbsp; &nbsp; &nbsp; &nbsp; bigNum.push_back(value);<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; return bigNum;<br>}<br><br>//Reverse conversion to a HEX string (with correct leading zeros within blocks).<br><br>std::string bigNumToHex(const std::vector&lt;uint64_t&gt;&amp; num) {<br>&nbsp; &nbsp; std::ostringstream oss;<br>&nbsp; &nbsp; for (auto it = num.rbegin(); it != num.rend(); ++it) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (it != num.rbegin())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; oss &lt;&lt; std::setw(16) &lt;&lt; std::setfill('0');<br>&nbsp; &nbsp; &nbsp; &nbsp; oss &lt;&lt; std::hex &lt;&lt; *it;<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; return oss.str();<br>}<br><br>std::vector&lt;uint64_t&gt; singleElementVector(uint64_t val) {<br>&nbsp; &nbsp; return { val };<br>}<br><br>std::vector&lt;uint64_t&gt; bigNumAdd(const std::vector&lt;uint64_t&gt;&amp; a, const std::vector&lt;uint64_t&gt;&amp; b) {<br>&nbsp; &nbsp; std::vector&lt;uint64_t&gt; sum;<br>&nbsp; &nbsp; sum.reserve(std::max(a.size(), b.size()) + 1);<br>&nbsp; &nbsp; uint64_t carry = 0;<br>&nbsp; &nbsp; for (size_t i = 0, sz = std::max(a.size(), b.size()); i &lt; sz; ++i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t x = (i &lt; a.size()) ? a[i] : 0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t y = (i &lt; b.size()) ? b[i] : 0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; __uint128_t s = ( __uint128_t )x + ( __uint128_t )y + carry;<br>&nbsp; &nbsp; &nbsp; &nbsp; carry = (uint64_t)(s &gt;&gt; 64);<br>&nbsp; &nbsp; &nbsp; &nbsp; sum.push_back((uint64_t)s);<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; if (carry) sum.push_back(carry);<br>&nbsp; &nbsp; return sum;<br>}<br><br>std::vector&lt;uint64_t&gt; bigNumSubtract(const std::vector&lt;uint64_t&gt;&amp; a, const std::vector&lt;uint64_t&gt;&amp; b) {<br>&nbsp; &nbsp; std::vector&lt;uint64_t&gt; diff = a;<br>&nbsp; &nbsp; uint64_t borrow = 0;<br>&nbsp; &nbsp; for (size_t i = 0; i &lt; b.size(); ++i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t subtrahend = b[i];<br>&nbsp; &nbsp; &nbsp; &nbsp; if (diff[i] &lt; subtrahend + borrow) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diff[i] = diff[i] + (~0ULL) - subtrahend - borrow + 1ULL; // eqv diff[i] = diff[i] - subtrahend - borrow<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borrow = 1ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diff[i] -= (subtrahend + borrow);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borrow = 0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; <br>&nbsp; &nbsp; for (size_t i = b.size(); i &lt; diff.size() &amp;&amp; borrow; ++i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; if (diff[i] == 0ULL) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diff[i] = ~0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diff[i] -= 1ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; borrow = 0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; // delete leading zeros<br>&nbsp; &nbsp; while (!diff.empty() &amp;&amp; diff.back() == 0ULL)<br>&nbsp; &nbsp; &nbsp; &nbsp; diff.pop_back();<br>&nbsp; &nbsp; return diff;<br>}<br><br><br>std::pair&lt;std::vector&lt;uint64_t&gt;, uint64_t&gt; bigNumDivide(const std::vector&lt;uint64_t&gt;&amp; a, uint64_t divisor) {<br>&nbsp; &nbsp; std::vector&lt;uint64_t&gt; quotient(a.size(), 0ULL);<br>&nbsp; &nbsp; uint64_t remainder = 0ULL;<br>&nbsp; &nbsp; for (int i = (int)a.size() - 1; i &gt;= 0; --i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; __uint128_t temp = ((__uint128_t)remainder &lt;&lt; 64) | a[i];<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t q = (uint64_t)(temp / divisor);<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t r = (uint64_t)(temp % divisor);<br>&nbsp; &nbsp; &nbsp; &nbsp; quotient[i] = q;<br>&nbsp; &nbsp; &nbsp; &nbsp; remainder&nbsp; &nbsp;= r;<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; while (!quotient.empty() &amp;&amp; quotient.back() == 0ULL)<br>&nbsp; &nbsp; &nbsp; &nbsp; quotient.pop_back();<br>&nbsp; &nbsp; return { quotient, remainder };<br>}<br><br>long double hexStrToLongDouble(const std::string &amp;hex) {<br>&nbsp; &nbsp; long double result = 0.0L;<br>&nbsp; &nbsp; for (char c : hex) {<br>&nbsp; &nbsp; &nbsp; &nbsp; result *= 16.0L;<br>&nbsp; &nbsp; &nbsp; &nbsp; if (c &gt;= '0' &amp;&amp; c &lt;= '9')<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result += (c - '0');<br>&nbsp; &nbsp; &nbsp; &nbsp; else if (c &gt;= 'a' &amp;&amp; c &lt;= 'f')<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result += (c - 'a' + 10);<br>&nbsp; &nbsp; &nbsp; &nbsp; else if (c &gt;= 'A' &amp;&amp; c &lt;= 'F')<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result += (c - 'A' + 10);<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; return result;<br>}<br><br>//------------------------------------------------------------------------------<br>static inline std::string padHexTo64(const std::string &amp;hex) {<br>&nbsp; &nbsp; return (hex.size() &gt;= 64) ? hex : std::string(64 - hex.size(), '0') + hex;<br>}<br>static inline Int hexToInt(const std::string &amp;hex) {<br>&nbsp; &nbsp; Int number;<br>&nbsp; &nbsp; char buf[65] = {0};<br>&nbsp; &nbsp; std::strncpy(buf, hex.c_str(), 64);<br>&nbsp; &nbsp; number.SetBase16(buf);<br>&nbsp; &nbsp; return number;<br>}<br>static inline std::string intToHex(const Int &amp;value) {<br>&nbsp; &nbsp; Int temp;<br>&nbsp; &nbsp; temp.Set((Int*)&amp;value);<br>&nbsp; &nbsp; return temp.GetBase16();<br>}<br>static inline bool intGreater(const Int &amp;a, const Int &amp;b) {<br>&nbsp; &nbsp; std::string ha = ((Int&amp;)a).GetBase16();<br>&nbsp; &nbsp; std::string hb = ((Int&amp;)b).GetBase16();<br>&nbsp; &nbsp; if (ha.size() != hb.size()) return (ha.size() &gt; hb.size());<br>&nbsp; &nbsp; return (ha &gt; hb);<br>}<br>static inline bool isEven(const Int &amp;number) {<br>&nbsp; &nbsp; return ((Int&amp;)number).IsEven();<br>}<br><br>static inline std::string intXToHex64(const Int &amp;x) {<br>&nbsp; &nbsp; Int temp;<br>&nbsp; &nbsp; temp.Set((Int*)&amp;x);<br>&nbsp; &nbsp; std::string hex = temp.GetBase16();<br>&nbsp; &nbsp; if (hex.size() &lt; 64)<br>&nbsp; &nbsp; &nbsp; &nbsp; hex.insert(0, 64 - hex.size(), '0');<br>&nbsp; &nbsp; return hex;<br>}<br><br>static inline std::string pointToCompressedHex(const Point &amp;point) {<br>&nbsp; &nbsp; return (isEven(point.y) ? "02" : "03") + intXToHex64(point.x);<br>}<br>static inline void pointToCompressedBin(const Point &amp;point, uint8_t outCompressed[33]) {<br>&nbsp; &nbsp; outCompressed[0] = isEven(point.y) ? 0x02 : 0x03;<br>&nbsp; &nbsp; Int temp;<br>&nbsp; &nbsp; temp.Set((Int*)&amp;point.x);<br>&nbsp; &nbsp; for (int i = 0; i &lt; 32; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; outCompressed[1 + i] = (uint8_t)temp.GetByte(31 - i);<br>&nbsp; &nbsp; }<br>}<br><br>//------------------------------------------------------------------------------<br>inline void prepareShaBlock(const uint8_t* dataSrc, size_t dataLen, uint8_t* outBlock) {<br>&nbsp; &nbsp; std::fill_n(outBlock, 64, 0);<br>&nbsp; &nbsp; std::memcpy(outBlock, dataSrc, dataLen);<br>&nbsp; &nbsp; outBlock[dataLen] = 0x80;<br>&nbsp; &nbsp; const uint32_t bitLen = (uint32_t)(dataLen * 8);<br>&nbsp; &nbsp; outBlock[60] = (uint8_t)((bitLen &gt;&gt; 24) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[61] = (uint8_t)((bitLen &gt;&gt; 16) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[62] = (uint8_t)((bitLen &gt;&gt;&nbsp; 8) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[63] = (uint8_t)( bitLen&nbsp; &nbsp; &nbsp; &nbsp; &amp; 0xFF);<br>}<br>inline void prepareRipemdBlock(const uint8_t* dataSrc, uint8_t* outBlock) {<br>&nbsp; &nbsp; std::fill_n(outBlock, 64, 0);<br>&nbsp; &nbsp; std::memcpy(outBlock, dataSrc, 32);<br>&nbsp; &nbsp; outBlock[32] = 0x80;<br>&nbsp; &nbsp; const uint32_t bitLen = 256;<br>&nbsp; &nbsp; outBlock[60] = (uint8_t)((bitLen &gt;&gt; 24) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[61] = (uint8_t)((bitLen &gt;&gt; 16) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[62] = (uint8_t)((bitLen &gt;&gt;&nbsp; 8) &amp; 0xFF);<br>&nbsp; &nbsp; outBlock[63] = (uint8_t)( bitLen&nbsp; &nbsp; &nbsp; &nbsp; &amp; 0xFF);<br>}<br><br>// Computing hash160 using avx2 (8 hashes per try)<br>static void computeHash160BatchBinSingle(int numKeys,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;uint8_t pubKeys[][33],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;uint8_t hashResults[][20])<br>{<br>&nbsp; &nbsp; alignas(32) std::array&lt;std::array&lt;uint8_t, 64&gt;, HASH_BATCH_SIZE&gt; shaInputs;<br>&nbsp; &nbsp; alignas(32) std::array&lt;std::array&lt;uint8_t, 32&gt;, HASH_BATCH_SIZE&gt; shaOutputs;<br>&nbsp; &nbsp; alignas(32) std::array&lt;std::array&lt;uint8_t, 64&gt;, HASH_BATCH_SIZE&gt; ripemdInputs;<br>&nbsp; &nbsp; alignas(32) std::array&lt;std::array&lt;uint8_t, 20&gt;, HASH_BATCH_SIZE&gt; ripemdOutputs;<br><br>&nbsp; &nbsp; const size_t totalBatches = (numKeys + (HASH_BATCH_SIZE - 1)) / HASH_BATCH_SIZE;<br>&nbsp; &nbsp; for (size_t batch = 0; batch &lt; totalBatches; batch++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; const size_t batchCount = std::min&lt;size_t&gt;(HASH_BATCH_SIZE, numKeys - batch * HASH_BATCH_SIZE);<br>&nbsp; &nbsp; &nbsp; &nbsp; for (size_t i = 0; i &lt; batchCount; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const size_t idx = batch * HASH_BATCH_SIZE + i;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; prepareShaBlock(pubKeys[idx], 33, shaInputs[i].data());<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; for (size_t i = batchCount; i &lt; HASH_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; std::memcpy(shaInputs[i].data(), shaInputs[0].data(), 64);<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; const uint8_t* inPtr[HASH_BATCH_SIZE];<br>&nbsp; &nbsp; &nbsp; &nbsp; uint8_t* outPtr[HASH_BATCH_SIZE];<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; HASH_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inPtr[i]&nbsp; = shaInputs[i].data();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[i] = shaOutputs[i].data();<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; // SHA256 (avx2)<br>&nbsp; &nbsp; &nbsp; &nbsp; sha256avx2_8B(inPtr[0], inPtr[1], inPtr[2], inPtr[3],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inPtr[4], inPtr[5], inPtr[6], inPtr[7],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[0], outPtr[1], outPtr[2], outPtr[3],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[4], outPtr[5], outPtr[6], outPtr[7]);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Preparing Ripemd160<br>&nbsp; &nbsp; &nbsp; &nbsp; for (size_t i = 0; i &lt; batchCount; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; prepareRipemdBlock(shaOutputs[i].data(), ripemdInputs[i].data());<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; for (size_t i = batchCount; i &lt; HASH_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; std::memcpy(ripemdInputs[i].data(), ripemdInputs[0].data(), 64);<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; HASH_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inPtr[i]&nbsp; = ripemdInputs[i].data();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[i] = ripemdOutputs[i].data();<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; // Ripemd160 (avx2)<br>&nbsp; &nbsp; &nbsp; &nbsp; ripemd160avx2::ripemd160avx2_32(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[0],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[1],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[2],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[3],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[4],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[5],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[6],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (unsigned char*)inPtr[7],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[0], outPtr[1], outPtr[2], outPtr[3],<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outPtr[4], outPtr[5], outPtr[6], outPtr[7]<br>&nbsp; &nbsp; &nbsp; &nbsp; );<br>&nbsp; &nbsp; &nbsp; &nbsp; for (size_t i = 0; i &lt; batchCount; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const size_t idx = batch * HASH_BATCH_SIZE + i;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; std::memcpy(hashResults[idx], ripemdOutputs[i].data(), 20);<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>}<br><br>//------------------------------------------------------------------------------<br>static void printUsage(const char* programName) {<br>&nbsp; &nbsp; std::cerr &lt;&lt; "Usage: " &lt;&lt; programName &lt;&lt; " -h &lt;hash160_hex&gt; -p &lt;puzzle&gt;\n";<br>}<br><br>static std::string formatElapsedTime(double seconds) {<br>&nbsp; &nbsp; int hrs = (int)seconds / 3600;<br>&nbsp; &nbsp; int mins = ((int)seconds % 3600) / 60;<br>&nbsp; &nbsp; int secs = (int)seconds % 60;<br>&nbsp; &nbsp; std::ostringstream oss;<br>&nbsp; &nbsp; oss &lt;&lt; std::setw(2) &lt;&lt; std::setfill('0') &lt;&lt; hrs &lt;&lt; ":"<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;&lt; std::setw(2) &lt;&lt; std::setfill('0') &lt;&lt; mins &lt;&lt; ":"<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;&lt; std::setw(2) &lt;&lt; std::setfill('0') &lt;&lt; secs;<br>&nbsp; &nbsp; return oss.str();<br>}<br><br>//------------------------------------------------------------------------------<br>static void printStatsBlock(int numCPUs, const std::string &amp;targetHash160Hex,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const std::string &amp;rangeStr, double mkeysPerSec,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unsigned long long totalChecked, double elapsedTime,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int puzzle)<br>{<br>&nbsp; &nbsp; static bool firstPrint = true;<br>&nbsp; &nbsp; if (!firstPrint) {<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; "\033[8A";<br>&nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; firstPrint = false;<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; std::cout &lt;&lt; "================= WORK IN PROGRESS =================\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Puzzle&nbsp; &nbsp; &nbsp; &nbsp; : " &lt;&lt; puzzle &lt;&lt; "\n";&nbsp; // Print puzzle value<br>&nbsp; &nbsp; std::cout &lt;&lt; "Range&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: " &lt;&lt; rangeStr &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Target Hash160: " &lt;&lt; targetHash160Hex &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "CPU Threads&nbsp; &nbsp;: " &lt;&lt; numCPUs &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Mkeys/s&nbsp; &nbsp; &nbsp; &nbsp;: " &lt;&lt; std::fixed &lt;&lt; std::setprecision(2) &lt;&lt; mkeysPerSec &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Total Checked : " &lt;&lt; totalChecked &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Elapsed Time&nbsp; : " &lt;&lt; formatElapsedTime(elapsedTime) &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout.flush();<br>}<br><br><br>struct ThreadRange {<br>&nbsp; &nbsp; std::string startHex;<br>&nbsp; &nbsp; std::string endHex;<br>};<br><br>static std::vector&lt;ThreadRange&gt; g_threadRanges;<br><br>class Timer {<br>public:<br>&nbsp; &nbsp; static std::string getSeed(int length) {<br>&nbsp; &nbsp; &nbsp; &nbsp; auto now = std::chrono::high_resolution_clock::now();<br>&nbsp; &nbsp; &nbsp; &nbsp; auto epoch = now.time_since_epoch();<br>&nbsp; &nbsp; &nbsp; &nbsp; auto value = std::chrono::duration_cast&lt;std::chrono::nanoseconds&gt;(epoch).count();<br>&nbsp; &nbsp; &nbsp; &nbsp; std::ostringstream oss;<br>&nbsp; &nbsp; &nbsp; &nbsp; oss &lt;&lt; std::hex &lt;&lt; value;<br>&nbsp; &nbsp; &nbsp; &nbsp; return oss.str().substr(0, length);<br>&nbsp; &nbsp; }<br>};<br><br>Int generateRandomPrivateKey(Int minKey, Int range) {<br>&nbsp; &nbsp; // Use a high-resolution clock to seed the random number generator<br>&nbsp; &nbsp; static std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());<br><br>&nbsp; &nbsp; Int randomPrivateKey((uint64_t)0);<br><br>&nbsp; &nbsp; // Generate random values in chunks of 64 bits<br>&nbsp; &nbsp; for (int i = 0; i &lt; NB64BLOCK; ++i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; uint64_t randVal = rng();<br>&nbsp; &nbsp; &nbsp; &nbsp; randomPrivateKey.ShiftL(64);&nbsp; // Shift left by 64 bits<br>&nbsp; &nbsp; &nbsp; &nbsp; randomPrivateKey.Add(randVal);<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; // Apply modulo operation and add minKey<br>&nbsp; &nbsp; randomPrivateKey.Mod(&amp;range);&nbsp; <br>&nbsp; &nbsp; randomPrivateKey.Add(&amp;minKey);&nbsp; &nbsp; &nbsp;<br><br>&nbsp; &nbsp; return randomPrivateKey;<br>}<br><br>Int minKey, maxKey;<br><br>int main(int argc, char *argv[]) {<br>&nbsp; &nbsp; bool hash160Provided = false, rangeProvided = false;<br>&nbsp; &nbsp; std::string targetHash160Hex;<br>&nbsp; &nbsp; std::vector&lt;uint8_t&gt; targetHash160;<br>&nbsp; &nbsp; int puzzle = 0;&nbsp; // Declare puzzle variable<br><br>&nbsp; &nbsp; // Parse command-line arguments<br>&nbsp; &nbsp; for (int i = 1; i &lt; argc; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; if (!std::strcmp(argv[i], "-h") &amp;&amp; i + 1 &lt; argc) {&nbsp; // Use -h for hash160_hex<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; targetHash160Hex = argv[++i];<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hash160Provided = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Convert the hex string to a byte array<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; targetHash160.resize(20);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (size_t j = 0; j &lt; 20; j++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; targetHash160[j] = std::stoul(targetHash160Hex.substr(j * 2, 2), nullptr, 16);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; } else if (!std::strcmp(argv[i], "-p") &amp;&amp; i + 1 &lt; argc) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; puzzle = std::stoi(argv[++i]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (puzzle &lt;= 0) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; std::cerr &lt;&lt; "Invalid puzzle value. Must be greater than 0.\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 1;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int one, range;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; one.SetBase10(const_cast&lt;char*&gt;("1"));<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minKey = one;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minKey.ShiftL(puzzle - 1); // Start of range: 2^(puzzle-1)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxKey = one;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxKey.ShiftL(puzzle);&nbsp; &nbsp; &nbsp;// End of range: 2^puzzle - 1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxKey.Sub(&amp;one);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; range = maxKey;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; range.Sub(&amp;minKey);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rangeProvided = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; std::cerr &lt;&lt; "Unknown parameter: " &lt;&lt; argv[i] &lt;&lt; "\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printUsage(argv[0]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 1;<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; if (!hash160Provided || !rangeProvided) {<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cerr &lt;&lt; "Both -h and -p are required!\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; printUsage(argv[0]);<br>&nbsp; &nbsp; &nbsp; &nbsp; return 1;<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; // Convert range to big numbers<br>&nbsp; &nbsp; auto rangeStart = hexToBigNum(intToHex(minKey));<br>&nbsp; &nbsp; auto rangeEnd = hexToBigNum(intToHex(maxKey));<br><br>&nbsp; &nbsp; // Validate range<br>&nbsp; &nbsp; bool validRange = false;<br>&nbsp; &nbsp; if (rangeStart.size() &lt; rangeEnd.size()) {<br>&nbsp; &nbsp; &nbsp; &nbsp; validRange = true;<br>&nbsp; &nbsp; } else if (rangeStart.size() &gt; rangeEnd.size()) {<br>&nbsp; &nbsp; &nbsp; &nbsp; validRange = false;<br>&nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; validRange = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = (int)rangeStart.size() - 1; i &gt;= 0; --i) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (rangeStart[i] &lt; rangeEnd[i]) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (rangeStart[i] &gt; rangeEnd[i]) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; validRange = false;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; if (!validRange) {<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cerr &lt;&lt; "Range start must be less than range end.\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; return 1;<br>&nbsp; &nbsp; }<br><br>&nbsp; &nbsp; auto rangeSize = bigNumSubtract(rangeEnd, rangeStart);<br>&nbsp; &nbsp; rangeSize = bigNumAdd(rangeSize, singleElementVector(1ULL));<br><br>&nbsp; &nbsp; const std::string rangeSizeHex = bigNumToHex(rangeSize);<br>&nbsp; &nbsp; <br>&nbsp; &nbsp; const long double totalRangeLD = hexStrToLongDouble(rangeSizeHex);<br><br>&nbsp; &nbsp; const int numCPUs = omp_get_num_procs();<br>&nbsp; &nbsp; g_threadPrivateKeys.resize(numCPUs, "0");<br><br>&nbsp; &nbsp; auto [chunkSize, remainder] = bigNumDivide(rangeSize, (uint64_t)numCPUs);<br>&nbsp; &nbsp; g_threadRanges.resize(numCPUs);<br><br>&nbsp; &nbsp; std::vector&lt;uint64_t&gt; currentStart = rangeStart;<br>&nbsp; &nbsp; for (int t = 0; t &lt; numCPUs; t++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; auto currentEnd = bigNumAdd(currentStart, chunkSize);<br>&nbsp; &nbsp; &nbsp; &nbsp; if (t &lt; (int)remainder) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentEnd = bigNumAdd(currentEnd, singleElementVector(1ULL));<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; currentEnd = bigNumSubtract(currentEnd, singleElementVector(1ULL));<br><br>&nbsp; &nbsp; &nbsp; &nbsp; g_threadRanges[t].startHex = bigNumToHex(currentStart);<br>&nbsp; &nbsp; &nbsp; &nbsp; g_threadRanges[t].endHex&nbsp; &nbsp;= bigNumToHex(currentEnd);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; currentStart = bigNumAdd(currentEnd, singleElementVector(1ULL));<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp; const std::string displayRange = g_threadRanges.front().startHex + ":" + g_threadRanges.back().endHex;<br><br>&nbsp; &nbsp; unsigned long long globalComparedCount = 0ULL;<br>&nbsp; &nbsp; double globalElapsedTime = 0.0;<br>&nbsp; &nbsp; double mkeysPerSec&nbsp; &nbsp; &nbsp; &nbsp;= 0.0;<br><br>&nbsp; &nbsp; const auto tStart = std::chrono::high_resolution_clock::now();<br>&nbsp; &nbsp; auto lastStatusTime = tStart;<br>&nbsp; &nbsp; auto lastSaveTime&nbsp; &nbsp;= tStart;<br><br>&nbsp; &nbsp; bool matchFound&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = false;<br>&nbsp; &nbsp; std::string foundPrivateKeyHex;<br><br>&nbsp; &nbsp; Int one; one.SetBase10(const_cast&lt;char*&gt;("1"));<br>&nbsp; &nbsp; Int minKey = one;<br>&nbsp; &nbsp; minKey.ShiftL(puzzle - 1); // Start of range: 2^(puzzle-1)<br>&nbsp; &nbsp; Int maxKey = one;<br>&nbsp; &nbsp; maxKey.ShiftL(puzzle);&nbsp; &nbsp; &nbsp;// End of range: 2^puzzle - 1<br>&nbsp; &nbsp; maxKey.Sub(&amp;one);<br>&nbsp; &nbsp; Int range = maxKey;<br>&nbsp; &nbsp; range.Sub(&amp;minKey);<br><br>&nbsp; &nbsp; Secp256K1 secp;<br>&nbsp; &nbsp; secp.Init();<br><br>&nbsp; &nbsp; // PARRALEL COMPUTING BLOCK<br>&nbsp; &nbsp; #pragma omp parallel num_threads(numCPUs) \<br>&nbsp; &nbsp; &nbsp; shared(globalComparedCount, globalElapsedTime, mkeysPerSec, matchFound, \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;foundPrivateKeyHex, tStart, lastStatusTime, lastSaveTime, g_progressSaveCount, \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;g_threadPrivateKeys)<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; const int threadId = omp_get_thread_num();<br><br>&nbsp; &nbsp; &nbsp; &nbsp; Int privateKey = hexToInt(g_threadRanges[threadId].startHex);<br>&nbsp; &nbsp; &nbsp; &nbsp; const Int threadRangeEnd = hexToInt(g_threadRanges[threadId].endHex);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; #pragma omp critical<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g_threadPrivateKeys[threadId] = padHexTo64(intToHex(privateKey));<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Precomputing +i*G and -i*G for i=0..255<br>&nbsp; &nbsp; &nbsp; &nbsp; std::vector&lt;Point&gt; plusPoints(POINTS_BATCH_SIZE);<br>&nbsp; &nbsp; &nbsp; &nbsp; std::vector&lt;Point&gt; minusPoints(POINTS_BATCH_SIZE);<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; POINTS_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int tmp; tmp.SetInt32(i);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Point p = secp.ComputePublicKey(&amp;tmp); <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; plusPoints[i] = p;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.y.ModNeg();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minusPoints[i] = p;<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Arrays for batch-adding<br>&nbsp; &nbsp; &nbsp; &nbsp; std::vector&lt;Int&gt;&nbsp; deltaX(POINTS_BATCH_SIZE);<br>&nbsp; &nbsp; &nbsp; &nbsp; IntGroup modGroup(POINTS_BATCH_SIZE);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Save 512 publickeys<br>&nbsp; &nbsp; &nbsp; &nbsp; const int fullBatchSize = 2 * POINTS_BATCH_SIZE;<br>&nbsp; &nbsp; &nbsp; &nbsp; std::vector&lt;Point&gt; pointBatch(fullBatchSize);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Buffers for hashing<br>&nbsp; &nbsp; &nbsp; &nbsp; uint8_t localPubKeys[fullBatchSize][33];<br>&nbsp; &nbsp; &nbsp; &nbsp; uint8_t localHashResults[HASH_BATCH_SIZE][20];<br>&nbsp; &nbsp; &nbsp; &nbsp; int localBatchCount = 0;<br>&nbsp; &nbsp; &nbsp; &nbsp; int pointIndices[HASH_BATCH_SIZE];<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Local count<br>&nbsp; &nbsp; &nbsp; &nbsp; unsigned long long localComparedCount = 0ULL;<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Download the target (hash160) &#1074; __m128i for fast compare<br>&nbsp; &nbsp; &nbsp; &nbsp; __m128i target16 = _mm_loadu_si128(reinterpret_cast&lt;const __m128i*&gt;(targetHash160.data()));<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // main<br>&nbsp; &nbsp; // Main loop for generating random private keys<br>&nbsp; &nbsp; while (!matchFound) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Generate a random private key within the thread's range<br>&nbsp; &nbsp; &nbsp; &nbsp; Int currentBatchKey = generateRandomPrivateKey(minKey, range);<br>&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentBatchKey.Set(&amp;privateKey);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Point startPoint = secp.ComputePublicKey(&amp;currentBatchKey);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #pragma omp critical<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g_threadPrivateKeys[threadId] = padHexTo64(intToHex(privateKey));<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Divide the batch of 512 keys into 2 blocks of 256 keys, count +256 and -256 from the center G-point of the batch<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // First pointBatch[0..255] +<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; POINTS_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deltaX[i].ModSub(&amp;plusPoints[i].x, &amp;startPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modGroup.Set(deltaX.data());<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modGroup.ModInv();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; POINTS_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Point tempPoint = startPoint;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int deltaY;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deltaY.ModSub(&amp;plusPoints[i].y, &amp;startPoint.y);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int slope;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; slope.ModMulK1(&amp;deltaY, &amp;deltaX[i]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int slopeSq;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; slopeSq.ModSquareK1(&amp;slope);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int tmpX;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.Set(&amp;startPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModNeg();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModAdd(&amp;slopeSq);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModSub(&amp;plusPoints[i].x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.x.Set(&amp;tmpX);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int diffX;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.Set(&amp;startPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.ModSub(&amp;tempPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.ModMulK1(&amp;slope);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.y.ModNeg();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.y.ModAdd(&amp;diffX);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pointBatch[i] = tempPoint;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Second pointBatch[256..511] -<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; POINTS_BATCH_SIZE; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Point tempPoint = startPoint;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int deltaY;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deltaY.ModSub(&amp;minusPoints[i].y, &amp;startPoint.y);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int slope;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; slope.ModMulK1(&amp;deltaY, &amp;deltaX[i]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int slopeSq;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; slopeSq.ModSquareK1(&amp;slope);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int tmpX;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.Set(&amp;startPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModNeg();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModAdd(&amp;slopeSq);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tmpX.ModSub(&amp;minusPoints[i].x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.x.Set(&amp;tmpX);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int diffX;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.Set(&amp;startPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.ModSub(&amp;tempPoint.x);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diffX.ModMulK1(&amp;slope);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.y.ModNeg();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tempPoint.y.ModAdd(&amp;diffX);<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pointBatch[POINTS_BATCH_SIZE + i] = tempPoint;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Construct local buffeer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; fullBatchSize; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pointToCompressedBin(pointBatch[i], localPubKeys[localBatchCount]);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pointIndices[localBatchCount] = i;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; localBatchCount++;<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 8 keys are ready - time to use avx2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (localBatchCount == HASH_BATCH_SIZE) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; computeHash160BatchBinSingle(localBatchCount, localPubKeys, localHashResults);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Results check<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; HASH_BATCH_SIZE; j++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __m128i cand16 = _mm_loadu_si128(reinterpret_cast&lt;const __m128i*&gt;(localHashResults[j]));<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __m128i cmp = _mm_cmpeq_epi8(cand16, target16);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (_mm_movemask_epi8(cmp) == 0xFFFF) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Checking last 4 bytes (20 - 16)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!matchFound &amp;&amp; std::memcmp(localHashResults[j], targetHash160.data(), 20) == 0) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #pragma omp critical<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!matchFound) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; matchFound = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; auto tEndTime = std::chrono::high_resolution_clock::now();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; globalElapsedTime = std::chrono::duration&lt;double&gt;(tEndTime - tStart).count();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mkeysPerSec = (double)(globalComparedCount + localComparedCount) / globalElapsedTime / 1e6;<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Recovering private key<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int matchingPrivateKey;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; matchingPrivateKey.Set(&amp;currentBatchKey);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int idx = pointIndices[j];<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (idx &lt; 256) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int offset; offset.SetInt32(idx);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; matchingPrivateKey.Add(&amp;offset);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int offset; offset.SetInt32(idx - 256);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; matchingPrivateKey.Sub(&amp;offset);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; foundPrivateKeyHex = padHexTo64(intToHex(matchingPrivateKey));<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #pragma omp cancel parallel<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; localComparedCount++;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; localComparedCount++;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; localBatchCount = 0;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Next step<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Int step;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; step.SetInt32(fullBatchSize - 2); // 510<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; privateKey.Add(&amp;step);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Time to show status<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; auto now = std::chrono::high_resolution_clock::now();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double secondsSinceStatus = std::chrono::duration&lt;double&gt;(now - lastStatusTime).count();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (secondsSinceStatus &gt;= statusIntervalSec) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #pragma omp critical<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; globalComparedCount += localComparedCount;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; localComparedCount = 0ULL;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; globalElapsedTime = std::chrono::duration&lt;double&gt;(now - tStart).count();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mkeysPerSec = (double)globalComparedCount / globalElapsedTime / 1e6;<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printStatsBlock(numCPUs, targetHash160Hex, displayRange,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mkeysPerSec, globalComparedCount,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; globalElapsedTime, puzzle);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lastStatusTime = now;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (matchFound) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; } // while(true)<br><br>&nbsp; &nbsp; &nbsp; &nbsp; // Adding local count<br>&nbsp; &nbsp; &nbsp; &nbsp; #pragma omp atomic<br>&nbsp; &nbsp; &nbsp; &nbsp; globalComparedCount += localComparedCount;<br>&nbsp; &nbsp; } // end of parralel section<br><br>&nbsp; &nbsp; // Main results<br>&nbsp; &nbsp; auto tEnd = std::chrono::high_resolution_clock::now();<br>&nbsp; &nbsp; globalElapsedTime = std::chrono::duration&lt;double&gt;(tEnd - tStart).count();<br><br>&nbsp; &nbsp; if (!matchFound) {<br>&nbsp; &nbsp; &nbsp; &nbsp; mkeysPerSec = (double)globalComparedCount / globalElapsedTime / 1e6;<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; "\nNo match found.\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; "Total Checked : " &lt;&lt; globalComparedCount &lt;&lt; "\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; "Elapsed Time&nbsp; : " &lt;&lt; formatElapsedTime(globalElapsedTime) &lt;&lt; "\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; "Speed&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: " &lt;&lt; mkeysPerSec &lt;&lt; " Mkeys/s\n";<br>&nbsp; &nbsp; &nbsp; &nbsp; return 0;<br>&nbsp; &nbsp; }<br><br><br>&nbsp; &nbsp; // If the key was found<br>&nbsp; &nbsp; std::cout &lt;&lt; "================== FOUND MATCH! ==================\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Private Key&nbsp; &nbsp;: " &lt;&lt; foundPrivateKeyHex &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Total Checked : " &lt;&lt; globalComparedCount &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Elapsed Time&nbsp; : " &lt;&lt; formatElapsedTime(globalElapsedTime) &lt;&lt; "\n";<br>&nbsp; &nbsp; std::cout &lt;&lt; "Speed&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: " &lt;&lt; mkeysPerSec &lt;&lt; " Mkeys/s\n";<br>&nbsp; &nbsp; return 0;<br>}</div><br><br><div class="codeheader">Code:</div><div class="code">./Cyclone -h bfebb73562d4541b32a02ba664d140b5a574792f -p 26</div><br></div><br>Hi, thanks for the code. I'm having some trouble to compile it on Ubuntu 24.04; this is the error I get when I try to 'make' it:<br><div class="codeheader">Code:</div><div class="code"> Cyclone.cpp:234:70: error: aggregate ‘std::array&lt;std::array&lt;unsigned char, 64&gt;, 8&gt; shaInputs’ has incomplete type and cannot be defined<br>&nbsp; 234 |&nbsp; &nbsp; &nbsp;alignas(32) std::array&lt;std::array&lt;uint8_t, 64&gt;, HASH_BATCH_SIZE&gt; shaInputs;<br>&nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^~~~~~~~~<br></div><br>Thanks in advance.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65154295">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig164362">I can help you to restore/recover your wallet or password.<br><a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=1234619.0">https://bitcointalk.org/index.php?topic=1234619.0</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65157153"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3566343" title="View the profile of nomachine">nomachine</a></b>
+							<div class="smalltext">
+								Full Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 798<br>
+								Merit: 134<br>
+								Posts: 977<br><br>
+								<div style="overflow: auto; width: 100%;"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/avatar_3566343.png" alt="" class="avatar" border="0"></div><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3566343"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3566343" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3566343;topic=5532654;msg=65157153;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65157153#msg65157153"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65157153"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65157153#msg65157153">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext"><span title="Last edit: March 27, 2025, 01:55:03 AM by nomachine" class="edited">March 11, 2025, 07:07:13 PM</span><span class="editplain"><br>Last edit: March 27, 2025, 01:55:03 AM by nomachine</span></div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns16" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65157153;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65157153#msg65157153">#16</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65154295#msg65154295">Quote from: GoldTiger69 on March 10, 2025, 10:11:34 PM</a></div><div class="quote">Hi, thanks for the code. I'm having some trouble to compile it on Ubuntu 24.04; this is the error I get when I try to 'make' it:<br><div class="codeheader">Code:</div><div class="code"> Cyclone.cpp:234:70: error: aggregate ‘std::array&lt;std::array&lt;unsigned char, 64&gt;, 8&gt; shaInputs’ has incomplete type and cannot be defined<br>&nbsp;&nbsp;234 | &nbsp; &nbsp; alignas(32) std::array&lt;std::array&lt;uint8_t, 64&gt;, HASH_BATCH_SIZE&gt; shaInputs;<br>&nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;^~~~~~~~~<br></div><br>Thanks in advance.<br></div><br><br>It's probably a copy/paste error on my part - the &lt;array&gt; header is missing. Here it is again:<br><br><a class="ul" href="https://github.com/NoMachine1/Cyclone">https://github.com/NoMachine1/Cyclone</a><br><br>&nbsp;I have about ~380M keys/s.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65157153">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig3566343">BTC: bc1qdwnxr7s08xwelpjy3cc52rrxg63xsmagv50fa8</div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65157448"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=164362" title="View the profile of GoldTiger69">GoldTiger69</a></b>
+							<div class="smalltext">
+								Hero Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=164362" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 595<br>
+								Merit: 502<br>
+								Posts: 595<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=164362"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?topic=1234619.0" title="Wallet Restoration/Password Recovery Services."><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/www_sm.gif" alt="WWW" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=164362" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=164362;topic=5532654;msg=65157448;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65157448#msg65157448"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65157448"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65157448#msg65157448">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 11, 2025, 08:38:34 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns17" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65157448;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65157448#msg65157448">#17</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post">@nomachine: Thanks a lot, indeed that was the problem!<br><br>Cheers!<br></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65157448">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+							<hr width="100%" size="1" class="hrcolor">
+							<div class="signature sig164362">I can help you to restore/recover your wallet or password.<br><a rel="ugc" class="ul" href="https://bitcointalk.org/index.php?topic=1234619.0">https://bitcointalk.org/index.php?topic=1234619.0</a></div>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65171838"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3656340" title="View the profile of b0dre">b0dre</a></b>
+							<div class="smalltext">
+								Jr. Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3656340" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 61<br>
+								Merit: 1<br>
+								Posts: 61<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3656340"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3656340" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3656340;topic=5532654;msg=65171838;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65171838#msg65171838"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65171838"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65171838#msg65171838">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 15, 2025, 07:25:01 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns18" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65171838;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65171838#msg65171838">#18</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646">Quote from: FrozenThroneGuy on February 19, 2025, 04:51:28 PM</a></div><div class="quote">Hello everyone!<br>I’m super excited to share something I’ve been working on for a while now—Cyclone, the fastest CPU puzzle bruteforcer! <br>It’s designed to crack Satoshi puzzles on CPU (why not? Any chances to take a prize).<br>Here’s a quick breakdown of how Cyclone stacks up against other tools:<br><br>Vanity Search: 35.91 (No option to select a range of private keys for search and it using endomorphizm which is not relevant to range search)<br>Keyhunt: 43 (Incorrectly computes half of hashes and addresses by omitting Y coordinates for compress mode)<br>Cyclone AVX2: 51.21 (Full and correct computation of compressed public keys, computing 8 hash160 per batch)<br>Cyclone AVX512: ~64 (estimated, ~25% faster than AVX2, computing 16 hash160 per batch)<br><br>Also I tested AVX2 version on Ryzen 9 7945HX, speed is 145 Mkey/s. <br><br>On a single thread of an Intel Xeon Gold processor 3 Gen, the AVX512 version is approximately 22% faster than the AVX2 version:<br>AVX2: ~2.5 Mkey/s<br>AVX512: ~3.2 Mkey/s<br><br>If you’re curious to try it out or dive into the code, check out the GitHub repository here: <a class="ul" href="https://github.com/Dookoo2/Cyclone/tree/main">https://github.com/Dookoo2/Cyclone/tree/main</a><br>I’d love to hear your thoughts, feedback, or any suggestions for improvement. Let me know if you run into any issues or have questions.<br><br>Sorry for English, I'm not a native speaker:)<br></div><br>Prefix and auto_random:<br><a class="ul" href="https://github.com/B0dre/Cyclone_Prefix">https://github.com/B0dre/Cyclone_Prefix</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65171838">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65173870"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3655599" title="View the profile of MrGPBit">MrGPBit</a></b>
+							<div class="smalltext">
+								Jr. Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3655599" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 52<br>
+								Merit: 1<br>
+								Posts: 52<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3655599"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3655599" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3655599;topic=5532654;msg=65173870;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65173870#msg65173870"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65173870"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65173870#msg65173870">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 16, 2025, 11:30:32 AM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns19" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65173870;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65173870#msg65173870">#19</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65171838#msg65171838">Quote from: b0dre on March 15, 2025, 07:25:01 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646">Quote from: FrozenThroneGuy on February 19, 2025, 04:51:28 PM</a></div><div class="quote">Hello everyone!<br>I’m super excited to share something I’ve been working on for a while now—Cyclone, the fastest CPU puzzle bruteforcer! <br>It’s designed to crack Satoshi puzzles on CPU (why not? Any chances to take a prize).<br>Here’s a quick breakdown of how Cyclone stacks up against other tools:<br><br>Vanity Search: 35.91 (No option to select a range of private keys for search and it using endomorphizm which is not relevant to range search)<br>Keyhunt: 43 (Incorrectly computes half of hashes and addresses by omitting Y coordinates for compress mode)<br>Cyclone AVX2: 51.21 (Full and correct computation of compressed public keys, computing 8 hash160 per batch)<br>Cyclone AVX512: ~64 (estimated, ~25% faster than AVX2, computing 16 hash160 per batch)<br><br>Also I tested AVX2 version on Ryzen 9 7945HX, speed is 145 Mkey/s. <br><br>On a single thread of an Intel Xeon Gold processor 3 Gen, the AVX512 version is approximately 22% faster than the AVX2 version:<br>AVX2: ~2.5 Mkey/s<br>AVX512: ~3.2 Mkey/s<br><br>If you’re curious to try it out or dive into the code, check out the GitHub repository here: <a class="ul" href="https://github.com/Dookoo2/Cyclone/tree/main">https://github.com/Dookoo2/Cyclone/tree/main</a><br>I’d love to hear your thoughts, feedback, or any suggestions for improvement. Let me know if you run into any issues or have questions.<br><br>Sorry for English, I'm not a native speaker:)<br></div><br>Prefix and auto_random:<br><a class="ul" href="https://github.com/B0dre/Cyclone_Prefix">https://github.com/B0dre/Cyclone_Prefix</a><br></div><br>@b0dre<br><br>Can you adapt the source code so that it can be turned into a Windows 64 project?<br><br>The code is currently only adapted for Linux, would that be possible?<br>Many thanks</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65173870">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr><tr><td class="msgcl1">
+		<a name="msg65179233"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tbody><tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tbody><tr>
+								<td valign="top" width="16%" rowspan="2" style="overflow: hidden;" class="poster_info">
+							<b><a href="https://bitcointalk.org/index.php?action=profile;u=3656340" title="View the profile of b0dre">b0dre</a></b>
+							<div class="smalltext">
+								Jr. Member<br>
+								<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/star.gif" alt="*" border="0"><br>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3656340" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/useroff.gif" alt="Offline" border="0" style="margin-top: 2px;"></a><span class="smalltext"> Offline</span><br><br>
+								Activity: 61<br>
+								Merit: 1<br>
+								Posts: 61<br><br>
+								
+								
+								
+								<br>
+								<a href="https://bitcointalk.org/index.php?action=profile;u=3656340"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/profile_sm.gif" alt="View Profile" title="View Profile" border="0"></a>
+								<a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=3656340" title="Personal Message (Offline)"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/im_off.gif" alt="Personal Message (Offline)" border="0"></a><br>
+						  <br><a href="https://bitcointalk.org/index.php?action=ignore;u=3656340;topic=5532654;msg=65179233;sesc=e59f8fcb6881e57bc215e875debdf61c">Ignore</a>
+							</div>
+						</td>
+								<td valign="top" width="85%" height="100%" style="padding: 2px;" class="td_headerandpost with_column_bug">
+							<table width="100%" border="0"><tbody><tr>
+								<td valign="middle" width="26"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65179233#msg65179233"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xx.gif" alt="" border="0"></a></td>
+								<td valign="middle">
+												<div style="font-weight: bold;" class="subject" id="subject_65179233"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65179233#msg65179233">Re: Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></div>
+												<div class="smalltext">March 17, 2025, 08:45:33 PM</div></td>
+										  <td align="right" valign="middle" height="20" style="font-size: smaller; padding-top: 4px;" class="td_buttons"><div id="ignmsgbttns20" style="visibility: visible;">
+					<a href="https://bitcointalk.org/index.php?action=post;quote=65179233;topic=5532654.0;num_replies=45;sesc=e59f8fcb6881e57bc215e875debdf61c"><img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/frostee_quote.png" alt="Reply with quote" class="reply_button" style="vertical-align: middle;"></a> &nbsp;<a class="message_number" style="vertical-align: middle;" href="https://bitcointalk.org/index.php?topic=5532654.msg65179233#msg65179233">#20</a>
+		 </div>
+								</td>
+							</tr></tbody></table>
+									 <hr width="100%" size="1" class="hrcolor" style="margin-top: 4px;">
+							<div class="post"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65173870#msg65173870">Quote from: MrGPBit on March 16, 2025, 11:30:32 AM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65171838#msg65171838">Quote from: b0dre on March 15, 2025, 07:25:01 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=5532654.msg65082646#msg65082646">Quote from: FrozenThroneGuy on February 19, 2025, 04:51:28 PM</a></div><div class="quote">Hello everyone!<br>I’m super excited to share something I’ve been working on for a while now—Cyclone, the fastest CPU puzzle bruteforcer! <br>It’s designed to crack Satoshi puzzles on CPU (why not? Any chances to take a prize).<br>Here’s a quick breakdown of how Cyclone stacks up against other tools:<br><br>Vanity Search: 35.91 (No option to select a range of private keys for search and it using endomorphizm which is not relevant to range search)<br>Keyhunt: 43 (Incorrectly computes half of hashes and addresses by omitting Y coordinates for compress mode)<br>Cyclone AVX2: 51.21 (Full and correct computation of compressed public keys, computing 8 hash160 per batch)<br>Cyclone AVX512: ~64 (estimated, ~25% faster than AVX2, computing 16 hash160 per batch)<br><br>Also I tested AVX2 version on Ryzen 9 7945HX, speed is 145 Mkey/s. <br><br>On a single thread of an Intel Xeon Gold processor 3 Gen, the AVX512 version is approximately 22% faster than the AVX2 version:<br>AVX2: ~2.5 Mkey/s<br>AVX512: ~3.2 Mkey/s<br><br>If you’re curious to try it out or dive into the code, check out the GitHub repository here: <a class="ul" href="https://github.com/Dookoo2/Cyclone/tree/main">https://github.com/Dookoo2/Cyclone/tree/main</a><br>I’d love to hear your thoughts, feedback, or any suggestions for improvement. Let me know if you run into any issues or have questions.<br><br>Sorry for English, I'm not a native speaker:)<br></div><br>Prefix and auto_random:<br><a class="ul" href="https://github.com/B0dre/Cyclone_Prefix">https://github.com/B0dre/Cyclone_Prefix</a><br></div><br>@b0dre<br><br>Can you adapt the source code so that it can be turned into a Windows 64 project?<br><br>The code is currently only adapted for Linux, would that be possible?<br>Many thanks<br></div><br>I don’t have a Windows machine available for testing; I only have macOS and Linux systems. You could try using either WSL (Windows Subsystem for Linux) or this version: <a class="ul" href="https://github.com/NoMachine1/Cyclone">https://github.com/NoMachine1/Cyclone</a>, which is faster than mine.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tbody><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_65179233">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/ip.gif" alt="" border="0">
+								</td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td></tr>
+		</tbody></table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</tbody></table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="middletext">Pages:  [<b>1</b>] <a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.20">2</a> <a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.40">3</a> <span class="prevnext"><a class="navPages" href="https://bitcointalk.org/index.php?topic=5532654.20">»</a> </span>&nbsp;<a href="https://bitcointalk.org/index.php?topic=5532654.0;all">All</a> </td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					
+		<td class="maintab_first">&nbsp;</td>
+		<td class="maintab_back"><a href="https://bitcointalk.org/index.php?action=post;topic=5532654.0;num_replies=45">Reply</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?topic=5532654.0;do=watch;sesc=e59f8fcb6881e57bc215e875debdf61c" onclick="return confirm(&#39;Watch or unwatch this topic?&#39;);">Watch</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=notify;sa=on;topic=5532654.0;sesc=e59f8fcb6881e57bc215e875debdf61c" onclick="return confirm(&#39;Are you sure you wish to enable notification of new replies for this topic?&#39;);">Notify</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=markasread;sa=topic;t=0;topic=5532654.0;sesc=e59f8fcb6881e57bc215e875debdf61c">Mark unread</a> &nbsp;|&nbsp; <a href="https://bitcointalk.org/index.php?action=printpage;topic=5532654.0" target="_blank">Print</a></td>
+		<td class="maintab_last">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<script language="JavaScript" type="text/javascript" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/xml_topic.js.download"></script>
+<script language="JavaScript" type="text/javascript">//<!--
+	quickReplyCollapsed = true;
+
+	smf_topic = 5532654;
+	smf_start = 0;
+	smf_show_modify = 0;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="e59f8fcb6881e57bc215e875debdf61c" /><input type="hidden" name="topic" value="5532654" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Save" onclick="return modify_save(\'e59f8fcb6881e57bc215e875debdf61c\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Cancel" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="https://bitcointalk.org/index.php?topic=5532654.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Topic: %subject% &nbsp;(Read 1757 times)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// --></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tbody><tr>
+				<td valign="top"><div class="nav" style="font-size: smaller; margin-bottom: 2ex; margin-top: 2ex;"><b><a href="https://bitcointalk.org/index.php" class="nav">Bitcoin Forum</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php#1" class="nav">Bitcoin</a></b>&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?board=6.0" class="nav">Development &amp; Technical Discussion</a></b> (Moderators: <a href="https://bitcointalk.org/index.php?action=profile;u=11425" title="Board Moderator">gmaxwell</a>, <a href="https://bitcointalk.org/index.php?action=profile;u=290195" title="Board Moderator">achow101</a>)&nbsp;&gt;&nbsp;<b><a href="https://bitcointalk.org/index.php?topic=5532654.0" class="nav">Cyclone - fastest CPU Satoshi's puzzle solver (only CPU)</a></b></div></td> 
+				<td valign="top" align="right" class="nav"> <a href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=prev#new">« previous topic</a> <a href="https://bitcointalk.org/index.php?topic=5532654.0;prev_next=next#new">next topic »</a></td>
+		</tr>
+</tbody></table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tbody><tr>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody></table>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="https://bitcointalk.org/index.php" method="get" accept-charset="ISO-8859-1" style="padding:0; margin: 0;">
+		<span class="smalltext">Jump to:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex &gt; 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf(&#39;?&#39;) == -1 || this.options[this.selectedIndex].value.substr(0, 1) != &#39;?&#39; ? 0 : 1);">
+			<option value="">Please select a destination:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#1">Bitcoin</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=1.0"> =&gt; Bitcoin Discussion</option>
+			<option value="?board=74.0"> ===&gt; Legal</option>
+			<option value="?board=77.0"> ===&gt; Press</option>
+			<option value="?board=86.0"> ===&gt; Meetups</option>
+			<option value="?board=87.0"> ===&gt; Important Announcements</option>
+			<option value="?board=6.0" selected="selected"> =&gt; Development &amp; Technical Discussion</option>
+			<option value="?board=37.0"> ===&gt; Wallet software</option>
+			<option value="?board=98.0"> =====&gt; Electrum</option>
+			<option value="?board=100.0"> =====&gt; Bitcoin Wallet for Android</option>
+			<option value="?board=138.0"> =====&gt; BitcoinJ</option>
+			<option value="?board=97.0"> =====&gt; Armory</option>
+			<option value="?board=231.0"> =====&gt; Mycelium</option>
+			<option value="?board=261.0"> =====&gt; Hardware wallets</option>
+			<option value="?board=14.0"> =&gt; Mining</option>
+			<option value="?board=40.0"> ===&gt; Mining support</option>
+			<option value="?board=41.0"> ===&gt; Pools</option>
+			<option value="?board=42.0"> ===&gt; Mining software (miners)</option>
+			<option value="?board=76.0"> ===&gt; Hardware</option>
+			<option value="?board=137.0"> =====&gt; Group buys</option>
+			<option value="?board=81.0"> ===&gt; Mining speculation</option>
+			<option value="?board=4.0"> =&gt; Bitcoin Technical Support</option>
+			<option value="?board=12.0"> =&gt; Project Development</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#3">Economy</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=7.0"> =&gt; Economics</option>
+			<option value="?board=57.0"> ===&gt; Speculation</option>
+			<option value="?board=5.0"> =&gt; Marketplace</option>
+			<option value="?board=51.0"> ===&gt; Goods</option>
+			<option value="?board=75.0"> =====&gt; Computer hardware</option>
+			<option value="?board=93.0"> =====&gt; Digital goods</option>
+			<option value="?board=234.0"> =======&gt; Invites &amp; Accounts</option>
+			<option value="?board=217.0"> =====&gt; Collectibles</option>
+			<option value="?board=52.0"> ===&gt; Services</option>
+			<option value="?board=53.0"> ===&gt; Currency exchange</option>
+			<option value="?board=56.0"> ===&gt; Gambling</option>
+			<option value="?board=71.0"> =====&gt; Games and rounds</option>
+			<option value="?board=207.0"> =====&gt; Investor-based games</option>
+			<option value="?board=228.0"> =====&gt; Gambling discussion</option>
+			<option value="?board=65.0"> ===&gt; Lending</option>
+			<option value="?board=88.0"> =====&gt; Long-term offers</option>
+			<option value="?board=78.0"> ===&gt; Securities</option>
+			<option value="?board=73.0"> ===&gt; Auctions</option>
+			<option value="?board=84.0"> ===&gt; Service Announcements</option>
+			<option value="?board=212.0"> =====&gt; Micro Earnings</option>
+			<option value="?board=85.0"> ===&gt; Service Discussion</option>
+			<option value="?board=222.0"> =====&gt; Web Wallets</option>
+			<option value="?board=223.0"> =====&gt; Exchanges</option>
+			<option value="?board=8.0"> =&gt; Trading Discussion</option>
+			<option value="?board=83.0"> ===&gt; Scam Accusations</option>
+			<option value="?board=129.0"> ===&gt; Reputation</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Other</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> =&gt; Meta</option>
+			<option value="?board=168.0"> ===&gt; Bitcoin Wiki</option>
+			<option value="?board=34.0"> =&gt; Politics &amp; Society</option>
+			<option value="?board=39.0"> =&gt; Beginners &amp; Help</option>
+			<option value="?board=9.0"> =&gt; Off-topic</option>
+			<option value="?board=250.0"> =&gt; Serious discussion</option>
+			<option value="?board=251.0"> ===&gt; Ivory Tower</option>
+			<option value="?board=59.0"> =&gt; Archival</option>
+			<option value="?board=167.0"> ===&gt; New forum software</option>
+			<option value="?board=92.0"> ===&gt; &#1050;&#1086;&#1088;&#1079;&#1080;&#1085;&#1072;</option>
+			<option value="?board=44.0"> ===&gt; CPU/GPU Bitcoin mining hardware</option>
+			<option value="?board=17.0"> ===&gt; Chinese students</option>
+			<option value="?board=25.0"> ===&gt; Obsolete (buying)</option>
+			<option value="?board=26.0"> ===&gt; Obsolete (selling)</option>
+			<option value="?board=99.0"> ===&gt; MultiBit</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Alternate cryptocurrencies</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=67.0"> =&gt; Altcoin Discussion</option>
+			<option value="?board=159.0"> =&gt; Announcements (Altcoins)</option>
+			<option value="?board=240.0"> ===&gt; Tokens (Altcoins)</option>
+			<option value="?board=160.0"> =&gt; Mining (Altcoins)</option>
+			<option value="?board=199.0"> ===&gt; Pools (Altcoins)</option>
+			<option value="?board=161.0"> =&gt; Marketplace (Altcoins)</option>
+			<option value="?board=197.0"> ===&gt; Service Announcements (Altcoins)</option>
+			<option value="?board=198.0"> ===&gt; Service Discussion (Altcoins)</option>
+			<option value="?board=238.0"> ===&gt; Bounties (Altcoins)</option>
+			<option value="?board=224.0"> =&gt; Speculation (Altcoins)</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Local</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=241.0"> =&gt; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; (Arabic)</option>
+			<option value="?board=242.0"> ===&gt; &#1575;&#1604;&#1593;&#1605;&#1604;&#1575;&#1578; &#1575;&#1604;&#1576;&#1583;&#1610;&#1604;&#1577; (Altcoins)</option>
+			<option value="?board=265.0"> =====&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578;</option>
+			<option value="?board=253.0"> ===&gt; &#1573;&#1587;&#1578;&#1601;&#1587;&#1575;&#1585;&#1575;&#1578; &#1608; &#1571;&#1587;&#1574;&#1604;&#1577; &#1575;&#1604;&#1605;&#1576;&#1578;&#1583;&#1574;&#1610;&#1606;</option>
+			<option value="?board=266.0"> ===&gt; &#1575;&#1604;&#1578;&#1593;&#1583;&#1610;&#1606;</option>
+			<option value="?board=267.0"> ===&gt; &#1575;&#1604;&#1606;&#1602;&#1575;&#1588;&#1575;&#1578; &#1575;&#1604;&#1571;&#1582;&#1585;&#1609;</option>
+			<option value="?board=271.0"> ===&gt; &#1605;&#1606;&#1589;&#1575;&#1578; &#1575;&#1604;&#1578;&#1576;&#1575;&#1583;&#1604;</option>
+			<option value="?board=191.0"> =&gt; Bahasa Indonesia (Indonesian)</option>
+			<option value="?board=193.0"> ===&gt; Marketplace (Bahasa Indonesia)</option>
+			<option value="?board=194.0"> ===&gt; Mining (Bahasa Indonesia)</option>
+			<option value="?board=192.0"> ===&gt; Altcoins (Bahasa Indonesia)</option>
+			<option value="?board=276.0"> ===&gt; Trading dan Spekulasi</option>
+			<option value="?board=277.0"> ===&gt; Ekonomi, Politik, dan Budaya</option>
+			<option value="?board=278.0"> ===&gt; Topik Lainnya</option>
+			<option value="?board=27.0"> =&gt; Español (Spanish)</option>
+			<option value="?board=31.0"> ===&gt; Mercado y Economía</option>
+			<option value="?board=202.0"> =====&gt; Servicios</option>
+			<option value="?board=203.0"> =====&gt; Trading y especulación</option>
+			<option value="?board=32.0"> ===&gt; Hardware y Minería</option>
+			<option value="?board=33.0"> ===&gt; Esquina Libre</option>
+			<option value="?board=101.0"> ===&gt; Mercadillo</option>
+			<option value="?board=102.0"> =====&gt; Mexico</option>
+			<option value="?board=103.0"> =====&gt; Argentina</option>
+			<option value="?board=104.0"> =====&gt; España</option>
+			<option value="?board=105.0"> =====&gt; Centroamerica y Caribe</option>
+			<option value="?board=130.0"> ===&gt; Primeros pasos y ayuda</option>
+			<option value="?board=151.0"> ===&gt; Altcoins (criptomonedas alternativas)</option>
+			<option value="?board=177.0"> =====&gt; Minería de altcoins</option>
+			<option value="?board=204.0"> =====&gt; Servicios</option>
+			<option value="?board=254.0"> =====&gt; Tokens (Español)</option>
+			<option value="?board=30.0"> =&gt; &#20013;&#25991; (Chinese)</option>
+			<option value="?board=117.0"> ===&gt; &#36339;&#34468;&#24066;&#22330;</option>
+			<option value="?board=118.0"> ===&gt; &#23665;&#23528;&#24065;</option>
+			<option value="?board=119.0"> ===&gt; &#23186;&#20307;</option>
+			<option value="?board=146.0"> ===&gt; &#25366;&#30719;</option>
+			<option value="?board=196.0"> ===&gt; &#31163;&#39064;&#19975;&#37324;</option>
+			<option value="?board=201.0"> =&gt; Hrvatski (Croatian)</option>
+			<option value="?board=220.0"> ===&gt; Trgovina</option>
+			<option value="?board=221.0"> ===&gt; Altcoins (Hrvatski)</option>
+			<option value="?board=273.0"> =====&gt; Announcements (Hrvatski)</option>
+			<option value="?board=272.0"> ===&gt; Off-topic (Hrvatski)</option>
+			<option value="?board=16.0"> =&gt; Deutsch (German)</option>
+			<option value="?board=62.0"> ===&gt; Anfänger und Hilfe</option>
+			<option value="?board=60.0"> ===&gt; Mining (Deutsch)</option>
+			<option value="?board=61.0"> ===&gt; Trading und Spekulation</option>
+			<option value="?board=63.0"> ===&gt; Projektentwicklung</option>
+			<option value="?board=64.0"> ===&gt; Off-Topic (Deutsch)</option>
+			<option value="?board=139.0"> ===&gt; Treffen</option>
+			<option value="?board=140.0"> ===&gt; Presse </option>
+			<option value="?board=152.0"> ===&gt; Altcoins (Deutsch)</option>
+			<option value="?board=270.0"> =====&gt; Announcements (Deutsch)</option>
+			<option value="?board=269.0"> ===&gt; Marktplatz</option>
+			<option value="?board=141.0"> =====&gt; Auktionen</option>
+			<option value="?board=36.0"> =====&gt; Suche</option>
+			<option value="?board=35.0"> =====&gt; Biete</option>
+			<option value="?board=120.0"> =&gt; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940; (Greek)</option>
+			<option value="?board=136.0"> ===&gt; &#913;&#947;&#959;&#961;&#940;</option>
+			<option value="?board=195.0"> ===&gt; Mining Discussion (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=179.0"> ===&gt; Altcoins (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=246.0"> =====&gt; Altcoin Announcements (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=247.0"> =====&gt; Altcoin Mining (&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;)</option>
+			<option value="?board=95.0"> =&gt; &#1506;&#1489;&#1512;&#1497;&#1514; (Hebrew)</option>
+			<option value="?board=13.0"> =&gt; Français</option>
+			<option value="?board=183.0"> ===&gt; Actualité et News</option>
+			<option value="?board=208.0"> ===&gt; Débutants</option>
+			<option value="?board=47.0"> ===&gt; Discussions générales et utilisation du Bitcoin</option>
+			<option value="?board=48.0"> ===&gt; Mining et Hardware</option>
+			<option value="?board=187.0"> ===&gt; Économie et spéculation</option>
+			<option value="?board=49.0"> ===&gt; Place de marché</option>
+			<option value="?board=209.0"> =====&gt; Échanges</option>
+			<option value="?board=210.0"> =====&gt; Produits et services</option>
+			<option value="?board=211.0"> =====&gt; Petites annonces</option>
+			<option value="?board=188.0"> ===&gt; Le Bitcoin et la loi</option>
+			<option value="?board=54.0"> ===&gt; Wiki, documentation et traduction</option>
+			<option value="?board=186.0"> ===&gt; Développement et technique</option>
+			<option value="?board=184.0"> ===&gt; Vos sites et projets</option>
+			<option value="?board=50.0"> ===&gt; Hors-sujet</option>
+			<option value="?board=149.0"> ===&gt; Altcoins (Français)</option>
+			<option value="?board=258.0"> =====&gt; Annonces</option>
+			<option value="?board=89.0"> =&gt; India</option>
+			<option value="?board=121.0"> ===&gt; Mining (India)</option>
+			<option value="?board=122.0"> ===&gt; Marketplace (India)</option>
+			<option value="?board=123.0"> ===&gt; Regional Languages (India)</option>
+			<option value="?board=124.0"> ===&gt; Press &amp; News from India</option>
+			<option value="?board=125.0"> ===&gt; Alt Coins (India)</option>
+			<option value="?board=126.0"> ===&gt; Buyer/ Seller Reputations (India)</option>
+			<option value="?board=127.0"> ===&gt; Off-Topic (India)</option>
+			<option value="?board=28.0"> =&gt; Italiano (Italian)</option>
+			<option value="?board=153.0"> ===&gt; Guide (Italiano)</option>
+			<option value="?board=169.0"> ===&gt; Progetti</option>
+			<option value="?board=205.0"> ===&gt; Discussioni avanzate e sviluppo</option>
+			<option value="?board=175.0"> ===&gt; Trading, analisi e speculazione</option>
+			<option value="?board=170.0"> ===&gt; Mercato</option>
+			<option value="?board=46.0"> =====&gt; Mercato valute</option>
+			<option value="?board=107.0"> =====&gt; Beni</option>
+			<option value="?board=171.0"> =====&gt; Servizi</option>
+			<option value="?board=172.0"> =====&gt; Esercizi commerciali</option>
+			<option value="?board=173.0"> =====&gt; Hardware/Mining (Italiano)</option>
+			<option value="?board=200.0"> =====&gt; Gambling (Italiano)</option>
+			<option value="?board=162.0"> ===&gt; Accuse scam/truffe</option>
+			<option value="?board=115.0"> ===&gt; Mining (Italiano)</option>
+			<option value="?board=132.0"> ===&gt; Alt-Currencies (Italiano)</option>
+			<option value="?board=176.0"> =====&gt; Annunci</option>
+			<option value="?board=144.0"> ===&gt; Raduni/Meeting (Italiano)</option>
+			<option value="?board=165.0"> ===&gt; Crittografia e decentralizzazione</option>
+			<option value="?board=145.0"> ===&gt; Off-Topic (Italiano)</option>
+			<option value="?board=252.0"> =&gt; &#26085;&#26412;&#35486; (Japanese)</option>
+			<option value="?board=255.0"> ===&gt; &#12450;&#12523;&#12488;&#12467;&#12452;&#12531;</option>
+			<option value="?board=79.0"> =&gt; Nederlands (Dutch)</option>
+			<option value="?board=80.0"> ===&gt; Markt</option>
+			<option value="?board=94.0"> ===&gt; Gokken/lotterijen</option>
+			<option value="?board=116.0"> ===&gt; Mining (Nederlands)</option>
+			<option value="?board=143.0"> ===&gt; Beurzen</option>
+			<option value="?board=147.0"> ===&gt; Alt Coins (Nederlands)</option>
+			<option value="?board=148.0"> ===&gt; Off-topic (Nederlands)</option>
+			<option value="?board=150.0"> ===&gt; Meetings (Nederlands)</option>
+			<option value="?board=275.0"> =&gt; Nigeria (Naija)</option>
+			<option value="?board=279.0"> ===&gt; Politics and society (Naija)</option>
+			<option value="?board=280.0"> ===&gt; Off-topic (Naija)</option>
+			<option value="?board=82.0"> =&gt; &#54620;&#44397;&#50612; (Korean)</option>
+			<option value="?board=182.0"> ===&gt; &#45824;&#52404;&#53076;&#51064; Alt Coins (&#54620;&#44397;&#50612;)</option>
+			<option value="?board=219.0"> =&gt; Pilipinas</option>
+			<option value="?board=243.0"> ===&gt; Altcoins (Pilipinas)</option>
+			<option value="?board=260.0"> =====&gt; Altcoin Announcements (Pilipinas)</option>
+			<option value="?board=268.0"> ===&gt; Pamilihan</option>
+			<option value="?board=274.0"> ===&gt; Others (Pilipinas)</option>
+			<option value="?board=142.0"> =&gt; Polski</option>
+			<option value="?board=163.0"> ===&gt; Tablica og&#322;osze&#324;</option>
+			<option value="?board=164.0"> ===&gt; Alternatywne kryptowaluty</option>
+			<option value="?board=263.0"> =====&gt; Nowe kryptowaluty i tokeny</option>
+			<option value="?board=264.0"> =====&gt; Tablica og&#322;osze&#324; (altcoiny)</option>
+			<option value="?board=29.0"> =&gt; Português (Portuguese)</option>
+			<option value="?board=131.0"> ===&gt; Primeiros Passos (Iniciantes)</option>
+			<option value="?board=69.0"> ===&gt; Economia &amp; Mercado</option>
+			<option value="?board=70.0"> ===&gt; Mineração em Geral</option>
+			<option value="?board=206.0"> ===&gt; Desenvolvimento &amp; Discussões Técnicas</option>
+			<option value="?board=181.0"> ===&gt; Criptomoedas Alternativas</option>
+			<option value="?board=134.0"> ===&gt; Brasil</option>
+			<option value="?board=135.0"> ===&gt; Portugal</option>
+			<option value="?board=10.0"> =&gt; &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russian)</option>
+			<option value="?board=22.0"> ===&gt; &#1053;&#1086;&#1074;&#1080;&#1095;&#1082;&#1080;</option>
+			<option value="?board=23.0"> ===&gt; &#1041;&#1080;&#1079;&#1085;&#1077;&#1089;</option>
+			<option value="?board=236.0"> =====&gt; &#1041;&#1072;&#1088;&#1072;&#1093;&#1086;&#1083;&#1082;&#1072;</option>
+			<option value="?board=237.0"> =====&gt; &#1054;&#1073;&#1084;&#1077;&#1085;&#1085;&#1080;&#1082;&#1080;</option>
+			<option value="?board=90.0"> ===&gt; &#1048;&#1076;&#1077;&#1080;</option>
+			<option value="?board=66.0"> ===&gt; &#1050;&#1086;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=21.0"> ===&gt; &#1052;&#1072;&#1081;&#1085;&#1077;&#1088;&#1099;</option>
+			<option value="?board=91.0"> ===&gt; &#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;</option>
+			<option value="?board=20.0"> ===&gt; &#1058;&#1088;&#1077;&#1081;&#1076;&#1077;&#1088;&#1099;</option>
+			<option value="?board=72.0"> ===&gt; &#1040;&#1083;&#1100;&#1090;&#1077;&#1088;&#1085;&#1072;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1074;&#1072;&#1083;&#1102;&#1090;&#1099;</option>
+			<option value="?board=248.0"> =====&gt; &#1058;&#1086;&#1082;&#1077;&#1085;&#1099;</option>
+			<option value="?board=256.0"> =====&gt; &#1041;ay&#1085;&#1090;&#1080; &#1080; a&#1080;p&#1076;po&#1087;&#1099;</option>
+			<option value="?board=55.0"> ===&gt; &#1061;&#1072;&#1081;&#1087;&#1099;</option>
+			<option value="?board=185.0"> ===&gt; &#1056;&#1072;&#1073;&#1086;&#1090;&#1072;</option>
+			<option value="?board=18.0"> ===&gt; &#1056;&#1072;&#1079;&#1085;&#1086;&#1077;</option>
+			<option value="?board=262.0"> ===&gt; O&#1073;cy&#1078;&#1076;e&#1085;&#1080;e Bitcoin</option>
+			<option value="?board=128.0"> =====&gt; &#1053;&#1086;&#1074;&#1086;&#1089;&#1090;&#1080;</option>
+			<option value="?board=19.0"> =====&gt; &#1070;&#1088;&#1080;&#1089;&#1090;&#1099;</option>
+			<option value="?board=108.0"> =&gt; Român&#259; (Romanian)</option>
+			<option value="?board=109.0"> ===&gt; Anunturi importante</option>
+			<option value="?board=110.0"> ===&gt; Offtopic</option>
+			<option value="?board=111.0"> ===&gt; Market</option>
+			<option value="?board=257.0"> =====&gt; Discutii Servicii</option>
+			<option value="?board=166.0"> ===&gt; Minerit</option>
+			<option value="?board=112.0"> ===&gt; Tutoriale</option>
+			<option value="?board=113.0"> ===&gt; Bine ai venit!</option>
+			<option value="?board=114.0"> ===&gt; Presa</option>
+			<option value="?board=259.0"> ===&gt; Altcoins (Monede Alternative)</option>
+			<option value="?board=178.0"> =====&gt; Anunturi Monede Alternative</option>
+			<option value="?board=45.0"> =&gt; Skandinavisk</option>
+			<option value="?board=133.0"> =&gt; Türkçe (Turkish)</option>
+			<option value="?board=180.0"> ===&gt; Bitcoin Haberleri</option>
+			<option value="?board=155.0"> ===&gt; Pazar Alan&#305;</option>
+			<option value="?board=156.0"> ===&gt; Madencilik</option>
+			<option value="?board=189.0"> ===&gt; Ekonomi</option>
+			<option value="?board=190.0"> ===&gt; Servisler</option>
+			<option value="?board=232.0"> =====&gt; Fonlar</option>
+			<option value="?board=229.0"> ===&gt; Proje Geli&#351;tirme</option>
+			<option value="?board=157.0"> ===&gt; Alternatif Kripto-Paralar</option>
+			<option value="?board=235.0"> =====&gt; Madencilik (Alternatif Kripto-Paralar)</option>
+			<option value="?board=239.0"> =====&gt; Duyurular (Alternatif Kripto-Paralar)</option>
+			<option value="?board=158.0"> ===&gt; Konu D&#305;&#351;&#305;</option>
+			<option value="?board=174.0"> ===&gt; Yeni Ba&#351;layanlar &amp; Yard&#305;m</option>
+			<option value="?board=230.0"> ===&gt; Bulu&#351;malar</option>
+			<option value="?board=11.0"> =&gt; Other languages/locations</option>
+		</select>&nbsp;
+		<input type="button" value="go" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = &#39;https://bitcointalk.org/index.php&#39; + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;">
+	</form>
+</div></div><br>
+	</div><script type="text/javascript">
+//<!--
+Array.prototype.forEach.call(document.getElementsByClassName("userimg"), checkImg);
+//-->
+</script>
+
+	<div id="footerarea" style="text-align: center; padding-bottom: 1ex;">
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			function smfFooterHighlight(element, value)
+			{
+				element.src = smf_images_url + "/" + (value ? "h_" : "") + element.id + ".gif";
+			}
+		// ]]></script>
+		<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+			<tbody><tr>
+				<td width="28%" valign="middle" align="right">
+					<a href="http://www.mysql.com/" target="_blank"><img id="powered-mysql" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/powered-mysql.gif" alt="Powered by MySQL" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://www.php.net/" target="_blank"><img id="powered-php" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/powered-php.gif" alt="Powered by PHP" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+				<td valign="middle" align="center" style="white-space: nowrap;">
+					
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.19</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF © 2006-2009, Simple Machines</a>
+		</span>
+				</td>
+				<td width="28%" valign="middle" align="left">
+					<a href="http://validator.w3.org/check/referer" target="_blank"><img id="valid-xhtml10" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/valid-xhtml10.gif" alt="Valid XHTML 1.0!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img id="valid-css" src="./Cyclone - fastest CPU Satoshi&#39;s puzzle solver (only CPU)_files/valid-css.gif" alt="Valid CSS!" width="54" height="20" style="margin: 5px 16px;" onmouseover="smfFooterHighlight(this, true);" onmouseout="smfFooterHighlight(this, false);"></a>
+				</td>
+			</tr>
+		</tbody></table>
+		<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+			window.addEventListener("load", smf_codeFix, false);
+
+			function smf_codeFix()
+			{
+				var codeFix = document.getElementsByTagName ? document.getElementsByTagName("div") : document.all.tags("div");
+
+				for (var i = 0; i < codeFix.length; i++)
+				{
+					if ((codeFix[i].className == "code" || codeFix[i].className == "post" || codeFix[i].className == "signature") && codeFix[i].offsetHeight < 20)
+						codeFix[i].style.height = (codeFix[i].offsetHeight + 20) + "px";
+				}
+			}
+		// ]]></script>
+	</div>
+	<div id="ajax_in_progress" style="display: none;">Loading...</div>
+</body></html>
